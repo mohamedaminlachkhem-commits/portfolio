@@ -1,0 +1,686 @@
+:root {
+  --ink: #17181d;
+  --night: #10131c;
+  --paper: #f7f0e6;
+  --mist: #ebe2d5;
+  --line: rgba(23, 24, 29, 0.14);
+  --muted: #696b70;
+  --blue: #2432c3;
+  --royal: #364ee8;
+  --gold: #c7992d;
+  --coffee: #87684f;
+  --cream: #fbf6ee;
+  --cyan: #26a7ff;
+  --shadow: 0 28px 80px rgba(16, 19, 28, 0.22);
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    linear-gradient(rgba(247, 240, 230, 0.93), rgba(247, 240, 230, 0.93)),
+    url("assets/arabic-calligraphy-pattern.jpg") center top / 360px auto repeat,
+    radial-gradient(circle at 18% 10%, rgba(199, 153, 45, 0.2), transparent 24rem),
+    radial-gradient(circle at 84% 18%, rgba(36, 50, 195, 0.14), transparent 24rem),
+    var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(rgba(247, 240, 230, 0.88), rgba(247, 240, 230, 0.88)),
+    url("assets/arabic-calligraphy-pattern.jpg") left top / 430px auto repeat;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px clamp(18px, 4vw, 58px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(16, 19, 28, 0.78);
+  color: #fff;
+  backdrop-filter: blur(18px);
+}
+
+.brand,
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 220px;
+}
+
+.brand-mark {
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 0.95rem;
+  line-height: 1.15;
+}
+
+.brand small {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.76rem;
+}
+
+.nav {
+  gap: clamp(14px, 2.8vw, 30px);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.nav a {
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 2px;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--gold);
+  transition: transform 180ms ease;
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.hero {
+  position: relative;
+  min-height: 86vh;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  padding: 138px clamp(20px, 6vw, 78px) 62px;
+  color: #fff;
+}
+
+.hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(16, 19, 28, 0.92), rgba(16, 19, 28, 0.66) 45%, rgba(16, 19, 28, 0.2)),
+    linear-gradient(0deg, rgba(16, 19, 28, 0.82), rgba(16, 19, 28, 0.03) 56%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
+
+.eyebrow,
+.section-kicker,
+.project-tile p {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 740px;
+  margin-bottom: 20px;
+  font-size: clamp(3rem, 6.4vw, 6.2rem);
+  font-weight: 950;
+  line-height: 0.94;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 4.6vw, 4.4rem);
+  font-weight: 950;
+  line-height: 1;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+  line-height: 1.18;
+}
+
+.hero-copy {
+  max-width: 650px;
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.12rem;
+}
+
+.hero-actions,
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button,
+.contact-actions span {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.button {
+  border: 1px solid transparent;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button.primary {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(36, 50, 195, 0.32);
+}
+
+.button.ghost {
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.signature-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid var(--line);
+  background: var(--night);
+  color: #fff;
+}
+
+.signature-strip span {
+  min-height: 86px;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(0.82rem, 1.3vw, 1rem);
+  font-weight: 850;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.work,
+.expertise,
+.atelier,
+.profile,
+.contact {
+  padding: clamp(64px, 10vw, 124px) clamp(20px, 6vw, 78px);
+}
+
+.section-heading {
+  display: grid;
+  max-width: 1180px;
+  margin: 0 auto clamp(32px, 6vw, 64px);
+  gap: 10px;
+}
+
+.section-heading h2 {
+  max-width: 960px;
+}
+
+.section-heading.compact {
+  margin-bottom: 34px;
+}
+
+.work {
+  background:
+    linear-gradient(rgba(247, 240, 230, 0.96), rgba(235, 226, 213, 0.97)),
+    url("assets/arabic-calligraphy-pattern.jpg") right top / 520px auto repeat;
+}
+
+.showcase-grid {
+  display: grid;
+  max-width: 1180px;
+  margin: 0 auto;
+  grid-auto-rows: 265px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.project-tile {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(16, 19, 28, 0.88), rgba(16, 19, 28, 0.88)),
+    url("assets/arabic-calligraphy-pattern.jpg") center / cover;
+  box-shadow: 0 18px 52px rgba(16, 19, 28, 0.1);
+}
+
+.project-tile.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.project-tile.tall {
+  grid-row: span 2;
+}
+
+.project-tile.wide {
+  grid-column: span 2;
+}
+
+.project-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.project-tile:hover img {
+  transform: scale(1.045);
+}
+
+.project-tile::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(0deg, rgba(16, 19, 28, 0.78), rgba(16, 19, 28, 0.02) 58%);
+}
+
+.project-tile div {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 18px;
+  left: 20px;
+  color: #fff;
+}
+
+.project-tile h3 {
+  margin-bottom: 0;
+}
+
+.expertise {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(16, 19, 28, 0.96), rgba(16, 19, 28, 0.9)),
+    url("assets/arabic-calligraphy-pattern.jpg") center / 420px auto repeat;
+  color: #fff;
+}
+
+.expertise::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: rgba(16, 19, 28, 0.72);
+  pointer-events: none;
+}
+
+.expertise-list {
+  position: relative;
+  display: grid;
+  max-width: 1180px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.expertise-list article {
+  min-height: 300px;
+  padding: clamp(24px, 3vw, 36px);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.expertise-list span {
+  display: inline-flex;
+  margin-bottom: 34px;
+  color: var(--gold);
+  font-weight: 950;
+}
+
+.expertise-list p,
+.atelier-copy p,
+.profile-copy p {
+  color: var(--muted);
+}
+
+.expertise-list p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.atelier {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: center;
+  background:
+    linear-gradient(rgba(224, 216, 202, 0.92), rgba(224, 216, 202, 0.92)),
+    url("assets/arabic-calligraphy-pattern.jpg") left center / 390px auto repeat;
+}
+
+.atelier-copy p:not(.section-kicker) {
+  max-width: 520px;
+  margin-top: 24px;
+  font-size: 1.05rem;
+}
+
+.atelier-gallery {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 14px;
+}
+
+.atelier-gallery img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(16, 19, 28, 0.12);
+}
+
+.atelier-gallery img:first-child {
+  height: 594px;
+  grid-row: span 2;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.48fr) minmax(0, 0.9fr);
+  gap: clamp(28px, 6vw, 86px);
+  align-items: center;
+  background: var(--paper);
+}
+
+.portrait-wrap {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  padding: 18px;
+  background-color: #fff;
+}
+
+.portrait-wrap::before {
+  position: absolute;
+  inset: -18px;
+  z-index: 0;
+  border: 1px solid rgba(214, 172, 43, 0.65);
+  border-radius: 8px;
+  content: "";
+}
+
+.portrait-wrap img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  background-color: #fff;
+}
+
+.profile-copy p {
+  max-width: 690px;
+  margin-top: 24px;
+  font-size: 1.08rem;
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  display: grid;
+  align-items: center;
+  background:
+    linear-gradient(120deg, rgba(16, 19, 28, 0.95), rgba(16, 19, 28, 0.78)),
+    url("assets/exterior-moroccan.jpg") center / cover no-repeat;
+  background-blend-mode: multiply;
+  color: #fff;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
+
+.contact-content p {
+  max-width: 660px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1.06rem;
+}
+
+.contact-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.contact-actions span,
+.contact-actions a {
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-actions a {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.site-footer {
+  padding: 24px clamp(20px, 6vw, 78px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px;
+  background: rgba(23, 24, 29, 0.92);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-copy {
+  font-size: 0.92rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+}
+
+@media (max-width: 1060px) {
+  .signature-strip,
+  .expertise-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .showcase-grid {
+    grid-auto-rows: 245px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-tile.tall,
+  .project-tile.large,
+  .project-tile.wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .atelier,
+  .profile {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    position: absolute;
+    align-items: flex-start;
+    padding: 14px 18px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    min-height: 88vh;
+    padding: 120px 18px 50px;
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 13vw, 4.3rem);
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .signature-strip,
+  .showcase-grid,
+  .expertise-list,
+  .atelier-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .signature-strip span {
+    min-height: 58px;
+  }
+
+  .project-tile,
+  .project-tile.large,
+  .project-tile.tall,
+  .project-tile.wide {
+    min-height: 270px;
+  }
+
+  .atelier-gallery img,
+  .atelier-gallery img:first-child {
+    height: 270px;
+  }
+
+  .portrait-wrap img {
+    height: auto;
+  }
+
+  .button,
+  .contact-actions span {
+    width: 100%;
+  }
+}
