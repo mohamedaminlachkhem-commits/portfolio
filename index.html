@@ -1,213 +1,888 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mohamed Amin Lachkhem | Leder Design</title>
-  <meta name="description" content="Portfolio de Mohamed Amin Lachkhem, designer Leder...">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محمد أمين لشخم | مصمم داخلي وإظهار معماري ثلاثي الأبعاد</title>
+  <meta name="description" content="معرض أعمال محمد أمين لشخم - متخصص في التصميم الداخلي، الإظهار المعماري ثلاثي الأبعاد (3D Visualization)، والهوية البصرية. الدار البيضاء، المغرب.">
   
-  <!-- Favicon using the logo -->
-  <link rel="icon" href="assets/logo-removebg-preview.png" type="image/png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-removebg-preview.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- Stylesheet -->
-  <link rel="preload" as="image" href="assets/interior-lounge.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">
-      <span class="brand-mark">
-        <img src="assets/logo-removebg-preview.png"
-             alt="Leder Design Logo"
-             class="logo">
-      </span>
 
-      <div class="brand-text">
-          <strong>Leder Design</strong>
-          <small>Mohamed Amin Lachkhem</small>
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="الصفحة الرئيسية">
+        <img src="assets/logo-removebg-preview.png" alt="شعار محمد أمين لشخم" class="logo-img">
+        <span class="logo-text">MOHAMED AMIN<small>INTERIOR & 3D ARCHVIZ</small></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+          <li><a href="#about" class="nav-link">عن المصمم</a></li>
+          <li><a href="#services" class="nav-link">الخدمات</a></li>
+          <li><a href="#portfolio" class="nav-link">المشاريع</a></li>
+          <li><a href="#process" class="nav-link">منهجية العمل</a></li>
+          <li><a href="#skills" class="nav-link">البرامج والأدوات</a></li>
+          <li><a href="#contact" class="nav-link">تواصل معي</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-outline btn-sm" download>
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>تحميل البورتفوليو</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
-    </a>
-    <nav class="nav" aria-label="Navigation principale">
-      <a href="#work">Projets</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#profile">Profil</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-label="Introduction">
-      <img src="assets/interior-lounge.jpg" alt="Rendu 3D d'un salon moderne..." />
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">Leder Design / Designer of interiors and exteriors / 3D</p>
-        <h1>Mohamed Amin<br>Lachkhem</h1>
-        <p class="hero-copy">
-          Designer créatif avec 5 ans d'expérience, spécialisé dans la conception
-          d'espaces, les rendus 2D/3D, les façades et l'identité visuelle.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#work">Voir les projets</a>
-          <a class="button ghost" href="mohamed-amin-lachkhem-portfolio.pdf">Portfolio PDF</a>
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="drawer-logo">
+        <img src="assets/logo-removebg-preview.png" alt="Logo">
+        <span>محمد أمين لشخم</span>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-link">الرئيسية</a></li>
+      <li><a href="#about" class="drawer-link">عن المصمم</a></li>
+      <li><a href="#services" class="drawer-link">الخدمات</a></li>
+      <li><a href="#portfolio" class="drawer-link">المشاريع</a></li>
+      <li><a href="#process" class="drawer-link">منهجية العمل</a></li>
+      <li><a href="#skills" class="drawer-link">البرامج والأدوات</a></li>
+      <li><a href="#contact" class="drawer-link">تواصل معي</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-primary btn-block" download>
+        <i class="fa-solid fa-file-pdf"></i>
+        <span>تحميل البورتفوليو PDF</span>
+      </a>
+      <a href="https://wa.me/212600000000" target="_blank" class="btn btn-whatsapp btn-block">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>محادثة واتساب مباشرة</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-badge">
+            <i class="fa-solid fa-compass-drafting"></i>
+            <span>تصميم داخلي • إظهار معماري ثلاثي الأبعاد • هوية بصرية</span>
+          </div>
+          <h1 class="hero-title">
+            نُحوّل الرؤى المعمارية إلى <span class="highlight-text">تجارب بصرية واقعية</span>
+          </h1>
+          <p class="hero-subtitle">
+            أنا <strong>محمد أمين لشخم</strong>، مصمم داخلي وفنان إظهار معماري ثلاثي الأبعاد مقيم بالدار البيضاء، المغرب. أجمع بين الدقة الهندسية والجماليات البصرية المعاصرة لتقديم تصاميم متميزة تحاكي الواقع وتلهم الحواس.
+          </p>
+          
+          <div class="hero-cta-group">
+            <a href="#portfolio" class="btn btn-primary">
+              <span>استعرض المشاريع</span>
+              <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>ابدأ مشروعك الآن</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">+5</span>
+              <span class="stat-label">سنوات شغف وخبرة</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">دقة وإظهار واقعي (4K)</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">360°</span>
+              <span class="stat-label">رؤية بصرية ومعمارية</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper reveal-on-scroll delay-1">
+          <div class="hero-image-frame">
+            <img src="assets/hero-interior.png" alt="تصميم داخلي فاخر ومودرن" class="hero-main-img" loading="eager">
+            <div class="floating-tag tag-top">
+              <i class="fa-solid fa-cube"></i>
+              <span>High-End 3D Renders</span>
+            </div>
+            <div class="floating-tag tag-bottom">
+              <i class="fa-solid fa-couch"></i>
+              <span>Contemporary Spatial Design</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="signature-strip" aria-label="Chiffres clés">
-      <span>25+ projets finalisés</span>
-      <span>3 villes couvertes</span>
-      <span>12 identités visuelles</span>
-      <span>50+ rendus 3D</span>
-    </section>
-
-    <section class="work" id="work" aria-labelledby="work-title">
-      <div class="section-heading">
-        <p class="section-kicker">Projets</p>
-        <h2 id="work-title">Design d'espace, façades et univers visuels</h2>
-      </div>
-
-      <div class="showcase-grid">
-        <a class="project-tile large" href="#">
-          <img src="assets/interior-salon.jpg" alt="Salon moderne" />
-          <div>
-            <h3>Salon contemporain</h3>
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-media reveal-on-scroll">
+            <div class="about-image-card">
+              <img src="assets/portrait.jpg" alt="محمد أمين لشخم" class="about-portrait" onerror="this.src='assets/portfolio-about.jpg'">
+              <div class="experience-badge">
+                <i class="fa-solid fa-award"></i>
+                <div>
+                  <strong>تصميم وإخراج</strong>
+                  <small>مستوى احترافي عالي</small>
+                </div>
+              </div>
+            </div>
           </div>
-        </a>
 
-        <a class="project-tile tall" href="#">
-          <img src="assets/exterior-facade.jpg" alt="Façade architecturale" />
-          <div>
-            <h3>Façade signature</h3>
+          <div class="about-text-content reveal-on-scroll delay-1">
+            <div class="section-tag">
+              <i class="fa-solid fa-user-tie"></i>
+              <span>نبذة عني</span>
+            </div>
+            <h2 class="section-title">شغف بالتفاصيل، تناغم في الإضاءة، وإتقان للخامات</h2>
+            <p class="about-bio">
+              بصفتي مصمماً داخلياً ومتخصصاً في الإظهار المعماري ثلاثي الأبعاد والتصميم الجرافيكي، أركز على ابتكار فضاءات تعبر عن هوية أصحابها وتلبي أعلى معايير الراحة والوظيفة المعمارية.
+            </p>
+            <p class="about-bio">
+              أعمل على توظيف أحدث تقنيات النمذجة ثلاثية الأبعاد والإكساء الواقعي ومحاكاة الإضاءة الطبيعية والاصطناعية، لتمكين العملاء والمطورين من استكشاف مساحاتهم ومعاينتها بدقة فائقة قبل بدء التنفيذ على أرض الواقع.
+            </p>
+
+            <div class="about-features-grid">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                <div class="feature-info">
+                  <h4>تخطيط ذكي للمساحات</h4>
+                  <p>استغلال مثالي لكل متر مربع مع مراعاة مسارات الحركة والراحة.</p>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="feature-info">
+                  <h4>ريندر واقعي Photorealistic</h4>
+                  <p>محاكاة دقيقة لأدق تفاصيل الأنسجة، المواد، والانعكاسات الضوئية.</p>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+                <div class="feature-info">
+                  <h4>تناغم المواد والألوان</h4>
+                  <p>دمج اللمسات المعاصرة مع عناصر الأصالة المغربية والعالمية.</p>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="feature-info">
+                  <h4>هوية بصرية متكاملة</h4>
+                  <p>ربط روح المكان بالهوية الجرافيكية للمشاريع التجارية والسكنية.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-primary" download>
+                <i class="fa-solid fa-download"></i>
+                <span>تحميل ملف السيرة والأعمال (PDF)</span>
+              </a>
+            </div>
           </div>
-        </a>
+        </div>
+      </div>
+    </section>
 
-        <a class="project-tile wide" href="#">
-          <img src="assets/graphic-brand.jpg" alt="Identité visuelle" />
-          <div>
-            <h3>Branding & identité</h3>
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="services-section section-padding" id="services">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-solid fa-cubes"></i>
+            <span>مجالات التخصص</span>
           </div>
-        </a>
+          <h2 class="section-title">حلول تصميمية شاملة من الفكرة إلى الإظهار النهائي</h2>
+          <p class="section-description">
+            نقدم حزمة متكاملة من الخدمات الإبداعية لتلبية متطلبات المشاريع السكنية والتجارية بدقة واحترافية.
+          </p>
+        </div>
 
-        <a class="project-tile" href="#">
-          <img src="assets/interior-bedroom.jpg" alt="Chambre design" />
-          <div>
-            <h3>Chambre raffinée</h3>
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-image">
+              <img src="assets/portfolio-interior.jpg" alt="التصميم الداخلي" loading="lazy">
+              <div class="service-icon-floating">
+                <i class="fa-solid fa-house-chimney-window"></i>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">التصميم الداخلي والديكور</h3>
+              <p class="service-text">
+                تطوير المفاهيم الديكورية المتكاملة للمنازل، الفلل، والمكاتب. يشمل ذلك اختيار الأثاث، توزيع الإضاءة، تصميم الجدران والأسقف، ولوحات المواد (Moodboards).
+              </p>
+              <ul class="service-bullets">
+                <li><i class="fa-solid fa-check"></i> دراسة المخططات وتوزيع الأثاث (2D Space Planning)</li>
+                <li><i class="fa-solid fa-check"></i> لوحات الألوان وتناسق الخامات والمفروشات</li>
+                <li><i class="fa-solid fa-check"></i> تفاصيل ديكورية مخصصة (Custom Joinery)</li>
+              </ul>
+            </div>
           </div>
-        </a>
+
+          <!-- Service 2 -->
+          <div class="service-card reveal-on-scroll delay-1">
+            <div class="service-image">
+              <img src="assets/portfolio-exterior.jpg" alt="الإظهار المعماري" loading="lazy">
+              <div class="service-icon-floating">
+                <i class="fa-solid fa-city"></i>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">الإظهار المعماري ثلاثي الأبعاد</h3>
+              <p class="service-text">
+                تحويل المخططات الهندسية إلى مناظر ثلاثية الأبعاد فائقة الواقعية للواجهات الخارجية، المساحات الداخلية، والمشاريع المعمارية بجودة رندر متميزة.
+              </p>
+              <ul class="service-bullets">
+                <li><i class="fa-solid fa-check"></i> ريندر داخلي وخارجي فائق الدقة (Day & Night Shots)</li>
+                <li><i class="fa-solid fa-check"></i> لقطات معمارية وتفاصيل مادية قريبة (Close-up Details)</li>
+                <li><i class="fa-solid fa-check"></i> مناظر للمحيط الخارجي واللاندسكيب (Landscape Viz)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card reveal-on-scroll delay-2">
+            <div class="service-image">
+              <img src="assets/portfolio-graphic.jpg" alt="التصميم الجرافيكي" loading="lazy">
+              <div class="service-icon-floating">
+                <i class="fa-solid fa-bezier-curve"></i>
+              </div>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">الهوية البصرية والتصميم الجرافيكي</h3>
+              <p class="service-text">
+                بناء هويات تجارية احترافية، تصميم المطبوعات، قوائم الطعام، واللافتات التي تضفي طابعاً فريداً على المشاريع وتتناغم مع بيئتها المكانية.
+              </p>
+              <ul class="service-bullets">
+                <li><i class="fa-solid fa-check"></i> تصميم الشعارات ودليل الهوية البصرية (Brand Guidelines)</li>
+                <li><i class="fa-solid fa-check"></i> تصميم المطبوعات الترويجية والكتالوجات (Brochures & Menus)</li>
+                <li><i class="fa-solid fa-check"></i> مواد التسويق البصري والمعارض المعمارية</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="expertise" id="expertise" aria-labelledby="expertise-title">
-      <div class="section-heading compact">
-        <p class="section-kicker">Expertise</p>
-        <h2 id="expertise-title">Approche sur mesure pour chaque projet</h2>
-      </div>
+    <!-- ==================== PORTFOLIO SECTION ==================== -->
+    <section class="portfolio-section section-padding" id="portfolio">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-solid fa-images"></i>
+            <span>معرض الأعمال</span>
+          </div>
+          <h2 class="section-title">مختارات من أحدث المشاريع والتصاميم</h2>
+          <p class="section-description">
+            تصفح معرض المشاريع المصنفة. يمكنك استخدام أزرار التصفية أدناه أو النقر على أي عمل لتكبيره ومشاهدته بدقة كاملة.
+          </p>
+        </div>
 
-      <div class="expertise-list">
-        <article>
-          <span>Désigner des intérieurs et extérieurs</span>
-          <p>Agencement, mobilier et ambiance raffinée pour espaces résidentiels ou commerciaux.</p>
-        </article>
-        <article>
-          <span>Façades & extérieur</span>
-          <p>Conception de façades et d'enveloppes extérieures qui donnent du caractère et du sens.</p>
-        </article>
-        <article>
-          <span>Rendus 3D</span>
-          <p>Visualisations immersives et réalistes pour projets d'aménagement et présentations client.</p>
-        </article>
-        <article>
-          <span>Identité visuelle</span>
-          <p>Direction artistique et branding pour une communication forte et cohérente.</p>
-        </article>
+        <!-- Filter Controls -->
+        <div class="portfolio-filters reveal-on-scroll">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fa-solid fa-border-all"></i>
+            <span>جميع الأعمال</span>
+          </button>
+          <button class="filter-btn" data-filter="interior">
+            <i class="fa-solid fa-couch"></i>
+            <span>تصميم داخلي</span>
+          </button>
+          <button class="filter-btn" data-filter="exterior">
+            <i class="fa-solid fa-building"></i>
+            <span>إظهار خارجي 3D</span>
+          </button>
+          <button class="filter-btn" data-filter="graphic">
+            <i class="fa-solid fa-pen-nib"></i>
+            <span>هوية وجرافيك</span>
+          </button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid" id="portfolioGrid">
+
+          <!-- Item 1 - Interior -->
+          <div class="portfolio-item" data-category="interior">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/interior-salon.jpg" alt="صالون معيشة معاصر فاخر" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="صالون معيشة معاصر فاخر" data-category="تصميم داخلي" data-img="assets/interior-salon.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">تصميم داخلي</span>
+                <h3 class="portfolio-item-title">صالون معيشة معاصر فاخر</h3>
+                <p class="portfolio-item-desc">تناغم دافئ بين الخامات الخشبية، الإضاءة الخفية، وقطع الأثاث المريحة ذات الطابع المودرن.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 - Exterior -->
+          <div class="portfolio-item" data-category="exterior">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/exterior-villa-pool.jpg" alt="فيلا سكنية حديثة مع مسبح" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="فيلا سكنية حديثة مع مسبح" data-category="إظهار خارجي 3D" data-img="assets/exterior-villa-pool.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">إظهار خارجي 3D</span>
+                <h3 class="portfolio-item-title">فيلا سكنية حديثة مع مسبح</h3>
+                <p class="portfolio-item-desc">محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 - Interior -->
+          <div class="portfolio-item" data-category="interior">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/interior-bedroom.jpg" alt="غرفة نوم رئيسية أنيقة" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="غرفة نوم رئيسية بتصميم هادئ" data-category="تصميم داخلي" data-img="assets/interior-bedroom.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">تصميم داخلي</span>
+                <h3 class="portfolio-item-title">غرفة نوم رئيسية بتصميم هادئ</h3>
+                <p class="portfolio-item-desc">اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 - Graphic -->
+          <div class="portfolio-item" data-category="graphic">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/graphic-brand.jpg" alt="تصميم هوية بصرية وتغليف" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="تصميم هوية بصرية وتغليف فاخر" data-category="هوية وجرافيك" data-img="assets/graphic-brand.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">هوية وجرافيك</span>
+                <h3 class="portfolio-item-title">هوية بصرية وتغليف علامة تجارية</h3>
+                <p class="portfolio-item-desc">تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 - Interior -->
+          <div class="portfolio-item" data-category="interior">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/interior-office.jpg" alt="مكتب تنفيذي راقي" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="مكتب تنفيذي بتصميم مريح وراقي" data-category="تصميم داخلي" data-img="assets/interior-office.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">تصميم داخلي</span>
+                <h3 class="portfolio-item-title">مكتب تنفيذي بتصميم مريح</h3>
+                <p class="portfolio-item-desc">بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 - Exterior -->
+          <div class="portfolio-item" data-category="exterior">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/exterior-facade.jpg" alt="تصميم واجهة معمارية عصرية" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="تصميم واجهة معمارية عصرية" data-category="إظهار خارجي 3D" data-img="assets/exterior-facade.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">إظهار خارجي 3D</span>
+                <h3 class="portfolio-item-title">واجهة معمارية بخامات حجرية وخشبية</h3>
+                <p class="portfolio-item-desc">تأكيد الكتل المعمارية بإنارة موجهة واستخدام مواد طبيعية مقاومة للعوامل البيئية.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 - Interior -->
+          <div class="portfolio-item" data-category="interior">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/interior-lounge.jpg" alt="صالة استقبال واستراحة فندقية" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="صالة استقبال واستراحة فاخرة" data-category="تصميم داخلي" data-img="assets/interior-lounge.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">تصميم داخلي</span>
+                <h3 class="portfolio-item-title">صالة استقبال واستراحة فاخرة</h3>
+                <p class="portfolio-item-desc">تصميم رحب يبرز جمالية الأثاث والإنارة المعلقة مع تناغم أرضيات الرخام والمرايا.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 - Exterior -->
+          <div class="portfolio-item" data-category="exterior">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/exterior-moroccan.jpg" alt="عمارة مغربية برؤية حداثية" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="عمارة مغربية برؤية حداثية" data-category="إظهار خارجي 3D" data-img="assets/exterior-moroccan.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">إظهار خارجي 3D</span>
+                <h3 class="portfolio-item-title">عمارة مغربية برؤية حداثية</h3>
+                <p class="portfolio-item-desc">استلهام الأقواس والزخارف المغربية وإعادة صياغتها بأسلوب معماري نيو-كلاسيكي معاصر.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9 - Graphic -->
+          <div class="portfolio-item" data-category="graphic">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/graphic-menu.jpg" alt="تصميم قائمة طعام ومطبوعات ضيافة" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="تصميم قائمة طعام ومطبوعات ضيافة" data-category="هوية وجرافيك" data-img="assets/graphic-menu.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">هوية وجرافيك</span>
+                <h3 class="portfolio-item-title">تصميم مطبوعات وقوائم ضيافة</h3>
+                <p class="portfolio-item-desc">إخراج طباعي متميز يجمع بين الجمالية البصرية وسهولة القراءة لقطاع المطاعم والضيافة.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10 - Interior -->
+          <div class="portfolio-item" data-category="interior">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb">
+                <img src="assets/interior-stair.jpg" alt="تصميم درج داخلي معماري" loading="lazy">
+                <div class="portfolio-overlay">
+                  <span class="view-btn" data-title="تصميم درج داخلي معماري منحوت" data-category="تصميم داخلي" data-img="assets/interior-stair.jpg">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="portfolio-meta">
+                <span class="category-badge">تصميم داخلي</span>
+                <h3 class="portfolio-item-title">تصميم درج داخلي معماري</h3>
+                <p class="portfolio-item-desc">عنصر معماري منحوت يربط الطوابق بجمالية انسيابية وإضاءة مدمجة على درجات السلم.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <section class="atelier" aria-labelledby="atelier-title">
-      <div class="atelier-copy">
-        <p class="section-kicker">Atelier</p>
-        <h2 id="atelier-title">Des espaces pensés comme une expérience</h2>
-        <p>Je conçois chaque projet avec une attention particulière aux matériaux, à la lumière et au confort. Le résultat allie élégance, fonctionnalité et caractère.</p>
-      </div>
-      <div class="atelier-gallery">
-        <img src="assets/interior-office.jpg" alt="Espace de travail design" />
-        <img src="assets/portfolio-interior.jpg" alt="Détails d'un intérieur contemporain" />
-        <img src="assets/exterior-villa-pool.jpg" alt="Maison avec piscine" />
+    <!-- ==================== WORK PROCESS SECTION ==================== -->
+    <section class="process-section section-padding" id="process">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-solid fa-list-check"></i>
+            <span>منهجية العمل</span>
+          </div>
+          <h2 class="section-title">خطوات مدروسة تضمن أعلى درجات الدقة والجودة</h2>
+          <p class="section-description">
+            نتبع مسار عمل منظم من أول جلسة استكشافية حتى تسليم الصور النهائية بدقة 4K.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step reveal-on-scroll">
+            <div class="step-badge">01</div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+              <h3 class="step-title">الاستكشاف وجمع المتطلبات</h3>
+              <p class="step-text">جلسة نقاش لفهم أهداف العميل، متطلبات المساحة، الميزانية، والاتجاه الفني المفضل (Moodboard).</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal-on-scroll delay-1">
+            <div class="step-badge">02</div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+              <h3 class="step-title">المخططات ثنائية الأبعاد (2D)</h3>
+              <p class="step-text">إعداد المخططات المعمارية وتوزيع الأثاث والممرات بما يضمن الراحة والاستغلال الأمثل للفراغ.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal-on-scroll delay-2">
+            <div class="step-badge">03</div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+              <h3 class="step-title">النمذجة ثلاثية الأبعاد (3D)</h3>
+              <p class="step-text">بناء النموذج الهندسي ثلاثي الأبعاد بكل تفاصيله الدقيقة للأثاث والتشطيبات المعمارية.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal-on-scroll delay-3">
+            <div class="step-badge">04</div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-lightbulb"></i></div>
+              <h3 class="step-title">الإضاءة والإكساء الواقعي</h3>
+              <p class="step-text">تطبيق خامات عالية الجودة وضبط زوايا الإضاءة الطبيعية والاصطناعية لمنح المشهد واقعية فائقة.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal-on-scroll delay-4">
+            <div class="step-badge">05</div>
+            <div class="step-card">
+              <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h3 class="step-title">الريندر النهائي والمعالجة</h3>
+              <p class="step-text">استخراج الصور النهائية بجودة فائقة مع المعالجة اللونية الاحترافية (Post-Production) والتسليم.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="profile" id="profile" aria-labelledby="profile-title">
-      <div class="portrait-wrap" aria-label="Portrait de Mohamed Amin Lachkhem">
-        <img src="assets/portrait.jpg" alt="Portrait de Mohamed Amin Lachkhem">
-      </div>
-      <div class="profile-copy">
-        <p class="section-kicker">Profil</p>
-        <h2 id="profile-title">Créatif, précis et orienté résultat</h2>
-        <p>Désigner des intérieurs et extérieurs et designer visuel basé au Maroc, j'accompagne des clients exigeants pour transformer leurs ambitions en espaces vivants. Mon travail mêle culture, élégance et savoir-faire local.</p>
+    <!-- ==================== SKILLS & TOOLS SECTION ==================== -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span>البرامج والأدوات</span>
+          </div>
+          <h2 class="section-title">تقنيات وبرمجيات متطورة لتحقيق أعلى دقة</h2>
+          <p class="section-description">
+            نعتمد على أفضل البرمجيات الهندسية والإظهارية لضمان سرعة الإنجاز والواقعية المتناهية.
+          </p>
+        </div>
+
+        <div class="tools-grid reveal-on-scroll">
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fa-solid fa-cube"></i></div>
+            <h4 class="tool-name">3ds Max / Blender</h4>
+            <span class="tool-category">3D Modeling & Rendering</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fa-solid fa-drafting-compass"></i></div>
+            <h4 class="tool-name">AutoCAD</h4>
+            <span class="tool-category">2D Drafting & Floor Plans</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fa-solid fa-sun"></i></div>
+            <h4 class="tool-name">V-Ray / Corona</h4>
+            <span class="tool-category">Photorealistic Engines</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fa-solid fa-image"></i></div>
+            <h4 class="tool-name">Adobe Photoshop</h4>
+            <span class="tool-category">Post-Production & Texturing</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fa-solid fa-vector-square"></i></div>
+            <h4 class="tool-name">Adobe Illustrator</h4>
+            <span class="tool-category">Branding & Identity Design</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fa-solid fa-book-open"></i></div>
+            <h4 class="tool-name">Adobe InDesign</h4>
+            <span class="tool-category">Portfolios & Editorial</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fa-solid fa-shapes"></i></div>
+            <h4 class="tool-name">SketchUp</h4>
+            <span class="tool-category">Conceptual 3D Massing</span>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-icon"><i class="fa-solid fa-palette"></i></div>
+            <h4 class="tool-name">Material & Color Theory</h4>
+            <span class="tool-category">Spatial Lighting & Aesthetics</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact-content">
-        <p class="section-kicker">Contact</p>
-        <h2 id="contact-title">Nous concevons vos espaces de rêve.</h2>
-        <p>Pour un intérieur, une façade, une visualisation 3D ou une identité visuelle, contactez Leder Design.</p>
-        <div class="contact-actions">
-          <a class="button primary contact-link contact-card" href="tel:+212628993050">
-            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.8 3.6 4.7 6.5 8.3 8.3l2.8-2.8c.3-.3.8-.4 1.2-.2 1.3.4 2.7.7 4.1.7.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.9 22 2 13.1 2 1.9c0-.6.4-1 1-1h4.2c.6 0 1 .4 1 1 0 1.4.2 2.8.7 4.1.1.4 0 .9-.2 1.2L6.6 10.8z"/></svg>
-            Phone: +212 628 993 050
-          </a>
-          <span class="contact-item contact-card">
-            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2c-4.9 0-8.8 3.7-8.8 8.3 0 2.4.9 4.6 2.5 6.2l-1 3 3.2-1.1c1.4.6 3 .9 4.7.9 4.9 0 8.8-3.7 8.8-8.3S16.9 3.2 12 3.2zm-1.8 8.2c-.2 0-.4-.1-.5-.2l-.2-.2c-.1-.1-.2-.3-.2-.5 0-.2.1-.4.2-.5l.7-.7c.2-.2.4-.2.6 0l.5.5c.2.2.2.5 0 .7l-.7.7c-.1.1-.2.2-.4.2zm4.2 0c-.2 0-.4-.1-.5-.2l-.2-.2c-.1-.1-.2-.3-.2-.5 0-.2.1-.4.2-.5l.7-.7c.2-.2.4-.2.6 0l.5.5c.2.2.2.5 0 .7l-.7.7c-.1.1-.2.2-.4.2zm4.2 0c-.2 0-.4-.1-.5-.2l-.2-.2c-.1-.1-.2-.3-.2-.5 0-.2.1-.4.2-.5l.7-.7c.2-.2.4-.2.6 0l.5.5c.2.2.2.5 0 .7l-.7.7c-.1.1-.2.2-.4.2z"/></svg>
-            <strong>WhatsApp:</strong> <a href="https://wa.me/qr/4XJ2DHC7GVC6G1" target="_blank" rel="noopener">Chat on WhatsApp</a>
-          </span>
-          <span class="contact-item contact-card">
-            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 4.5A5.5 5.5 0 1 0 17.5 12 5.5 5.5 0 0 0 12 6.5zm0 2A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm6.2-3.2a1.3 1.3 0 1 0 1.3 1.3 1.3 1.3 0 0 0-1.3-1.3z"/></svg>
-            <strong>Instagram:</strong> <a href="https://www.instagram.com/leader__design?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">leader__design</a>
-          </span>
-          <span class="contact-item contact-card">
-            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5A2.5 2.5 0 1 1 6.94 13.5 2.5 2.5 0 0 1 6.94 8.5zm-2.1 3.2h4.2v8.3H4.84zm6.8-3.2h4.02v1.14h.06c.56-1.06 1.93-2.18 3.97-2.18 4.24 0 5.03 2.79 5.03 6.42v6.15h-4.2v-5.77c0-1.38-.03-3.16-1.93-3.16-1.94 0-2.24 1.51-2.24 3.07v5.86H11.64z"/></svg>
-            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohamed-amin-lachkhem-7bb205330/#:~:text=www.linkedin.com/in/mohamed%2Damin%2Dlachkhem%2D7bb205330" target="_blank" rel="noopener">Mohamed Amin Lachkhem</a>
-          </span>
-          <span class="contact-item contact-card">
-            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.9 9.5.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.9.1-.7.3-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-4.8 0-1.1.4-2 1-2.7-.1-.2-.4-1.1.1-2.3 0 0 .8-.3 2.7 1 .8-.2 1.6-.3 2.4-.3s1.6.1 2.4.3c1.9-1.3 2.7-1 2.7-1 .5 1.2.2 2.1.1 2.3.6.7 1 1.6 1 2.7 0 3.7-2.4 4.5-4.6 4.7.4.3.7.9.7 1.8v2.7c0 .3.2.6.7.5 4-1.2 6.9-5 6.9-9.5C22 6.5 17.5 2 12 2z"/></svg>
-            <strong>GitHub:</strong> <a href="https://github.com/mohamedaminlachkhem-commits" target="_blank" rel="noopener">mohamedaminlachkhem-commits</a>
-          </span>
-          <span class="contact-item contact-card">
-            <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6l5 3 .9-1.5-4-2.3z"/></svg>
-            <strong>Website:</strong> <a href="https://mohamedaminlachkhem-commits.github.io/portfolio/" target="_blank" rel="noopener">mohamedaminlachkhem-commits.github.io/portfolio/</a>
-          </span>
+    <!-- ==================== PDF PORTFOLIO BANNER ==================== -->
+    <section class="pdf-cta-section">
+      <div class="container">
+        <div class="pdf-cta-card reveal-on-scroll">
+          <div class="pdf-cta-content">
+            <div class="pdf-icon-large">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <div class="pdf-cta-text">
+              <h3>هل ترغب في استعراض ملف الأعمال الكامل بصيغة PDF؟</h3>
+              <p>الملف يحتوي على تفاصيل ومخططات المشاريع وريندرات بدقة عالية ومواصفات الخامات.</p>
+            </div>
+          </div>
+          <div class="pdf-cta-action">
+            <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-gold btn-lg" download>
+              <i class="fa-solid fa-circle-down"></i>
+              <span>تحميل البورتفوليو الكامل (PDF)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-solid fa-envelope"></i>
+            <span>تواصل معي</span>
+          </div>
+          <h2 class="section-title">جاهز لبدء مشروعك المعماري أو الديكوري القادم؟</h2>
+          <p class="section-description">
+            يسعدني استقبال استفساراتك ومناقشة تفاصيل مشروعك لتقديم التصور الأنسب وعرض السعر.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Cards -->
+          <div class="contact-info-col reveal-on-scroll">
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-details">
+                <h4>الموقع الجغرافي</h4>
+                <p>الدار البيضاء (Casablanca)، المغرب</p>
+                <small>متاح للعمل على المشاريع المحلية والدولية عن بعد</small>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="info-details">
+                <h4>واتساب / اتصال مباشر</h4>
+                <p>تواصل فوري لمناقشة تفاصيل المشروع</p>
+                <a href="https://wa.me/212600000000" target="_blank" class="info-link">فتح محادثة واتساب <i class="fa-solid fa-arrow-left"></i></a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+              <div class="info-details">
+                <h4>البريد الإلكتروني</h4>
+                <p>استقبال المخططات وطلبات عروض الأسعار</p>
+                <a href="mailto:contact@mohamedamin.com" class="info-link">contact@mohamedamin.com</a>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-box">
+              <h4>تابع أعمالي على المنصات:</h4>
+              <div class="social-icons">
+                <a href="#" class="social-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/212600000000" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Card -->
+          <div class="contact-form-col reveal-on-scroll delay-1">
+            <div class="form-wrapper">
+              <h3 class="form-title">أرسل تفاصيل مشروعك</h3>
+              <form id="contactForm" onsubmit="return handleFormSubmit(event)">
+                <div class="form-group">
+                  <label for="userName">الاسم الكامل *</label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="userName" name="name" placeholder="مثال: أحمد المنصوري" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="userEmail">البريد الإلكتروني *</label>
+                    <div class="input-with-icon">
+                      <i class="fa-solid fa-at"></i>
+                      <input type="email" id="userEmail" name="email" placeholder="name@example.com" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="userPhone">رقم الهاتف / الواتساب</label>
+                    <div class="input-with-icon">
+                      <i class="fa-solid fa-phone"></i>
+                      <input type="tel" id="userPhone" name="phone" placeholder="+212 600 000000">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="projectType">نوع المشروع المطلوب *</label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <select id="projectType" name="projectType" required>
+                      <option value="" disabled selected>اختر الخدمة المطلوبة</option>
+                      <option value="interior">تصميم داخلي وديكور سكني / تجاري</option>
+                      <option value="exterior">إظهار معماري ثلاثي الأبعاد (3D ArchViz)</option>
+                      <option value="branding">تصميم هوية بصرية وجرافيك</option>
+                      <option value="full">مشروع متكامل (تصميم داخلي + ريندر + هوية)</option>
+                      <option value="other">استشارة أو خدمة أخرى</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage">نبذة عن المشروع والمتطلبات *</label>
+                  <textarea id="userMessage" name="message" rows="4" placeholder="اكتب وصفاً مختصراً للمساحة، الموقع، النمط المفضل، والجدول الزمني..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitBtn">
+                  <span>إرسال الرسالة</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <div class="form-feedback" id="formFeedback"></div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <script>
-    const contactCards = document.querySelectorAll('.contact-card');
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق النافذة">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
 
-    contactCards.forEach((card) => {
-      card.addEventListener('mousemove', (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width;
-        const y = (event.clientY - rect.top) / rect.height;
-        const rotateY = (x - 0.5) * 8;
-        const rotateX = (0.5 - y) * 7;
+      <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="الصورة السابقة">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
 
-        card.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
-      });
+      <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImg" class="lightbox-image">
+        <div class="lightbox-caption">
+          <span class="lightbox-cat" id="lightboxCat"></span>
+          <h4 class="lightbox-title" id="lightboxTitle"></h4>
+        </div>
+      </div>
 
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-      });
-    });
-  </script>
+      <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="الصورة التالية">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+    </div>
+  </div>
 
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/212600000000" target="_blank" class="floating-whatsapp" aria-label="تواصل عبر واتساب">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">تواصل عبر واتساب</span>
+  </a>
+
+  <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
-    <div class="footer-copy">© 2026 Leder Design. Tous droits réservés.</div>
-    <nav class="footer-nav" aria-label="Navigation du pied de page">
-      <a href="#top">Accueil</a>
-      <a href="#work">Projets</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <img src="assets/logo-removebg-preview.png" alt="Logo" class="logo-img">
+          <span class="logo-text">MOHAMED AMIN<small>INTERIOR & 3D ARCHVIZ</small></span>
+        </div>
+        <p class="footer-tagline">
+          تصاميم معمارية وداخلية استثنائية وإظهار بصري واقعي يرتقي برؤية مشاريعكم.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#hero">الرئيسية</a></li>
+          <li><a href="#about">عن المصمم</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#portfolio">المشاريع</a></li>
+          <li><a href="#process">منهجية العمل</a></li>
+          <li><a href="#contact">تواصل معي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>معلومات الاتصال</h4>
+        <p><i class="fa-solid fa-location-dot"></i> الدار البيضاء، المغرب</p>
+        <p><i class="fa-solid fa-envelope"></i> contact@mohamedamin.com</p>
+        <p><i class="fa-brands fa-whatsapp"></i> +212 600 000 000</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>© 2026 جميع الحقوق محفوظة | محمد أمين لشخم (Mohamed Amin Lachkhem)</p>
+        <a href="#hero" class="back-to-top" aria-label="الرجوع لأعلى الصفحة">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
 </body>
 </html>
