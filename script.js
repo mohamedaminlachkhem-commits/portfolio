@@ -1,74 +1,5 @@
 // ================= قاموس اللغات الشامل =================
 const translations = {
-  ar: {
-    nav_home: "الرئيسية",
-    nav_about: "عن المصمم",
-    nav_services: "الخدمات",
-    nav_projects: "المشاريع",
-    nav_workflow: "منهجية العمل",
-    nav_tools: "البرامج والأدوات",
-    nav_contact: "تواصل معي",
-    btn_portfolio: "تحميل البورتفوليو",
-    banner_sub: "ARCHITECTURE INTÉRIEURE & 3D ARCHITECTURAL VISUALIZATION",
-    hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
-    hero_badge: "مرحباً بك في مساحتي الإبداعية",
-    hero_spec: "مصمم داخلي وخبير إظهار معماري ثلاثي الأبعاد",
-    hero_bio: "متخصص في ابتكار وتصميم الفراغات المعمارية الحديثة، وتحويل المخططات الهندسية إلى مشاهد ثلاثية الأبعاد فائقة الواقعية والدقة البصرية، مع مراعاة أدق التفاصيل في توزيع الإضاءة، تناسق الخامات، وجودة الإخراج التنفيذي.",
-    btn_order_project: "طلب تصميم مشروع",
-    badge_archviz: "Leder Design ArchViz",
-    s1_title: "التصميم الداخلي السكني والتجاري",
-    s1_desc: "تصميم وتوزيع المساحات للفيلات والشقق والمحلات بأسلوب راقٍ يوازن بين الجمالية والاستغلال الوظيفي.",
-    s2_title: "الإظهار المعماري ثلاثي الأبعاد (3D ArchViz)",
-    s2_desc: "رندر احترافي فائق الواقعية للواجهات الخارجية والمساحات الداخلية واللاندسكيب بمختلف سيناريوهات الإضاءة.",
-    s3_title: "المخططات التنفيذية واللوحات التقنية",
-    s3_desc: "إعداد المخططات الدقيقة والمساقط الأفقية وتفاصيل الخامات والإضاءة الجاهزة للتنفيذ الميداني.",
-    s4_title: "إخراج الكتالوجات والعروض الهندسية",
-    s4_desc: "تصميم عروض تقديمية وملفات تعريفية (PDF/InDesign) متكاملة تعبر عن أصالة واحترافية المشاريع.",
-    title_projects: "معرض المشاريع",
-    hint_click_zoom: "اضغط على أي صورة لتكبيرها بدقة عالية",
-    p1_cat: "تصميم داخلي",
-    p1_title: "صالون معيشة معاصر فاخر",
-    p1_desc: "تناغم دافئ بين الخامات الخشبية، الإضاءة المخفية، وقطع الأثاث المريحة ذات الطابع المودرن.",
-    p2_cat: "إظهار خارجي 3D",
-    p2_title: "فيلا سكنية حديثة مع مسبح",
-    p2_desc: "محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.",
-    p3_cat: "تصميم داخلي",
-    p3_title: "غرفة نوم رئيسية بتصميم هادئ",
-    p3_desc: "اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.",
-    p4_cat: "هوية وجرافيك",
-    p4_title: "هوية بصرية وتغليف علامة تجارية",
-    p4_desc: "تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.",
-    p5_cat: "تصميم داخلي",
-    p5_title: "مكتب تنفيذي بتصميم مريح",
-    p5_desc: "بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.",
-    p6_cat: "إظهار خارجي 3D",
-    p6_title: "تصميم واجهة معمارية حديثة",
-    p6_desc: "تصميم معماري خارجي يبرز كتل المبنى والإنارة الليلية وتناسق خامات الحجر والزجاج.",
-    wf1_title: "دراسة الاحتياجات والمساحة",
-    wf1_desc: "تحليل المخططات الهندسية، وفهم رغبة العميل وتحديد النمط والميزانية المتاحة.",
-    wf2_title: "لوحة الإلهام والتوزيع (Moodboard)",
-    wf2_desc: "اختيار باليت الألوان وتناسق الخامات وتوزيع عناصر الفرش المعماري 2D/3D.",
-    wf3_title: "النمذجة والإظهار الواقعي 3D",
-    wf3_desc: "بناء الكتل ثلاثية الأبعاد وضبط الإضاءات الواقعية وتوليد رندرات عالية الدقة.",
-    wf4_title: "المراجعة والتسليم النهائي",
-    wf4_desc: "إتمام التعديلات المطلوبة وتسليم الحزمة الكاملة من صور ورسومات تنفيذية.",
-    tool_group_3d: "برامج التصميم والإظهار ثلاثي الأبعاد",
-    tool_group_graphics: "برامج التصميم الجرافيكي والإخراج",
-    tool_group_cad: "المخططات المعمارية والهندسية",
-    form_heading: "طلب تصميم / استشارة مشروع",
-    form_sub: "لديك فكرة فيلا، شقة، أو مشروع تجاري وتريد تجسيدها في الواقع؟ املأ التفاصيل وسأتواصل معك مباشرة:",
-    lbl_name: "الاسم الكريم",
-    lbl_project_type: "نوع المشروع",
-    lbl_desc: "تفاصيل الفكرة أو المساحة (الوصف)",
-    btn_send_wa: "إرسال الفكرة عبر واتساب",
-    btn_send_mail: "إرسال عبر البريد الإلكتروني",
-    direct_contact_title: "معلومات التواصل المباشرة",
-    c_email_lbl: "البريد الإلكتروني",
-    c_phone_lbl: "الهاتف / واتساب",
-    c_loc_lbl: "المقر والخدمة",
-    c_loc_val: "المغرب (الدار البيضاء / فاس) وكافة المدن",
-    rights: "جميع الحقوق محفوظة."
-  },
   en: {
     nav_home: "Home",
     nav_about: "About",
@@ -82,7 +13,7 @@ const translations = {
     hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
     hero_badge: "Welcome to my Creative Space",
     hero_spec: "Interior Designer & 3D Architectural Visualizer",
-    hero_bio: "Specialized in creating modern architectural spaces and turning blueprints into photorealistic 3D renders with exceptional visual fidelity.",
+    hero_bio: "Specialized in creating modern architectural spaces and turning blueprints into photorealistic 3D renders with exceptional visual fidelity, paying meticulous attention to lighting distribution, material harmony, and executive rendering quality.",
     btn_order_project: "Request a Design Project",
     badge_archviz: "Leder Design ArchViz",
     s1_title: "Residential & Commercial Interiors",
@@ -206,6 +137,75 @@ const translations = {
     c_loc_lbl: "Localisation",
     c_loc_val: "Maroc (Casablanca / Fès) et international",
     rights: "Tous droits réservés."
+  },
+  ar: {
+    nav_home: "الرئيسية",
+    nav_about: "عن المصمم",
+    nav_services: "الخدمات",
+    nav_projects: "المشاريع",
+    nav_workflow: "منهجية العمل",
+    nav_tools: "البرامج والأدوات",
+    nav_contact: "تواصل معي",
+    btn_portfolio: "تحميل البورتفوليو",
+    banner_sub: "ARCHITECTURE INTÉRIEURE & 3D ARCHITECTURAL VISUALIZATION",
+    hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
+    hero_badge: "مرحباً بك في مساحتي الإبداعية",
+    hero_spec: "مصمم داخلي وخبير إظهار معماري ثلاثي الأبعاد",
+    hero_bio: "متخصص في ابتكار وتصميم الفراغات المعمارية الحديثة، وتحويل المخططات الهندسية إلى مشاهد ثلاثية الأبعاد فائقة الواقعية والدقة البصرية، مع مراعاة أدق التفاصيل في توزيع الإضاءة، تناسق الخامات، وجودة الإخراج التنفيذي.",
+    btn_order_project: "طلب تصميم مشروع",
+    badge_archviz: "Leder Design ArchViz",
+    s1_title: "التصميم الداخلي السكني والتجاري",
+    s1_desc: "تصميم وتوزيع المساحات للفيلات والشقق والمحلات بأسلوب راقٍ يوازن بين الجمالية والاستغلال الوظيفي.",
+    s2_title: "الإظهار المعماري ثلاثي الأبعاد (3D ArchViz)",
+    s2_desc: "رندر احترافي فائق الواقعية للواجهات الخارجية والمساحات الداخلية واللاندسكيب بمختلف سيناريوهات الإضاءة.",
+    s3_title: "المخططات التنفيذية واللوحات التقنية",
+    s3_desc: "إعداد المخططات الدقيقة والمساقط الأفقية وتفاصيل الخامات والإضاءة الجاهزة للتنفيذ الميداني.",
+    s4_title: "إخراج الكتالوجات والعروض الهندسية",
+    s4_desc: "تصميم عروض تقديمية وملفات تعريفية (PDF/InDesign) متكاملة تعبر عن أصالة واحترافية المشاريع.",
+    title_projects: "معرض المشاريع",
+    hint_click_zoom: "اضغط على أي صورة لتكبيرها بدقة عالية",
+    p1_cat: "تصميم داخلي",
+    p1_title: "صالون معيشة معاصر فاخر",
+    p1_desc: "تناغم دافئ بين الخامات الخشبية، الإضاءة المخفية، وقطع الأثاث المريحة ذات الطابع المودرن.",
+    p2_cat: "إظهار خارجي 3D",
+    p2_title: "فيلا سكنية حديثة مع مسبح",
+    p2_desc: "محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.",
+    p3_cat: "تصميم داخلي",
+    p3_title: "غرفة نوم رئيسية بتصميم هادئ",
+    p3_desc: "اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.",
+    p4_cat: "هوية وجرافيك",
+    p4_title: "هوية بصرية وتغليف علامة تجارية",
+    p4_desc: "تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.",
+    p5_cat: "تصميم داخلي",
+    p5_title: "مكتب تنفيذي بتصميم مريح",
+    p5_desc: "بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.",
+    p6_cat: "إظهار خارجي 3D",
+    p6_title: "تصميم واجهة معمارية حديثة",
+    p6_desc: "تصميم معماري خارجي يبرز كتل المبنى والإنارة الليلية وتناسق خامات الحجر والزجاج.",
+    wf1_title: "دراسة الاحتياجات والمساحة",
+    wf1_desc: "تحليل المخططات الهندسية، وفهم رغبة العميل وتحديد النمط والميزانية المتاحة.",
+    wf2_title: "لوحة الإلهام والتوزيع (Moodboard)",
+    wf2_desc: "اختيار باليت الألوان وتناسق الخامات وتوزيع عناصر الفرش المعماري 2D/3D.",
+    wf3_title: "النمذجة والإظهار الواقعي 3D",
+    wf3_desc: "بناء الكتل ثلاثية الأبعاد وضبط الإضاءات الواقعية وتوليد رندرات عالية الدقة.",
+    wf4_title: "المراجعة والتسليم النهائي",
+    wf4_desc: "إتمام التعديلات المطلوبة وتسليم الحزمة الكاملة من صور ورسومات تنفيذية.",
+    tool_group_3d: "برامج التصميم والإظهار ثلاثي الأبعاد",
+    tool_group_graphics: "برامج التصميم الجرافيكي والإخراج",
+    tool_group_cad: "المخططات المعمارية والهندسية",
+    form_heading: "طلب تصميم / استشارة مشروع",
+    form_sub: "لديك فكرة فيلا، شقة، أو مشروع تجاري وتريد تجسيدها في الواقع؟ املأ التفاصيل وسأتواصل معك مباشرة:",
+    lbl_name: "الاسم الكريم",
+    lbl_project_type: "نوع المشروع",
+    lbl_desc: "تفاصيل الفكرة أو المساحة (الوصف)",
+    btn_send_wa: "إرسال الفكرة عبر واتساب",
+    btn_send_mail: "إرسال عبر البريد الإلكتروني",
+    direct_contact_title: "معلومات التواصل المباشرة",
+    c_email_lbl: "البريد الإلكتروني",
+    c_phone_lbl: "الهاتف / واتساب",
+    c_loc_lbl: "المقر والخدمة",
+    c_loc_val: "المغرب (الدار البيضاء / فاس) وكافة المدن",
+    rights: "جميع الحقوق محفوظة."
   }
 };
 
@@ -238,7 +238,7 @@ function sendViaWhatsApp() {
   }
 
   const phone = "212628993050";
-  const message = `مرحباً أستاذ محمد أمين،\n\n📌 *طلب مشروع جديد من الموقع*\n👤 *الاسم:* ${name}\n🏢 *نوع المشروع:* ${type}\n📝 *التفاصيل:* ${details}`;
+  const message = `Hello Mohamed Amin,\n\n📌 *New Project Request*\n👤 *Client Name:* ${name}\n🏢 *Project Type:* ${type}\n📝 *Details:* ${details}`;
   
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
@@ -256,8 +256,8 @@ function sendViaEmail() {
   }
 
   const email = "lachkhemmohamedamin@gmail.com";
-  const subject = `طلب مشروع جديد: ${type} - ${name}`;
-  const body = `مرحباً محمد أمين،\n\nالاسم: ${name}\nنوع المشروع: ${type}\n\nتفاصيل المشروع:\n${details}\n\nتحياتي.`;
+  const subject = `Project Request: ${type} - ${name}`;
+  const body = `Hello Mohamed Amin,\n\nName: ${name}\nProject Type: ${type}\n\nProject Details:\n${details}\n\nBest regards.`;
 
   window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
@@ -297,7 +297,7 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-// ================= تشغيل القائمة واستعادة اللغة =================
+// ================= استعادة اللغة الإنجليزية كافتراضية =================
 window.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
@@ -310,7 +310,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const savedLang = localStorage.getItem('preferred_lang') || 'ar';
+  // اللغة الإنجليزية هي الافتراضية
+  const savedLang = localStorage.getItem('preferred_lang') || 'en';
   const langSelector = document.getElementById('langSelector');
   if (langSelector) {
     langSelector.value = savedLang;
