@@ -20,6 +20,11 @@
 
 body {
   background-color: var(--bg-dark);
+  /* دمج خلفية الخط العربي الموجودة في مجلد assets */
+  background-image: linear-gradient(rgba(10, 13, 20, 0.92), rgba(10, 13, 20, 0.96)), url('assets/arabic-calligraphy-pattern.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   color: var(--text-main);
   font-family: var(--font-ar);
   line-height: 1.6;
@@ -35,7 +40,7 @@ a {
   color: inherit;
 }
 
-/* الشريط العلوي */
+/* Header */
 header {
   position: sticky;
   top: 0;
@@ -131,7 +136,7 @@ header {
   transform: translateY(-2px);
 }
 
-/* المشاريع والشبكة */
+/* Projects Grid */
 .section-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -220,9 +225,9 @@ body[dir="ltr"] .section-title::after {
   line-height: 1.5;
 }
 
-/* قسم التواصل */
+/* Contact Section */
 .contact-section {
-  background: #0e131d;
+  background: rgba(14, 19, 29, 0.85);
   border-top: 1px solid var(--border-color);
   padding: 4rem 1.5rem 2rem;
   margin-top: 3rem;
@@ -285,7 +290,7 @@ body[dir="ltr"] .section-title::after {
   padding-top: 1.5rem;
 }
 
-/* الهواتف */
+/* التجاوب مع شاشات الهواتف */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -297,4 +302,3 @@ body[dir="ltr"] .section-title::after {
     height: 200px;
   }
 }
-
