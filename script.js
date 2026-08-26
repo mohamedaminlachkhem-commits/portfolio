@@ -9,11 +9,10 @@ const translations = {
     nav_tools: "البرامج والأدوات",
     nav_contact: "تواصل معي",
     btn_portfolio: "تحميل البورتفوليو",
+    banner_sub: "ARCHITECTURE INTÉRIEURE & 3D ARCHITECTURAL VISUALIZATION",
     hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
-    hero_spec: "مصمم داخلي وخبير إظهار معماري ثلاثي الأبعاد",
     hero_badge: "مرحباً بك في مساحتي الإبداعية",
-    hero_name: "محمد أمين لشخم",
-    intro_title_tag: "مصمم داخلي وخبير محاكاة معمارية 3D",
+    hero_spec: "مصمم داخلي وخبير إظهار معماري ثلاثي الأبعاد",
     hero_bio: "متخصص في ابتكار وتصميم الفراغات المعمارية الحديثة، وتحويل المخططات الهندسية إلى مشاهد ثلاثية الأبعاد فائقة الواقعية والدقة البصرية، مع مراعاة أدق التفاصيل في توزيع الإضاءة، تناسق الخامات، وجودة الإخراج التنفيذي.",
     btn_order_project: "طلب تصميم مشروع",
     badge_archviz: "Leder Design ArchViz",
@@ -76,11 +75,10 @@ const translations = {
     nav_tools: "Tools & Software",
     nav_contact: "Contact Me",
     btn_portfolio: "Download Portfolio",
+    banner_sub: "ARCHITECTURE INTÉRIEURE & 3D ARCHITECTURAL VISUALIZATION",
     hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
-    hero_spec: "Interior Designer & 3D Architectural Visualizer",
     hero_badge: "Welcome to my Creative Space",
-    hero_name: "Mohamed Amin Lachkhem",
-    intro_title_tag: "Interior Designer & 3D Visualizer",
+    hero_spec: "Interior Designer & 3D Architectural Visualizer",
     hero_bio: "Specialized in creating modern architectural spaces and turning blueprints into photorealistic 3D renders with exceptional visual fidelity.",
     btn_order_project: "Request a Design Project",
     badge_archviz: "Leder Design ArchViz",
@@ -143,11 +141,10 @@ const translations = {
     nav_tools: "Logiciels & Outils",
     nav_contact: "Contactez-moi",
     btn_portfolio: "Télécharger Portfolio",
+    banner_sub: "ARCHITECTURE INTÉRIEURE & 3D ARCHITECTURAL VISUALIZATION",
     hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
-    hero_spec: "Architecte d'Intérieur & Expert Rendu 3D",
     hero_badge: "Bienvenue dans mon espace créatif",
-    hero_name: "Mohamed Amin Lachkhem",
-    intro_title_tag: "Architecte d'Intérieur & Rendu 3D",
+    hero_spec: "Architecte d'Intérieur & Expert Rendu 3D",
     hero_bio: "Spécialisé dans la création d'espaces modernes et la transformation de plans en visuels 3D photoréalistes d'une grande précision.",
     btn_order_project: "Commander un projet",
     badge_archviz: "Leder Design ArchViz",
@@ -291,7 +288,7 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-// ================= تشغيل القائمة للهواتف واستعادة اللغة =================
+// ================= تشغيل القائمة واستعادة اللغة =================
 window.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
