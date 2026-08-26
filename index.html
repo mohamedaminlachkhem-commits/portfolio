@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>محمد أمين لشخم | مصمم داخلي وإظهار معماري ثلاثي الأبعاد</title>
   <meta name="description" content="معرض أعمال محمد أمين لشخم - متخصص في التصميم الداخلي، الإظهار المعماري ثلاثي الأبعاد (3D Visualization)، والهوية البصرية. الدار البيضاء، المغرب.">
+  <meta name="keywords" content="تصميم داخلي, إظهار معماري, 3D Rendering, ديكور, رندر معماري, المغرب, كازابلانكا, Mohamed Amin Lachkhem, Interior Design, Architecture">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo-removebg-preview.png">
@@ -12,7 +13,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -26,28 +27,43 @@
   <header class="site-header" id="header">
     <div class="container header-container">
       <a href="#hero" class="brand-logo" aria-label="الصفحة الرئيسية">
-        <img src="assets/logo-removebg-preview.png" alt="شعار محمد أمين لشخم" class="logo-img">
+        <img src="assets/logo-removebg-preview.png" alt="Logo" class="logo-img">
         <span class="logo-text">MOHAMED AMIN<small>INTERIOR & 3D ARCHVIZ</small></span>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
-          <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
-          <li><a href="#about" class="nav-link">عن المصمم</a></li>
-          <li><a href="#services" class="nav-link">الخدمات</a></li>
-          <li><a href="#portfolio" class="nav-link">المشاريع</a></li>
-          <li><a href="#process" class="nav-link">منهجية العمل</a></li>
-          <li><a href="#skills" class="nav-link">البرامج والأدوات</a></li>
-          <li><a href="#contact" class="nav-link">تواصل معي</a></li>
+          <li><a href="#hero" class="nav-link active" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">عن المصمم</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav_services">الخدمات</a></li>
+          <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">المشاريع</a></li>
+          <li><a href="#process" class="nav-link" data-i18n="nav_process">منهجية العمل</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav_skills">البرامج والأدوات</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">تواصل معي</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-outline btn-sm" download>
+        <!-- Language Switcher Dropdown -->
+        <div class="lang-switcher">
+          <button class="lang-btn" id="langBtn" aria-label="اختيار اللغة">
+            <i class="fa-solid fa-globe"></i>
+            <span id="currentLangLabel">العربية</span>
+            <i class="fa-solid fa-chevron-down lang-chevron"></i>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option active" data-lang="ar">العربية (AR)</button>
+            <button class="lang-option" data-lang="en">English (EN)</button>
+            <button class="lang-option" data-lang="fr">Français (FR)</button>
+          </div>
+        </div>
+
+        <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-outline btn-sm header-pdf-btn" download>
           <i class="fa-solid fa-file-pdf"></i>
-          <span>تحميل البورتفوليو</span>
+          <span data-i18n="download_pdf">تحميل البورتفوليو</span>
         </a>
+
         <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -67,23 +83,35 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
+
+    <!-- Mobile Language Bar -->
+    <div class="drawer-lang-selector">
+      <span class="lang-title"><i class="fa-solid fa-globe"></i> <span data-i18n="select_language">اختر اللغة:</span></span>
+      <div class="lang-pills">
+        <button class="mobile-lang-pill active" data-lang="ar">العربية</button>
+        <button class="mobile-lang-pill" data-lang="en">English</button>
+        <button class="mobile-lang-pill" data-lang="fr">Français</button>
+      </div>
+    </div>
+
     <ul class="drawer-links">
-      <li><a href="#hero" class="drawer-link">الرئيسية</a></li>
-      <li><a href="#about" class="drawer-link">عن المصمم</a></li>
-      <li><a href="#services" class="drawer-link">الخدمات</a></li>
-      <li><a href="#portfolio" class="drawer-link">المشاريع</a></li>
-      <li><a href="#process" class="drawer-link">منهجية العمل</a></li>
-      <li><a href="#skills" class="drawer-link">البرامج والأدوات</a></li>
-      <li><a href="#contact" class="drawer-link">تواصل معي</a></li>
+      <li><a href="#hero" class="drawer-link" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="#about" class="drawer-link" data-i18n="nav_about">عن المصمم</a></li>
+      <li><a href="#services" class="drawer-link" data-i18n="nav_services">الخدمات</a></li>
+      <li><a href="#portfolio" class="drawer-link" data-i18n="nav_portfolio">المشاريع</a></li>
+      <li><a href="#process" class="drawer-link" data-i18n="nav_process">منهجية العمل</a></li>
+      <li><a href="#skills" class="drawer-link" data-i18n="nav_skills">البرامج والأدوات</a></li>
+      <li><a href="#contact" class="drawer-link" data-i18n="nav_contact">تواصل معي</a></li>
     </ul>
+
     <div class="drawer-footer">
       <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-primary btn-block" download>
         <i class="fa-solid fa-file-pdf"></i>
-        <span>تحميل البورتفوليو PDF</span>
+        <span data-i18n="download_pdf">تحميل البورتفوليو PDF</span>
       </a>
-      <a href="https://wa.me/212600000000" target="_blank" class="btn btn-whatsapp btn-block">
+      <a href="https://wa.me/212628993050" target="_blank" class="btn btn-whatsapp btn-block">
         <i class="fa-brands fa-whatsapp"></i>
-        <span>محادثة واتساب مباشرة</span>
+        <span>WhatsApp: +212 628-993050</span>
       </a>
     </div>
   </div>
@@ -95,40 +123,40 @@
         <div class="hero-content reveal-on-scroll">
           <div class="hero-badge">
             <i class="fa-solid fa-compass-drafting"></i>
-            <span>تصميم داخلي • إظهار معماري ثلاثي الأبعاد • هوية بصرية</span>
+            <span data-i18n="hero_badge">تصميم داخلي • إظهار معماري ثلاثي الأبعاد • هوية بصرية</span>
           </div>
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-i18n="hero_title">
             نُحوّل الرؤى المعمارية إلى <span class="highlight-text">تجارب بصرية واقعية</span>
           </h1>
-          <p class="hero-subtitle">
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
             أنا <strong>محمد أمين لشخم</strong>، مصمم داخلي وفنان إظهار معماري ثلاثي الأبعاد مقيم بالدار البيضاء، المغرب. أجمع بين الدقة الهندسية والجماليات البصرية المعاصرة لتقديم تصاميم متميزة تحاكي الواقع وتلهم الحواس.
           </p>
           
           <div class="hero-cta-group">
             <a href="#portfolio" class="btn btn-primary">
-              <span>استعرض المشاريع</span>
-              <i class="fa-solid fa-arrow-left"></i>
+              <span data-i18n="btn_explore">استعرض المشاريع</span>
+              <i class="fa-solid fa-arrow-left arrow-icon"></i>
             </a>
             <a href="#contact" class="btn btn-secondary">
               <i class="fa-solid fa-paper-plane"></i>
-              <span>ابدأ مشروعك الآن</span>
+              <span data-i18n="btn_start_project">ابدأ مشروعك الآن</span>
             </a>
           </div>
 
           <div class="hero-stats">
             <div class="stat-item">
               <span class="stat-number">+5</span>
-              <span class="stat-label">سنوات شغف وخبرة</span>
+              <span class="stat-label" data-i18n="stat_exp">سنوات شغف وخبرة</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
               <span class="stat-number">100%</span>
-              <span class="stat-label">دقة وإظهار واقعي (4K)</span>
+              <span class="stat-label" data-i18n="stat_quality">دقة وإظهار واقعي (4K)</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
               <span class="stat-number">360°</span>
-              <span class="stat-label">رؤية بصرية ومعمارية</span>
+              <span class="stat-label" data-i18n="stat_vision">رؤية بصرية ومعمارية</span>
             </div>
           </div>
         </div>
@@ -155,12 +183,12 @@
         <div class="about-grid">
           <div class="about-media reveal-on-scroll">
             <div class="about-image-card">
-              <img src="assets/portrait.jpg" alt="محمد أمين لشخم" class="about-portrait" onerror="this.src='assets/portfolio-about.jpg'">
+              <img src="assets/portrait.jpg" alt="محمد أمين لشخم - Mohamed Amin Lachkhem" class="about-portrait" onerror="this.src='assets/portfolio-about.jpg'">
               <div class="experience-badge">
                 <i class="fa-solid fa-award"></i>
                 <div>
-                  <strong>تصميم وإخراج</strong>
-                  <small>مستوى احترافي عالي</small>
+                  <strong data-i18n="about_badge_title">تصميم وإخراج</strong>
+                  <small data-i18n="about_badge_sub">مستوى احترافي عالي</small>
                 </div>
               </div>
             </div>
@@ -169,13 +197,13 @@
           <div class="about-text-content reveal-on-scroll delay-1">
             <div class="section-tag">
               <i class="fa-solid fa-user-tie"></i>
-              <span>نبذة عني</span>
+              <span data-i18n="about_tag">نبذة عني</span>
             </div>
-            <h2 class="section-title">شغف بالتفاصيل، تناغم في الإضاءة، وإتقان للخامات</h2>
-            <p class="about-bio">
+            <h2 class="section-title" data-i18n="about_title">شغف بالتفاصيل، تناغم في الإضاءة، وإتقان للخامات</h2>
+            <p class="about-bio" data-i18n="about_p1">
               بصفتي مصمماً داخلياً ومتخصصاً في الإظهار المعماري ثلاثي الأبعاد والتصميم الجرافيكي، أركز على ابتكار فضاءات تعبر عن هوية أصحابها وتلبي أعلى معايير الراحة والوظيفة المعمارية.
             </p>
-            <p class="about-bio">
+            <p class="about-bio" data-i18n="about_p2">
               أعمل على توظيف أحدث تقنيات النمذجة ثلاثية الأبعاد والإكساء الواقعي ومحاكاة الإضاءة الطبيعية والاصطناعية، لتمكين العملاء والمطورين من استكشاف مساحاتهم ومعاينتها بدقة فائقة قبل بدء التنفيذ على أرض الواقع.
             </p>
 
@@ -183,32 +211,32 @@
               <div class="feature-card">
                 <div class="feature-icon"><i class="fa-solid fa-ruler-combined"></i></div>
                 <div class="feature-info">
-                  <h4>تخطيط ذكي للمساحات</h4>
-                  <p>استغلال مثالي لكل متر مربع مع مراعاة مسارات الحركة والراحة.</p>
+                  <h4 data-i18n="feat_1_title">تخطيط ذكي للمساحات</h4>
+                  <p data-i18n="feat_1_desc">استغلال مثالي لكل متر مربع مع مراعاة مسارات الحركة والراحة.</p>
                 </div>
               </div>
 
               <div class="feature-card">
                 <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                 <div class="feature-info">
-                  <h4>ريندر واقعي Photorealistic</h4>
-                  <p>محاكاة دقيقة لأدق تفاصيل الأنسجة، المواد، والانعكاسات الضوئية.</p>
+                  <h4 data-i18n="feat_2_title">ريندر واقعي Photorealistic</h4>
+                  <p data-i18n="feat_2_desc">محاكاة دقيقة لأدق تفاصيل الأنسجة، المواد، والانعكاسات الضوئية.</p>
                 </div>
               </div>
 
               <div class="feature-card">
                 <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
                 <div class="feature-info">
-                  <h4>تناغم المواد والألوان</h4>
-                  <p>دمج اللمسات المعاصرة مع عناصر الأصالة المغربية والعالمية.</p>
+                  <h4 data-i18n="feat_3_title">تناغم المواد والألوان</h4>
+                  <p data-i18n="feat_3_desc">دمج اللمسات المعاصرة مع عناصر الأصالة المغربية والعالمية.</p>
                 </div>
               </div>
 
               <div class="feature-card">
                 <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
                 <div class="feature-info">
-                  <h4>هوية بصرية متكاملة</h4>
-                  <p>ربط روح المكان بالهوية الجرافيكية للمشاريع التجارية والسكنية.</p>
+                  <h4 data-i18n="feat_4_title">هوية بصرية متكاملة</h4>
+                  <p data-i18n="feat_4_desc">ربط روح المكان بالهوية الجرافيكية للمشاريع التجارية والسكنية.</p>
                 </div>
               </div>
             </div>
@@ -216,7 +244,7 @@
             <div class="about-actions">
               <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-primary" download>
                 <i class="fa-solid fa-download"></i>
-                <span>تحميل ملف السيرة والأعمال (PDF)</span>
+                <span data-i18n="btn_download_cv">تحميل ملف السيرة والأعمال (PDF)</span>
               </a>
             </div>
           </div>
@@ -230,10 +258,10 @@
         <div class="section-header text-center reveal-on-scroll">
           <div class="section-tag">
             <i class="fa-solid fa-cubes"></i>
-            <span>مجالات التخصص</span>
+            <span data-i18n="services_tag">مجالات التخصص</span>
           </div>
-          <h2 class="section-title">حلول تصميمية شاملة من الفكرة إلى الإظهار النهائي</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-i18n="services_title">حلول تصميمية شاملة من الفكرة إلى الإظهار النهائي</h2>
+          <p class="section-description" data-i18n="services_subtitle">
             نقدم حزمة متكاملة من الخدمات الإبداعية لتلبية متطلبات المشاريع السكنية والتجارية بدقة واحترافية.
           </p>
         </div>
@@ -248,14 +276,14 @@
               </div>
             </div>
             <div class="service-body">
-              <h3 class="service-title">التصميم الداخلي والديكور</h3>
-              <p class="service-text">
+              <h3 class="service-title" data-i18n="srv_1_title">التصميم الداخلي والديكور</h3>
+              <p class="service-text" data-i18n="srv_1_desc">
                 تطوير المفاهيم الديكورية المتكاملة للمنازل، الفلل، والمكاتب. يشمل ذلك اختيار الأثاث، توزيع الإضاءة، تصميم الجدران والأسقف، ولوحات المواد (Moodboards).
               </p>
               <ul class="service-bullets">
-                <li><i class="fa-solid fa-check"></i> دراسة المخططات وتوزيع الأثاث (2D Space Planning)</li>
-                <li><i class="fa-solid fa-check"></i> لوحات الألوان وتناسق الخامات والمفروشات</li>
-                <li><i class="fa-solid fa-check"></i> تفاصيل ديكورية مخصصة (Custom Joinery)</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_1_b1">دراسة المخططات وتوزيع الأثاث (2D Space Planning)</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_1_b2">لوحات الألوان وتناسق الخامات والمفروشات</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_1_b3">تفاصيل ديكورية مخصصة (Custom Joinery)</span></li>
               </ul>
             </div>
           </div>
@@ -269,14 +297,14 @@
               </div>
             </div>
             <div class="service-body">
-              <h3 class="service-title">الإظهار المعماري ثلاثي الأبعاد</h3>
-              <p class="service-text">
+              <h3 class="service-title" data-i18n="srv_2_title">الإظهار المعماري ثلاثي الأبعاد</h3>
+              <p class="service-text" data-i18n="srv_2_desc">
                 تحويل المخططات الهندسية إلى مناظر ثلاثية الأبعاد فائقة الواقعية للواجهات الخارجية، المساحات الداخلية، والمشاريع المعمارية بجودة رندر متميزة.
               </p>
               <ul class="service-bullets">
-                <li><i class="fa-solid fa-check"></i> ريندر داخلي وخارجي فائق الدقة (Day & Night Shots)</li>
-                <li><i class="fa-solid fa-check"></i> لقطات معمارية وتفاصيل مادية قريبة (Close-up Details)</li>
-                <li><i class="fa-solid fa-check"></i> مناظر للمحيط الخارجي واللاندسكيب (Landscape Viz)</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_2_b1">ريندر داخلي وخارجي فائق الدقة (Day & Night Shots)</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_2_b2">لقطات معمارية وتفاصيل مادية قريبة (Close-up Details)</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_2_b3">مناظر للمحيط الخارجي واللاندسكيب (Landscape Viz)</span></li>
               </ul>
             </div>
           </div>
@@ -290,14 +318,14 @@
               </div>
             </div>
             <div class="service-body">
-              <h3 class="service-title">الهوية البصرية والتصميم الجرافيكي</h3>
-              <p class="service-text">
+              <h3 class="service-title" data-i18n="srv_3_title">الهوية البصرية والتصميم الجرافيكي</h3>
+              <p class="service-text" data-i18n="srv_3_desc">
                 بناء هويات تجارية احترافية، تصميم المطبوعات، قوائم الطعام، واللافتات التي تضفي طابعاً فريداً على المشاريع وتتناغم مع بيئتها المكانية.
               </p>
               <ul class="service-bullets">
-                <li><i class="fa-solid fa-check"></i> تصميم الشعارات ودليل الهوية البصرية (Brand Guidelines)</li>
-                <li><i class="fa-solid fa-check"></i> تصميم المطبوعات الترويجية والكتالوجات (Brochures & Menus)</li>
-                <li><i class="fa-solid fa-check"></i> مواد التسويق البصري والمعارض المعمارية</li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_3_b1">تصميم الشعارات ودليل الهوية البصرية (Brand Guidelines)</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_3_b2">تصميم المطبوعات الترويجية والكتالوجات (Brochures & Menus)</span></li>
+                <li><i class="fa-solid fa-check"></i> <span data-i18n="srv_3_b3">مواد التسويق البصري والمعارض المعمارية</span></li>
               </ul>
             </div>
           </div>
@@ -311,10 +339,10 @@
         <div class="section-header text-center reveal-on-scroll">
           <div class="section-tag">
             <i class="fa-solid fa-images"></i>
-            <span>معرض الأعمال</span>
+            <span data-i18n="portfolio_tag">معرض الأعمال</span>
           </div>
-          <h2 class="section-title">مختارات من أحدث المشاريع والتصاميم</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-i18n="portfolio_title">مختارات من أحدث المشاريع والتصاميم</h2>
+          <p class="section-description" data-i18n="portfolio_subtitle">
             تصفح معرض المشاريع المصنفة. يمكنك استخدام أزرار التصفية أدناه أو النقر على أي عمل لتكبيره ومشاهدته بدقة كاملة.
           </p>
         </div>
@@ -323,19 +351,19 @@
         <div class="portfolio-filters reveal-on-scroll">
           <button class="filter-btn active" data-filter="all">
             <i class="fa-solid fa-border-all"></i>
-            <span>جميع الأعمال</span>
+            <span data-i18n="filter_all">جميع الأعمال</span>
           </button>
           <button class="filter-btn" data-filter="interior">
             <i class="fa-solid fa-couch"></i>
-            <span>تصميم داخلي</span>
+            <span data-i18n="filter_interior">تصميم داخلي</span>
           </button>
           <button class="filter-btn" data-filter="exterior">
             <i class="fa-solid fa-building"></i>
-            <span>إظهار خارجي 3D</span>
+            <span data-i18n="filter_exterior">إظهار خارجي 3D</span>
           </button>
           <button class="filter-btn" data-filter="graphic">
             <i class="fa-solid fa-pen-nib"></i>
-            <span>هوية وجرافيك</span>
+            <span data-i18n="filter_graphic">هوية وجرافيك</span>
           </button>
         </div>
 
@@ -354,9 +382,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">تصميم داخلي</span>
-                <h3 class="portfolio-item-title">صالون معيشة معاصر فاخر</h3>
-                <p class="portfolio-item-desc">تناغم دافئ بين الخامات الخشبية، الإضاءة الخفية، وقطع الأثاث المريحة ذات الطابع المودرن.</p>
+                <span class="category-badge" data-i18n="cat_interior">تصميم داخلي</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_1_title">صالون معيشة معاصر فاخر</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_1_desc">تناغم دافئ بين الخامات الخشبية، الإضاءة الخفية، وقطع الأثاث المريحة ذات الطابع المودرن.</p>
               </div>
             </div>
           </div>
@@ -373,9 +401,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">إظهار خارجي 3D</span>
-                <h3 class="portfolio-item-title">فيلا سكنية حديثة مع مسبح</h3>
-                <p class="portfolio-item-desc">محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.</p>
+                <span class="category-badge" data-i18n="cat_exterior">إظهار خارجي 3D</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_2_title">فيلا سكنية حديثة مع مسبح</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_2_desc">محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.</p>
               </div>
             </div>
           </div>
@@ -392,9 +420,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">تصميم داخلي</span>
-                <h3 class="portfolio-item-title">غرفة نوم رئيسية بتصميم هادئ</h3>
-                <p class="portfolio-item-desc">اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.</p>
+                <span class="category-badge" data-i18n="cat_interior">تصميم داخلي</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_3_title">غرفة نوم رئيسية بتصميم هادئ</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_3_desc">اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.</p>
               </div>
             </div>
           </div>
@@ -411,9 +439,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">هوية وجرافيك</span>
-                <h3 class="portfolio-item-title">هوية بصرية وتغليف علامة تجارية</h3>
-                <p class="portfolio-item-desc">تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.</p>
+                <span class="category-badge" data-i18n="cat_graphic">هوية وجرافيك</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_4_title">هوية بصرية وتغليف علامة تجارية</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_4_desc">تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.</p>
               </div>
             </div>
           </div>
@@ -430,9 +458,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">تصميم داخلي</span>
-                <h3 class="portfolio-item-title">مكتب تنفيذي بتصميم مريح</h3>
-                <p class="portfolio-item-desc">بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.</p>
+                <span class="category-badge" data-i18n="cat_interior">تصميم داخلي</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_5_title">مكتب تنفيذي بتصميم مريح</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_5_desc">بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.</p>
               </div>
             </div>
           </div>
@@ -449,9 +477,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">إظهار خارجي 3D</span>
-                <h3 class="portfolio-item-title">واجهة معمارية بخامات حجرية وخشبية</h3>
-                <p class="portfolio-item-desc">تأكيد الكتل المعمارية بإنارة موجهة واستخدام مواد طبيعية مقاومة للعوامل البيئية.</p>
+                <span class="category-badge" data-i18n="cat_exterior">إظهار خارجي 3D</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_6_title">واجهة معمارية بخامات حجرية وخشبية</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_6_desc">تأكيد الكتل المعمارية بإنارة موجهة واستخدام مواد طبيعية مقاومة للعوامل البيئية.</p>
               </div>
             </div>
           </div>
@@ -468,9 +496,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">تصميم داخلي</span>
-                <h3 class="portfolio-item-title">صالة استقبال واستراحة فاخرة</h3>
-                <p class="portfolio-item-desc">تصميم رحب يبرز جمالية الأثاث والإنارة المعلقة مع تناغم أرضيات الرخام والمرايا.</p>
+                <span class="category-badge" data-i18n="cat_interior">تصميم داخلي</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_7_title">صالة استقبال واستراحة فاخرة</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_7_desc">تصميم رحب يبرز جمالية الأثاث والإنارة المعلقة مع تناغم أرضيات الرخام والمرايا.</p>
               </div>
             </div>
           </div>
@@ -487,9 +515,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">إظهار خارجي 3D</span>
-                <h3 class="portfolio-item-title">عمارة مغربية برؤية حداثية</h3>
-                <p class="portfolio-item-desc">استلهام الأقواس والزخارف المغربية وإعادة صياغتها بأسلوب معماري نيو-كلاسيكي معاصر.</p>
+                <span class="category-badge" data-i18n="cat_exterior">إظهار خارجي 3D</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_8_title">عمارة مغربية برؤية حداثية</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_8_desc">استلهام الأقواس والزخارف المغربية وإعادة صياغتها بأسلوب معماري نيو-كلاسيكي معاصر.</p>
               </div>
             </div>
           </div>
@@ -506,9 +534,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">هوية وجرافيك</span>
-                <h3 class="portfolio-item-title">تصميم مطبوعات وقوائم ضيافة</h3>
-                <p class="portfolio-item-desc">إخراج طباعي متميز يجمع بين الجمالية البصرية وسهولة القراءة لقطاع المطاعم والضيافة.</p>
+                <span class="category-badge" data-i18n="cat_graphic">هوية وجرافيك</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_9_title">تصميم مطبوعات وقوائم ضيافة</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_9_desc">إخراج طباعي متميز يجمع بين الجمالية البصرية وسهولة القراءة لقطاع المطاعم والضيافة.</p>
               </div>
             </div>
           </div>
@@ -525,9 +553,9 @@
                 </div>
               </div>
               <div class="portfolio-meta">
-                <span class="category-badge">تصميم داخلي</span>
-                <h3 class="portfolio-item-title">تصميم درج داخلي معماري</h3>
-                <p class="portfolio-item-desc">عنصر معماري منحوت يربط الطوابق بجمالية انسيابية وإضاءة مدمجة على درجات السلم.</p>
+                <span class="category-badge" data-i18n="cat_interior">تصميم داخلي</span>
+                <h3 class="portfolio-item-title" data-i18n="proj_10_title">تصميم درج داخلي معماري</h3>
+                <p class="portfolio-item-desc" data-i18n="proj_10_desc">عنصر معماري منحوت يربط الطوابق بجمالية انسيابية وإضاءة مدمجة على درجات السلم.</p>
               </div>
             </div>
           </div>
@@ -542,10 +570,10 @@
         <div class="section-header text-center reveal-on-scroll">
           <div class="section-tag">
             <i class="fa-solid fa-list-check"></i>
-            <span>منهجية العمل</span>
+            <span data-i18n="process_tag">منهجية العمل</span>
           </div>
-          <h2 class="section-title">خطوات مدروسة تضمن أعلى درجات الدقة والجودة</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-i18n="process_title">خطوات مدروسة تضمن أعلى درجات الدقة والجودة</h2>
+          <p class="section-description" data-i18n="process_subtitle">
             نتبع مسار عمل منظم من أول جلسة استكشافية حتى تسليم الصور النهائية بدقة 4K.
           </p>
         </div>
@@ -555,8 +583,8 @@
             <div class="step-badge">01</div>
             <div class="step-card">
               <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
-              <h3 class="step-title">الاستكشاف وجمع المتطلبات</h3>
-              <p class="step-text">جلسة نقاش لفهم أهداف العميل، متطلبات المساحة، الميزانية، والاتجاه الفني المفضل (Moodboard).</p>
+              <h3 class="step-title" data-i18n="step_1_title">الاستكشاف وجمع المتطلبات</h3>
+              <p class="step-text" data-i18n="step_1_desc">جلسة نقاش لفهم أهداف العميل، متطلبات المساحة، الميزانية، والاتجاه الفني المفضل (Moodboard).</p>
             </div>
           </div>
 
@@ -564,8 +592,8 @@
             <div class="step-badge">02</div>
             <div class="step-card">
               <div class="step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-              <h3 class="step-title">المخططات ثنائية الأبعاد (2D)</h3>
-              <p class="step-text">إعداد المخططات المعمارية وتوزيع الأثاث والممرات بما يضمن الراحة والاستغلال الأمثل للفراغ.</p>
+              <h3 class="step-title" data-i18n="step_2_title">المخططات ثنائية الأبعاد (2D)</h3>
+              <p class="step-text" data-i18n="step_2_desc">إعداد المخططات المعمارية وتوزيع الأثاث والممرات بما يضمن الراحة والاستغلال الأمثل للفراغ.</p>
             </div>
           </div>
 
@@ -573,8 +601,8 @@
             <div class="step-badge">03</div>
             <div class="step-card">
               <div class="step-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
-              <h3 class="step-title">النمذجة ثلاثية الأبعاد (3D)</h3>
-              <p class="step-text">بناء النموذج الهندسي ثلاثي الأبعاد بكل تفاصيله الدقيقة للأثاث والتشطيبات المعمارية.</p>
+              <h3 class="step-title" data-i18n="step_3_title">النمذجة ثلاثية الأبعاد (3D)</h3>
+              <p class="step-text" data-i18n="step_3_desc">بناء النموذج الهندسي ثلاثي الأبعاد بكل تفاصيله الدقيقة للأثاث والتشطيبات المعمارية.</p>
             </div>
           </div>
 
@@ -582,8 +610,8 @@
             <div class="step-badge">04</div>
             <div class="step-card">
               <div class="step-icon"><i class="fa-solid fa-lightbulb"></i></div>
-              <h3 class="step-title">الإضاءة والإكساء الواقعي</h3>
-              <p class="step-text">تطبيق خامات عالية الجودة وضبط زوايا الإضاءة الطبيعية والاصطناعية لمنح المشهد واقعية فائقة.</p>
+              <h3 class="step-title" data-i18n="step_4_title">الإضاءة والإكساء الواقعي</h3>
+              <p class="step-text" data-i18n="step_4_desc">تطبيق خامات عالية الجودة وضبط زوايا الإضاءة الطبيعية والاصطناعية لمنح المشهد واقعية فائقة.</p>
             </div>
           </div>
 
@@ -591,8 +619,8 @@
             <div class="step-badge">05</div>
             <div class="step-card">
               <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
-              <h3 class="step-title">الريندر النهائي والمعالجة</h3>
-              <p class="step-text">استخراج الصور النهائية بجودة فائقة مع المعالجة اللونية الاحترافية (Post-Production) والتسليم.</p>
+              <h3 class="step-title" data-i18n="step_5_title">الريندر النهائي والمعالجة</h3>
+              <p class="step-text" data-i18n="step_5_desc">استخراج الصور النهائية بجودة فائقة مع المعالجة اللونية الاحترافية (Post-Production) والتسليم.</p>
             </div>
           </div>
         </div>
@@ -605,10 +633,10 @@
         <div class="section-header text-center reveal-on-scroll">
           <div class="section-tag">
             <i class="fa-solid fa-laptop-code"></i>
-            <span>البرامج والأدوات</span>
+            <span data-i18n="skills_tag">البرامج والأدوات</span>
           </div>
-          <h2 class="section-title">تقنيات وبرمجيات متطورة لتحقيق أعلى دقة</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-i18n="skills_title">تقنيات وبرمجيات متطورة لتحقيق أعلى دقة</h2>
+          <p class="section-description" data-i18n="skills_subtitle">
             نعتمد على أفضل البرمجيات الهندسية والإظهارية لضمان سرعة الإنجاز والواقعية المتناهية.
           </p>
         </div>
@@ -674,14 +702,14 @@
               <i class="fa-solid fa-file-pdf"></i>
             </div>
             <div class="pdf-cta-text">
-              <h3>هل ترغب في استعراض ملف الأعمال الكامل بصيغة PDF؟</h3>
-              <p>الملف يحتوي على تفاصيل ومخططات المشاريع وريندرات بدقة عالية ومواصفات الخامات.</p>
+              <h3 data-i18n="pdf_banner_title">هل ترغب في استعراض ملف الأعمال الكامل بصيغة PDF؟</h3>
+              <p data-i18n="pdf_banner_desc">الملف يحتوي على تفاصيل ومخططات المشاريع وريندرات بدقة عالية ومواصفات الخامات.</p>
             </div>
           </div>
           <div class="pdf-cta-action">
             <a href="mohamed-amin-lachkhem-portfolio.pdf" class="btn btn-gold btn-lg" download>
               <i class="fa-solid fa-circle-down"></i>
-              <span>تحميل البورتفوليو الكامل (PDF)</span>
+              <span data-i18n="btn_download_portfolio">تحميل البورتفوليو الكامل (PDF)</span>
             </a>
           </div>
         </div>
@@ -694,10 +722,10 @@
         <div class="section-header text-center reveal-on-scroll">
           <div class="section-tag">
             <i class="fa-solid fa-envelope"></i>
-            <span>تواصل معي</span>
+            <span data-i18n="contact_tag">تواصل معي</span>
           </div>
-          <h2 class="section-title">جاهز لبدء مشروعك المعماري أو الديكوري القادم؟</h2>
-          <p class="section-description">
+          <h2 class="section-title" data-i18n="contact_title">جاهز لبدء مشروعك المعماري أو الديكوري القادم؟</h2>
+          <p class="section-description" data-i18n="contact_subtitle">
             يسعدني استقبال استفساراتك ومناقشة تفاصيل مشروعك لتقديم التصور الأنسب وعرض السعر.
           </p>
         </div>
@@ -708,38 +736,40 @@
             <div class="info-card">
               <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
               <div class="info-details">
-                <h4>الموقع الجغرافي</h4>
-                <p>الدار البيضاء (Casablanca)، المغرب</p>
-                <small>متاح للعمل على المشاريع المحلية والدولية عن بعد</small>
-              </div>
-            </div>
-
-            <div class="info-card">
-              <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
-              <div class="info-details">
-                <h4>واتساب / اتصال مباشر</h4>
-                <p>تواصل فوري لمناقشة تفاصيل المشروع</p>
-                <a href="https://wa.me/212600000000" target="_blank" class="info-link">فتح محادثة واتساب <i class="fa-solid fa-arrow-left"></i></a>
+                <h4 data-i18n="info_loc_title">الموقع الجغرافي</h4>
+                <p data-i18n="info_loc_desc">الدار البيضاء (Casablanca)، المغرب</p>
+                <small data-i18n="info_loc_sub">متاح للعمل على المشاريع المحلية والدولية عن بعد</small>
               </div>
             </div>
 
             <div class="info-card">
               <div class="info-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
               <div class="info-details">
-                <h4>البريد الإلكتروني</h4>
-                <p>استقبال المخططات وطلبات عروض الأسعار</p>
-                <a href="mailto:contact@mohamedamin.com" class="info-link">contact@mohamedamin.com</a>
+                <h4 data-i18n="info_email_title">البريد الإلكتروني</h4>
+                <p data-i18n="info_email_desc">استقبال المخططات وطلبات عروض الأسعار</p>
+                <a href="mailto:lachkhemmohamedamin@gmail.com" class="info-link">lachkhemmohamedamin@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="info-details">
+                <h4 data-i18n="info_phone_title">واتساب / اتصال مباشر</h4>
+                <p>+212 628-993050</p>
+                <a href="https://wa.me/212628993050" target="_blank" class="info-link" id="whatsappLink">
+                  <span data-i18n="info_wa_link">فتح محادثة واتساب فورا</span> <i class="fa-solid fa-arrow-left arrow-icon"></i>
+                </a>
               </div>
             </div>
 
             <!-- Social Links -->
             <div class="social-box">
-              <h4>تابع أعمالي على المنصات:</h4>
+              <h4 data-i18n="social_title">تابع أعمالي وتواصل عبر المنصات:</h4>
               <div class="social-icons">
-                <a href="#" class="social-btn" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
-                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/212600000000" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/leader__design?igsi=dWVqMnJjeG11bA==" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-lachkhem-7bb205330?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://wa.me/212628993050" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:lachkhemmohamedamin@gmail.com" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -747,10 +777,10 @@
           <!-- Form Card -->
           <div class="contact-form-col reveal-on-scroll delay-1">
             <div class="form-wrapper">
-              <h3 class="form-title">أرسل تفاصيل مشروعك</h3>
+              <h3 class="form-title" data-i18n="form_title">أرسل تفاصيل مشروعك</h3>
               <form id="contactForm" onsubmit="return handleFormSubmit(event)">
                 <div class="form-group">
-                  <label for="userName">الاسم الكامل *</label>
+                  <label for="userName" data-i18n="form_name_label">الاسم الكامل *</label>
                   <div class="input-with-icon">
                     <i class="fa-solid fa-user"></i>
                     <input type="text" id="userName" name="name" placeholder="مثال: أحمد المنصوري" required>
@@ -759,43 +789,43 @@
 
                 <div class="form-row">
                   <div class="form-group">
-                    <label for="userEmail">البريد الإلكتروني *</label>
+                    <label for="userEmail" data-i18n="form_email_label">البريد الإلكتروني *</label>
                     <div class="input-with-icon">
                       <i class="fa-solid fa-at"></i>
                       <input type="email" id="userEmail" name="email" placeholder="name@example.com" required>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="userPhone">رقم الهاتف / الواتساب</label>
+                    <label for="userPhone" data-i18n="form_phone_label">رقم الهاتف / الواتساب</label>
                     <div class="input-with-icon">
                       <i class="fa-solid fa-phone"></i>
-                      <input type="tel" id="userPhone" name="phone" placeholder="+212 600 000000">
+                      <input type="tel" id="userPhone" name="phone" placeholder="+212 628-993050">
                     </div>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="projectType">نوع المشروع المطلوب *</label>
+                  <label for="projectType" data-i18n="form_type_label">نوع المشروع المطلوب *</label>
                   <div class="input-with-icon">
                     <i class="fa-solid fa-briefcase"></i>
                     <select id="projectType" name="projectType" required>
-                      <option value="" disabled selected>اختر الخدمة المطلوبة</option>
-                      <option value="interior">تصميم داخلي وديكور سكني / تجاري</option>
-                      <option value="exterior">إظهار معماري ثلاثي الأبعاد (3D ArchViz)</option>
-                      <option value="branding">تصميم هوية بصرية وجرافيك</option>
-                      <option value="full">مشروع متكامل (تصميم داخلي + ريندر + هوية)</option>
-                      <option value="other">استشارة أو خدمة أخرى</option>
+                      <option value="" disabled selected data-i18n="opt_select">اختر الخدمة المطلوبة</option>
+                      <option value="interior" data-i18n="opt_interior">تصميم داخلي وديكور سكني / تجاري</option>
+                      <option value="exterior" data-i18n="opt_exterior">إظهار معماري ثلاثي الأبعاد (3D ArchViz)</option>
+                      <option value="branding" data-i18n="opt_branding">تصميم هوية بصرية وجرافيك</option>
+                      <option value="full" data-i18n="opt_full">مشروع متكامل (تصميم داخلي + ريندر + هوية)</option>
+                      <option value="other" data-i18n="opt_other">استشارة أو خدمة أخرى</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="userMessage">نبذة عن المشروع والمتطلبات *</label>
+                  <label for="userMessage" data-i18n="form_msg_label">نبذة عن المشروع والمتطلبات *</label>
                   <textarea id="userMessage" name="message" rows="4" placeholder="اكتب وصفاً مختصراً للمساحة، الموقع، النمط المفضل، والجدول الزمني..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitBtn">
-                  <span>إرسال الرسالة</span>
+                  <span data-i18n="btn_send_msg">إرسال الرسالة</span>
                   <i class="fa-solid fa-paper-plane"></i>
                 </button>
                 <div class="form-feedback" id="formFeedback"></div>
@@ -834,9 +864,9 @@
   </div>
 
   <!-- Floating WhatsApp Quick Button -->
-  <a href="https://wa.me/212600000000" target="_blank" class="floating-whatsapp" aria-label="تواصل عبر واتساب">
+  <a href="https://wa.me/212628993050" target="_blank" class="floating-whatsapp" aria-label="تواصل عبر واتساب">
     <i class="fa-brands fa-whatsapp"></i>
-    <span class="whatsapp-tooltip">تواصل عبر واتساب</span>
+    <span class="whatsapp-tooltip">WhatsApp: +212 628-993050</span>
   </a>
 
   <!-- ==================== FOOTER ==================== -->
@@ -847,34 +877,34 @@
           <img src="assets/logo-removebg-preview.png" alt="Logo" class="logo-img">
           <span class="logo-text">MOHAMED AMIN<small>INTERIOR & 3D ARCHVIZ</small></span>
         </div>
-        <p class="footer-tagline">
+        <p class="footer-tagline" data-i18n="footer_tagline">
           تصاميم معمارية وداخلية استثنائية وإظهار بصري واقعي يرتقي برؤية مشاريعكم.
         </p>
       </div>
 
       <div class="footer-links">
-        <h4>روابط سريعة</h4>
+        <h4 data-i18n="footer_links_title">روابط سريعة</h4>
         <ul>
-          <li><a href="#hero">الرئيسية</a></li>
-          <li><a href="#about">عن المصمم</a></li>
-          <li><a href="#services">الخدمات</a></li>
-          <li><a href="#portfolio">المشاريع</a></li>
-          <li><a href="#process">منهجية العمل</a></li>
-          <li><a href="#contact">تواصل معي</a></li>
+          <li><a href="#hero" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#about" data-i18n="nav_about">عن المصمم</a></li>
+          <li><a href="#services" data-i18n="nav_services">الخدمات</a></li>
+          <li><a href="#portfolio" data-i18n="nav_portfolio">المشاريع</a></li>
+          <li><a href="#process" data-i18n="nav_process">منهجية العمل</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">تواصل معي</a></li>
         </ul>
       </div>
 
       <div class="footer-contact">
-        <h4>معلومات الاتصال</h4>
-        <p><i class="fa-solid fa-location-dot"></i> الدار البيضاء، المغرب</p>
-        <p><i class="fa-solid fa-envelope"></i> contact@mohamedamin.com</p>
-        <p><i class="fa-brands fa-whatsapp"></i> +212 600 000 000</p>
+        <h4 data-i18n="footer_contact_title">معلومات الاتصال</h4>
+        <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer_loc">الدار البيضاء، المغرب</span></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:lachkhemmohamedamin@gmail.com">lachkhemmohamedamin@gmail.com</a></p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/212628993050" target="_blank">+212 628-993050</a></p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="container footer-bottom-content">
-        <p>© 2026 جميع الحقوق محفوظة | محمد أمين لشخم (Mohamed Amin Lachkhem)</p>
+        <p data-i18n="footer_copyright">© 2026 جميع الحقوق محفوظة | محمد أمين لشخم (Mohamed Amin Lachkhem)</p>
         <a href="#hero" class="back-to-top" aria-label="الرجوع لأعلى الصفحة">
           <i class="fa-solid fa-arrow-up"></i>
         </a>
@@ -886,3 +916,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
