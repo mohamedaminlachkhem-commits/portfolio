@@ -167,19 +167,19 @@ header {
   cursor: pointer;
 }
 
-/* ================= 1. Top Showcase Banner (الخانة العلوية تماماً) ================= */
+/* ================= 1. Top Showcase Banner (بدون تكرار الاسم) ================= */
 .top-showcase-banner {
   position: relative;
   width: 100%;
-  min-height: 280px;
-  background-image: linear-gradient(rgba(10, 13, 20, 0.7), rgba(10, 13, 20, 0.92)), url('assets/interior-lounge.jpg');
+  min-height: 250px;
+  background-image: linear-gradient(rgba(10, 13, 20, 0.65), rgba(10, 13, 20, 0.92)), url('assets/interior-lounge.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 3.5rem 1.5rem;
+  padding: 3rem 1.5rem;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -189,34 +189,26 @@ header {
   max-width: 900px;
 }
 
-.brand-yellow-tag {
-  color: #fbbf24;
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 0.6rem;
-  text-transform: uppercase;
-}
-
-.banner-main-title {
-  font-size: 3.2rem;
+.banner-brand-title {
+  font-size: 3.4rem;
   font-weight: 900;
   color: #ffffff;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
   line-height: 1.15;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-family: var(--font-en);
 }
 
 .banner-sub-text {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   color: #cbd5e1;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 /* ================= 2. Profile Intro Section (القسم الأوسط) ================= */
 .profile-intro-section {
-  padding: 3.5rem 1.5rem;
+  padding: 4rem 1.5rem 3rem;
 }
 
 .section-container {
@@ -232,6 +224,16 @@ header {
   align-items: center;
 }
 
+.brand-yellow-tag {
+  color: #fbbf24;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
 .gold-badge {
   background: rgba(197, 160, 89, 0.15);
   color: var(--primary-gold);
@@ -239,20 +241,23 @@ header {
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
-  display: inline-block;
+  display: block;
+  width: fit-content;
   margin-bottom: 1rem;
   border: 1px solid rgba(197, 160, 89, 0.3);
 }
 
 .intro-name {
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-size: 2.8rem;
+  font-weight: 900;
   color: #ffffff;
-  margin-bottom: 0.3rem;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-en);
 }
 
 .intro-title {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--primary-gold);
   font-weight: 700;
   margin-bottom: 1.2rem;
@@ -290,7 +295,7 @@ header {
   flex-wrap: wrap;
 }
 
-/* الصورة الشخصية المربعة */
+/* إطار الصورة الشخصية المربعة */
 .intro-img-col {
   display: flex;
   justify-content: center;
@@ -313,6 +318,7 @@ header {
   object-fit: cover;
   border-radius: 12px;
   display: block;
+  background: #1e293b;
 }
 
 .square-accent-badge {
@@ -756,11 +762,13 @@ body[dir="ltr"] .lightbox-close { right: auto; left: 15px; }
 
 /* ================= شاشات الهواتف ================= */
 @media (max-width: 900px) {
-  .banner-main-title { font-size: 2.3rem; }
+  .banner-brand-title { font-size: 2.5rem; }
   .profile-intro-grid {
     grid-template-columns: 1fr;
     text-align: center;
   }
+  .intro-name { font-size: 2.2rem; }
+  .gold-badge { margin: 0 auto 1rem; }
   .intro-description { margin: 0 auto 2rem; }
   .intro-buttons { justify-content: center; }
   .software-tags-row { justify-content: center; }
