@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohamed Amin Lachkhem | Interior & 3D ArchViz</title>
   
-  <!-- الخطوط -->
+  <!-- أيقونة الموقع (Favicon) -->
+  <link rel="icon" type="image/png" href="assets/logo-removebg-preview.png">
+  <link rel="apple-touch-icon" href="assets/logo-removebg-preview.png">
+
+  <!-- تسريع الاتصال بخوادم الخطوط والأيقونات -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- الخطوط مع swap لمنع تأخير ظهور النصوص -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- الأيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- ملف التنسيقات -->
-  <link rel="stylesheet" href="styles.css?v=9.0">
+  <link rel="stylesheet" href="styles.css?v=11.0">
 </head>
 <body>
 
@@ -22,8 +27,7 @@
   <header>
     <div class="nav-container">
       <div class="logo-wrapper">
-        <img src="assets/logo-removebg-preview.png" alt="Leder Design Logo" class="nav-logo-img">
-        
+        <img src="assets/logo-removebg-preview.png" alt="Leder Design Logo" class="nav-logo-img" width="42" height="42" loading="eager">
         <div class="logo-text">
           <span class="brand-name">MOHAMED AMIN</span>
           <span class="brand-sub">INTERIOR & 3D ARCHVIZ</span>
@@ -41,20 +45,17 @@
       </ul>
 
       <div class="nav-actions">
-        <!-- محول اللغات (بدون أيقونة والإنجليزية هي الافتراضية) -->
         <select class="lang-selector" id="langSelector" onchange="changeLanguage(this.value)">
           <option value="en" selected>English</option>
           <option value="fr">Français</option>
           <option value="ar">العربية</option>
         </select>
 
-        <!-- زر تحميل البورتفوليو -->
         <a href="mohamed-amin-lachkhem-portfolio.pdf" download class="btn-gold d-none-mobile">
           <i class="fa-solid fa-download"></i>
           <span data-i18n="btn_portfolio">Download Portfolio</span>
         </a>
 
-        <!-- زر القائمة للهواتف -->
         <button class="mobile-toggle" id="menuToggle" aria-label="Toggle Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -77,13 +78,11 @@
       
       <div class="intro-text-col">
         <div class="brand-yellow-tag" data-i18n="hero_brand_sub">LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D</div>
-        
         <span class="gold-badge" data-i18n="hero_badge">Welcome to my Creative Space</span>
         
         <h2 class="intro-name">Mohamed Amin Lachkhem</h2>
         <h3 class="intro-title" data-i18n="hero_spec">Interior Designer & 3D Architectural Visualizer</h3>
 
-        <!-- وسوم البرامج -->
         <div class="software-tags-row">
           <span>#3dsMax</span>
           <span>#VRay7</span>
@@ -113,7 +112,7 @@
       <!-- صورتك الشخصية -->
       <div class="intro-img-col">
         <div class="profile-square-box">
-          <img src="assets/profile.jpg" alt="Mohamed Amin Lachkhem" class="profile-square-img">
+          <img src="assets/profile.jpg" alt="Mohamed Amin Lachkhem" class="profile-square-img" width="320" height="320" loading="eager" decoding="async">
           <div class="square-accent-badge">
             <i class="fa-solid fa-cube"></i> <span data-i18n="badge_archviz">Leder Design ArchViz</span>
           </div>
@@ -150,7 +149,7 @@
     </div>
   </section>
 
-  <!-- ================= 4. معرض المشاريع (مع ميزة التكبير) ================= -->
+  <!-- ================= 4. معرض المشاريع (مع التحميل الكسول السريع) ================= -->
   <section class="section-container" id="projects">
     <div class="section-header-flex">
       <h2 class="section-title" data-i18n="title_projects">Featured Projects</h2>
@@ -161,7 +160,7 @@
       <!-- Project 1 -->
       <div class="project-card" onclick="openLightbox('assets/interior-salon.jpg', 'Luxury Contemporary Living Room', 'Interior Design', 'Warm harmony of wood textures, ambient recessed lighting, and sleek modern furniture.')">
         <div class="img-zoom-container">
-          <img src="assets/interior-salon.jpg" alt="Living Room" class="project-img">
+          <img src="assets/interior-salon.jpg" alt="Living Room" class="project-img" loading="lazy" decoding="async">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -174,7 +173,7 @@
       <!-- Project 2 -->
       <div class="project-card" onclick="openLightbox('assets/exterior-villa-pool.jpg', 'Modern Residential Villa with Pool', '3D ArchViz Exterior', 'Photorealistic architectural simulation of villa facade, pool deck, and lush landscape.')">
         <div class="img-zoom-container">
-          <img src="assets/exterior-villa-pool.jpg" alt="Villa Exterior" class="project-img">
+          <img src="assets/exterior-villa-pool.jpg" alt="Villa Exterior" class="project-img" loading="lazy" decoding="async">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -187,7 +186,7 @@
       <!-- Project 3 -->
       <div class="project-card" onclick="openLightbox('assets/interior-bedroom.jpg', 'Serene Master Bedroom', 'Interior Design', 'Earthy soothing tones, tailored bedhead wall paneling, and warm relaxed lighting.')">
         <div class="img-zoom-container">
-          <img src="assets/interior-bedroom.jpg" alt="Bedroom" class="project-img">
+          <img src="assets/interior-bedroom.jpg" alt="Bedroom" class="project-img" loading="lazy" decoding="async">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -200,7 +199,7 @@
       <!-- Project 4 -->
       <div class="project-card" onclick="openLightbox('assets/graphic-brand.jpg', 'Brand Identity & Packaging', 'Branding & Graphics', 'Complete visual identity, logo refinement, and luxury stationery packaging design.')">
         <div class="img-zoom-container">
-          <img src="assets/graphic-brand.jpg" alt="Branding" class="project-img">
+          <img src="assets/graphic-brand.jpg" alt="Branding" class="project-img" loading="lazy" decoding="async">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -213,7 +212,7 @@
       <!-- Project 5 -->
       <div class="project-card" onclick="openLightbox('assets/interior-office.jpg', 'Executive Ergonomic Office', 'Interior Design', 'Balanced professional atmosphere maximizing productivity and ergonomic elegance.')">
         <div class="img-zoom-container">
-          <img src="assets/interior-office.jpg" alt="Executive Office" class="project-img">
+          <img src="assets/interior-office.jpg" alt="Executive Office" class="project-img" loading="lazy" decoding="async">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -226,7 +225,7 @@
       <!-- Project 6 -->
       <div class="project-card" onclick="openLightbox('assets/exterior-facade.jpg', 'Modern Architectural Facade Design', '3D ArchViz Exterior', 'Exterior architectural visualization highlighting massing, night illumination, and stone-glass harmony.')">
         <div class="img-zoom-container">
-          <img src="assets/exterior-facade.jpg" alt="Facade Architecture" class="project-img">
+          <img src="assets/exterior-facade.jpg" alt="Facade Architecture" class="project-img" loading="lazy" decoding="async">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -271,131 +270,4 @@
     
     <div class="tools-categories-grid">
       <div class="tool-group-box">
-        <h3 class="tool-group-title"><i class="fa-solid fa-cube gold-icon"></i> <span data-i18n="tool_group_3d">3D Modeling & Visualization Software</span></h3>
-        <div class="tools-container">
-          <span class="tool-tag"><i class="fa-solid fa-cubes"></i> 3ds Max</span>
-          <span class="tool-tag"><i class="fa-solid fa-sun"></i> Corona Renderer</span>
-          <span class="tool-tag"><i class="fa-solid fa-bolt"></i> V-Ray 7</span>
-          <span class="tool-tag"><i class="fa-solid fa-shapes"></i> Blender</span>
-          <span class="tool-tag"><i class="fa-solid fa-layer-group"></i> SketchUp</span>
-        </div>
-      </div>
-
-      <div class="tool-group-box">
-        <h3 class="tool-group-title"><i class="fa-solid fa-paintbrush gold-icon"></i> <span data-i18n="tool_group_graphics">Graphic Design & Post-Production</span></h3>
-        <div class="tools-container">
-          <span class="tool-tag"><i class="fa-solid fa-image"></i> Adobe Photoshop</span>
-          <span class="tool-tag"><i class="fa-solid fa-book-open"></i> Adobe InDesign</span>
-          <span class="tool-tag"><i class="fa-solid fa-pen-nib"></i> Adobe Illustrator</span>
-        </div>
-      </div>
-
-      <div class="tool-group-box">
-        <h3 class="tool-group-title"><i class="fa-solid fa-ruler-combined gold-icon"></i> <span data-i18n="tool_group_cad">CAD & Architectural Drafting</span></h3>
-        <div class="tools-container">
-          <span class="tool-tag"><i class="fa-solid fa-building"></i> ArchiCAD</span>
-          <span class="tool-tag"><i class="fa-solid fa-pen-ruler"></i> AutoCAD</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= 7. قسم طلب المشاريع والتواصل ================= -->
-  <footer class="contact-section" id="contact">
-    <div class="section-container" style="padding-top: 0;">
-      
-      <!-- نموذج طلب التصميم التفاعلي -->
-      <div class="request-box" id="request-form">
-        <h2 class="section-title" style="margin-bottom: 1rem;" data-i18n="form_heading">Request a Project / Consultation</h2>
-        <p class="form-sub" data-i18n="form_sub">Have an upcoming villa, apartment, or commercial space? Fill in your details and I'll contact you promptly:</p>
-
-        <form id="projectForm" onsubmit="event.preventDefault();">
-          <div class="form-row">
-            <div class="form-group">
-              <label data-i18n="lbl_name">Full Name</label>
-              <input type="text" id="clientName" placeholder="e.g. Architect John" required>
-            </div>
-            <div class="form-group">
-              <label data-i18n="lbl_project_type">Project Type</label>
-              <select id="projectType">
-                <option value="Residential Villa / Apartment Interior">Residential Villa / Apartment Interior</option>
-                <option value="3D Architectural Visualization (Exterior)">3D Architectural Visualization (Exterior)</option>
-                <option value="Commercial / Office Space Design">Commercial / Office Space Design</option>
-                <option value="Executive Drawing & Consultation">Executive Drawing & Consultation</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label data-i18n="lbl_desc">Project Details (Description)</label>
-            <textarea id="projectDetails" rows="4" placeholder="Briefly describe the area, number of rooms, desired style, or any specific requirements..." required></textarea>
-          </div>
-
-          <div class="form-actions">
-            <!-- إرسال واتساب -->
-            <button type="button" class="btn-whatsapp" onclick="sendViaWhatsApp()">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span data-i18n="btn_send_wa">Send via WhatsApp</span>
-            </button>
-            <!-- إرسال بريد -->
-            <button type="button" class="btn-email" onclick="sendViaEmail()">
-              <i class="fa-solid fa-envelope"></i>
-              <span data-i18n="btn_send_mail">Send via Email</span>
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <!-- بطاقات التواصل المباشرة -->
-      <h3 style="color: #fff; margin: 3.5rem 0 1.5rem;" data-i18n="direct_contact_title">Direct Contact Information</h3>
-      <div class="contact-grid">
-        <!-- البريد الإلكتروني الصحيح -->
-        <a href="mailto:lachkhemmohamedamin@gmail.com" class="contact-card">
-          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div class="contact-info">
-            <h4 data-i18n="c_email_lbl">Email Address</h4>
-            <p>lachkhemmohamedamin@gmail.com</p>
-          </div>
-        </a>
-
-        <!-- واتساب / هاتف -->
-        <a href="https://wa.me/212628993050" target="_blank" class="contact-card">
-          <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
-          <div class="contact-info">
-            <h4 data-i18n="c_phone_lbl">Phone / WhatsApp</h4>
-            <p dir="ltr">+212 628 993 050</p>
-          </div>
-        </a>
-
-        <!-- المقر -->
-        <div class="contact-card">
-          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="contact-info">
-            <h4 data-i18n="c_loc_lbl">Location & Coverage</h4>
-            <p data-i18n="c_loc_val">Morocco (Casablanca / Fes) & Worldwide</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Mohamed Amin Lachkhem. <span data-i18n="rights">All rights reserved.</span></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- نافذة تكبير الصور -->
-  <div class="lightbox-modal" id="imageLightbox" onclick="closeLightbox(event)">
-    <div class="lightbox-content">
-      <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
-      <img src="" alt="Zoomed Project" id="lightboxImg">
-      <div class="lightbox-caption">
-        <span class="lightbox-cat" id="lightboxCat"></span>
-        <h3 class="lightbox-title" id="lightboxTitle"></h3>
-        <p class="lightbox-desc" id="lightboxDesc"></p>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js?v=9.0"></script>
-</body>
-</html>
+        <h3 class="tool-group-title"><i class="fa-solid fa-cube gold-icon"></i> <span data-i18
