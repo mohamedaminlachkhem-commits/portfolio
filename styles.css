@@ -29,13 +29,13 @@ body {
   background-size: cover;
   background-position: center;
   color: var(--text-main);
-  font-family: var(--font-ar);
+  font-family: var(--font-en);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-body[dir="ltr"] {
-  font-family: var(--font-en);
+body[dir="rtl"] {
+  font-family: var(--font-ar);
 }
 
 a {
@@ -181,7 +181,7 @@ header {
   cursor: pointer;
 }
 
-/* ================= 1. البانر المعماري الكبير (Top Banner) ================= */
+/* ================= 1. Top Banner ================= */
 .top-showcase-banner {
   position: relative;
   width: 100%;
@@ -222,7 +222,7 @@ header {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* ================= 2. قسم النبذة (مع مباعدة فسيحة) ================= */
+/* ================= 2. Profile Intro Section ================= */
 .profile-intro-section {
   padding: 5.5rem 1.5rem 3.5rem;
 }
@@ -311,7 +311,7 @@ header {
   flex-wrap: wrap;
 }
 
-/* إطار الصورة الشخصية المربعة */
+/* صورة شخصية مربعة */
 .intro-img-col {
   display: flex;
   justify-content: center;
@@ -340,7 +340,7 @@ header {
 .square-accent-badge {
   position: absolute;
   bottom: -12px;
-  right: 15px;
+  left: 15px;
   background: var(--bg-card);
   border: 1px solid var(--primary-gold);
   color: var(--primary-gold);
@@ -353,9 +353,9 @@ header {
   align-items: center;
   gap: 0.4rem;
 }
-body[dir="ltr"] .square-accent-badge { right: auto; left: 15px; }
+body[dir="rtl"] .square-accent-badge { left: auto; right: 15px; }
 
-/* ================= العناوين والخدمات ================= */
+/* ================= Titles & Cards ================= */
 .section-title {
   font-size: 1.8rem;
   font-weight: 800;
@@ -368,13 +368,13 @@ body[dir="ltr"] .square-accent-badge { right: auto; left: 15px; }
   content: '';
   position: absolute;
   bottom: -8px;
-  right: 0;
+  left: 0;
   width: 50px;
   height: 3px;
   background: var(--primary-gold);
   border-radius: 2px;
 }
-body[dir="ltr"] .section-title::after { right: auto; left: 0; }
+body[dir="rtl"] .section-title::after { left: auto; right: 0; }
 
 .section-header-flex {
   display: flex;
@@ -420,7 +420,7 @@ body[dir="ltr"] .section-title::after { right: auto; left: 0; }
 .service-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; color: #ffffff; }
 .service-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
 
-/* ================= شبكة المشاريع وتكبير الصور ================= */
+/* Projects */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -514,7 +514,7 @@ body[dir="ltr"] .section-title::after { right: auto; left: 0; }
 .workflow-step h4 { font-size: 1rem; color: #ffffff; margin-bottom: 0.4rem; }
 .workflow-step p { font-size: 0.85rem; color: var(--text-muted); }
 
-/* ================= تصنيفات البرامج العامة ================= */
+/* Tools */
 .tools-categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -688,7 +688,7 @@ body[dir="ltr"] .section-title::after { right: auto; left: 0; }
   margin-top: 3rem;
 }
 
-/* ================= نافذة تكبير الصور (Lightbox) ================= */
+/* ================= Lightbox Modal ================= */
 .lightbox-modal {
   display: none;
   position: fixed;
@@ -737,7 +737,7 @@ body[dir="ltr"] .section-title::after { right: auto; left: 0; }
   z-index: 10;
 }
 
-body[dir="ltr"] .lightbox-close { right: auto; left: 15px; }
+body[dir="rtl"] .lightbox-close { right: auto; left: 15px; }
 
 .lightbox-content img {
   width: 100%;
@@ -776,7 +776,7 @@ body[dir="ltr"] .lightbox-close { right: auto; left: 15px; }
   to { opacity: 1; }
 }
 
-/* ================= شاشات الهواتف ================= */
+/* ================= Mobile Queries ================= */
 @media (max-width: 900px) {
   .banner-brand-title { font-size: 2.7rem; }
   .top-showcase-banner { min-height: 380px; padding: 4rem 1.5rem; }
