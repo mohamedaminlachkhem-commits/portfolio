@@ -8,13 +8,13 @@
   <!-- الخطوط -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- مكتبة الأيقونات -->
+  <!-- الأيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- ملف التنسيقات -->
-  <link rel="stylesheet" href="styles.css?v=4.0">
+  <link rel="stylesheet" href="styles.css?v=5.0">
 </head>
 <body>
 
@@ -58,19 +58,28 @@
     </div>
   </header>
 
-  <!-- ================= الواجهة الرئيسية العلوية (Hero Banner) ================= -->
-  <section class="hero-section" id="home">
-    <div class="hero-banner-overlay"></div>
-    <div class="section-container hero-grid" id="about">
-      <div class="hero-content">
-        <!-- الشعار والوسوم العلوية المطلوبة -->
-        <span class="hero-tagline" data-i18n="hero_brand_sub">LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D</span>
-        
-        <h1 class="hero-title">Mohamed Amin Lachkhem</h1>
-        <h2 class="hero-subtitle" data-i18n="hero_spec">مصمم داخلي وخبير إظهار معماري ثلاثي الأبعاد</h2>
-        
-        <!-- الوسوم العلوية للبرامج -->
-        <div class="hero-hashtags">
+  <!-- ================= 1. الخانة العلوية تماماً (Top Header Banner) ================= -->
+  <section class="top-showcase-banner" id="home">
+    <div class="banner-backdrop"></div>
+    <div class="banner-content">
+      <div class="brand-yellow-tag" data-i18n="hero_brand_sub">LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D</div>
+      <h1 class="banner-main-title">Mohamed Amin Lachkhem</h1>
+      <p class="banner-sub-text" data-i18n="hero_spec">Interior Designer & 3D Architectural Visualizer</p>
+    </div>
+  </section>
+
+  <!-- ================= 2. قسم النبذة مقابل الصورة الشخصية المربعة (About & Profile) ================= -->
+  <section class="section-container profile-intro-section" id="about">
+    <div class="profile-intro-grid">
+      
+      <!-- العمود النصي -->
+      <div class="intro-text-col">
+        <span class="gold-badge" data-i18n="hero_badge">مرحباً بك في مساحتي الإبداعية</span>
+        <h2 class="intro-name" data-i18n="hero_name">محمد أمين لشخم</h2>
+        <h3 class="intro-title" data-i18n="intro_title_tag">مصمم داخلي وخبير محاكاة معمارية 3D</h3>
+
+        <!-- وسوم البرامج المطلوبة -->
+        <div class="software-tags-row">
           <span>#3dsMax</span>
           <span>#VRay7</span>
           <span>#ArchiCAD</span>
@@ -80,11 +89,11 @@
           <span>#AutoCAD</span>
         </div>
 
-        <p class="hero-desc" data-i18n="hero_bio">
-          متخصص في ابتكار وتصميم الفراغات المعمارية الحديثة، وتحويل المخططات الهندسية إلى مشاهد ثلاثية الأبعاد فائقة الواقعية والدقة البصرية.
+        <p class="intro-description" data-i18n="hero_bio">
+          متخصص في ابتكار وتصميم الفراغات المعمارية الحديثة، وتحويل المخططات الهندسية إلى مشاهد ثلاثية الأبعاد فائقة الواقعية والدقة البصرية، مع مراعاة أدق التفاصيل في توزيع الإضاءة، تناسق الخامات، وجودة الإخراج التنفيذي.
         </p>
 
-        <div class="hero-btns">
+        <div class="intro-buttons">
           <a href="#request-form" class="btn-gold">
             <i class="fa-solid fa-paper-plane"></i>
             <span data-i18n="btn_order_project">طلب تصميم مشروع</span>
@@ -95,18 +104,21 @@
           </a>
         </div>
       </div>
-      
-      <!-- إطار الصورة المستطيل الأنيق -->
-      <div class="hero-img-wrapper">
-        <div class="profile-rect-container">
-          <img src="assets/interior-lounge.jpg" alt="Mohamed Amin Lachkhem Design" class="profile-rect-img" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800'">
-          <div class="rect-badge" data-i18n="badge_archviz">Architecture & 3D Visualizer</div>
+
+      <!-- العمود المقابل: الصورة الشخصية المربعة -->
+      <div class="intro-img-col">
+        <div class="profile-square-box">
+          <img src="assets/profile.jpg" alt="Mohamed Amin Lachkhem" class="profile-square-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600'">
+          <div class="square-accent-badge">
+            <i class="fa-solid fa-cube"></i> <span data-i18n="badge_archviz">Leder Design ArchViz</span>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ================= قسم الخدمات (Services) ================= -->
+  <!-- ================= 3. قسم الخدمات (Services) ================= -->
   <section class="section-container" id="services">
     <h2 class="section-title" data-i18n="nav_services">الخدمات</h2>
     <div class="services-grid">
@@ -133,7 +145,7 @@
     </div>
   </section>
 
-  <!-- ================= قسم معرض المشاريع (مع ميزة التكبير) ================= -->
+  <!-- ================= 4. قسم معرض المشاريع (مع ميزة التكبير Lightbox) ================= -->
   <section class="section-container" id="projects">
     <div class="section-header-flex">
       <h2 class="section-title" data-i18n="title_projects">معرض المشاريع</h2>
@@ -208,7 +220,7 @@
     </div>
   </section>
 
-  <!-- ================= قسم منهجية العمل (Workflow) ================= -->
+  <!-- ================= 5. قسم منهجية العمل (Workflow) ================= -->
   <section class="section-container" id="workflow">
     <h2 class="section-title" data-i18n="nav_workflow">منهجية العمل</h2>
     <div class="workflow-grid">
@@ -235,7 +247,7 @@
     </div>
   </section>
 
-  <!-- ================= قسم البرامج والتطبيقات العامة (Tools) ================= -->
+  <!-- ================= 6. قسم البرامج والتطبيقات العامة (Tools) ================= -->
   <section class="section-container" id="tools">
     <h2 class="section-title" data-i18n="nav_tools">البرامج والأدوات</h2>
     
@@ -273,7 +285,7 @@
     </div>
   </section>
 
-  <!-- ================= قسم طلب المشاريع والتواصل ================= -->
+  <!-- ================= 7. قسم طلب المشاريع والتواصل ================= -->
   <footer class="contact-section" id="contact">
     <div class="section-container" style="padding-top: 0;">
       
@@ -286,7 +298,7 @@
           <div class="form-row">
             <div class="form-group">
               <label data-i18n="lbl_name">الاسم الكريم</label>
-              <input type="text" id="clientName" placeholder="مثال: المهندس يوسف" required>
+              <input type="text" id="clientName" placeholder="مثال: يوسف العلمي" required>
             </div>
             <div class="form-group">
               <label data-i18n="lbl_project_type">نوع المشروع</label>
@@ -369,7 +381,7 @@
     </div>
   </div>
 
-  <!-- ربط ملف JavaScript -->
-  <script src="script.js?v=4.0"></script>
+  <!-- ملف JavaScript -->
+  <script src="script.js?v=5.0"></script>
 </body>
 </html>
