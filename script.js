@@ -11,9 +11,12 @@ const translations = {
     btn_portfolio: "تحميل البورتفوليو",
     hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
     hero_spec: "مصمم داخلي وخبير إظهار معماري ثلاثي الأبعاد",
-    hero_bio: "متخصص في ابتكار وتصميم الفراغات المعمارية الحديثة، وتحويل المخططات الهندسية إلى مشاهد ثلاثية الأبعاد فائقة الواقعية والدقة البصرية.",
+    hero_badge: "مرحباً بك في مساحتي الإبداعية",
+    hero_name: "محمد أمين لشخم",
+    intro_title_tag: "مصمم داخلي وخبير محاكاة معمارية 3D",
+    hero_bio: "متخصص في ابتكار وتصميم الفراغات المعمارية الحديثة، وتحويل المخططات الهندسية إلى مشاهد ثلاثية الأبعاد فائقة الواقعية والدقة البصرية، مع مراعاة أدق التفاصيل في توزيع الإضاءة، تناسق الخامات، وجودة الإخراج التنفيذي.",
     btn_order_project: "طلب تصميم مشروع",
-    badge_archviz: "Architecture & 3D Visualizer",
+    badge_archviz: "Leder Design ArchViz",
     s1_title: "التصميم الداخلي السكني والتجاري",
     s1_desc: "تصميم وتوزيع المساحات للفيلات والشقق والمحلات بأسلوب راقٍ يوازن بين الجمالية والاستغلال الوظيفي.",
     s2_title: "الإظهار المعماري ثلاثي الأبعاد (3D ArchViz)",
@@ -75,9 +78,12 @@ const translations = {
     btn_portfolio: "Download Portfolio",
     hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
     hero_spec: "Interior Designer & 3D Architectural Visualizer",
+    hero_badge: "Welcome to my Creative Space",
+    hero_name: "Mohamed Amin Lachkhem",
+    intro_title_tag: "Interior Designer & 3D Visualizer",
     hero_bio: "Specialized in creating modern architectural spaces and turning blueprints into photorealistic 3D renders with exceptional visual fidelity.",
     btn_order_project: "Request a Design Project",
-    badge_archviz: "Architecture & 3D Visualizer",
+    badge_archviz: "Leder Design ArchViz",
     s1_title: "Residential & Commercial Interiors",
     s1_desc: "Refined spatial planning for villas, apartments, and retail blending elegance and functionality.",
     s2_title: "3D Architectural Visualization (ArchViz)",
@@ -139,9 +145,12 @@ const translations = {
     btn_portfolio: "Télécharger Portfolio",
     hero_brand_sub: "LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D",
     hero_spec: "Architecte d'Intérieur & Expert Rendu 3D",
+    hero_badge: "Bienvenue dans mon espace créatif",
+    hero_name: "Mohamed Amin Lachkhem",
+    intro_title_tag: "Architecte d'Intérieur & Rendu 3D",
     hero_bio: "Spécialisé dans la création d'espaces modernes et la transformation de plans en visuels 3D photoréalistes d'une grande précision.",
     btn_order_project: "Commander un projet",
-    badge_archviz: "Architecture & 3D Visualizer",
+    badge_archviz: "Leder Design ArchViz",
     s1_title: "Architecture d'Intérieur Résidentielle & Commerciale",
     s1_desc: "Aménagement d'espace raffiné pour villas, appartements et boutiques alliant esthétique et fonctionnalité.",
     s2_title: "Visualisation Architecturale 3D (ArchViz)",
@@ -261,11 +270,10 @@ function openLightbox(src, title, cat, desc) {
   descEl.textContent = desc;
 
   modal.classList.add('active');
-  document.body.style.overflow = 'hidden'; // منع التمرير في الخلفية
+  document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox(event) {
-  // إغلاق عند الضغط على زر الإغلاق أو الخلفية الداكنة
   if (event.target.classList.contains('lightbox-modal') || event.target.classList.contains('lightbox-close') || event.key === 'Escape') {
     const modal = document.getElementById('imageLightbox');
     modal.classList.remove('active');
@@ -273,7 +281,6 @@ function closeLightbox(event) {
   }
 }
 
-// زر Escape لإغلاق النافذة
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     const modal = document.getElementById('imageLightbox');
@@ -284,7 +291,7 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-// ================= القائمة المتجاوبة واللغة =================
+// ================= تشغيل القائمة للهواتف واستعادة اللغة =================
 window.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
