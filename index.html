@@ -270,4 +270,125 @@
     
     <div class="tools-categories-grid">
       <div class="tool-group-box">
-        <h3 class="tool-group-title"><i class="fa-solid fa-cube gold-icon"></i> <span data-i18
+        <h3 class="tool-group-title"><i class="fa-solid fa-cube gold-icon"></i> <span data-i18n="tool_group_3d">3D Modeling & Visualization Software</span></h3>
+        <div class="tools-container">
+          <span class="tool-tag"><i class="fa-solid fa-cubes"></i> 3ds Max</span>
+          <span class="tool-tag"><i class="fa-solid fa-sun"></i> Corona Renderer</span>
+          <span class="tool-tag"><i class="fa-solid fa-bolt"></i> V-Ray 7</span>
+          <span class="tool-tag"><i class="fa-solid fa-shapes"></i> Blender</span>
+          <span class="tool-tag"><i class="fa-solid fa-layer-group"></i> SketchUp</span>
+        </div>
+      </div>
+
+      <div class="tool-group-box">
+        <h3 class="tool-group-title"><i class="fa-solid fa-paintbrush gold-icon"></i> <span data-i18n="tool_group_graphics">Graphic Design & Post-Production</span></h3>
+        <div class="tools-container">
+          <span class="tool-tag"><i class="fa-solid fa-image"></i> Adobe Photoshop</span>
+          <span class="tool-tag"><i class="fa-solid fa-book-open"></i> Adobe InDesign</span>
+          <span class="tool-tag"><i class="fa-solid fa-pen-nib"></i> Adobe Illustrator</span>
+        </div>
+      </div>
+
+      <div class="tool-group-box">
+        <h3 class="tool-group-title"><i class="fa-solid fa-ruler-combined gold-icon"></i> <span data-i18n="tool_group_cad">CAD & Architectural Drafting</span></h3>
+        <div class="tools-container">
+          <span class="tool-tag"><i class="fa-solid fa-building"></i> ArchiCAD</span>
+          <span class="tool-tag"><i class="fa-solid fa-pen-ruler"></i> AutoCAD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. قسم طلب المشاريع والتواصل ================= -->
+  <footer class="contact-section" id="contact">
+    <div class="section-container" style="padding-top: 0;">
+      
+      <div class="request-box" id="request-form">
+        <h2 class="section-title" style="margin-bottom: 1rem;" data-i18n="form_heading">Request a Project / Consultation</h2>
+        <p class="form-sub" data-i18n="form_sub">Have an upcoming villa, apartment, or commercial space? Fill in your details and I'll contact you promptly:</p>
+
+        <form id="projectForm" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="lbl_name">Full Name</label>
+              <input type="text" id="clientName" placeholder="e.g. Architect John" required>
+            </div>
+            <div class="form-group">
+              <label data-i18n="lbl_project_type">Project Type</label>
+              <select id="projectType">
+                <option value="Residential Villa / Apartment Interior">Residential Villa / Apartment Interior</option>
+                <option value="3D Architectural Visualization (Exterior)">3D Architectural Visualization (Exterior)</option>
+                <option value="Commercial / Office Space Design">Commercial / Office Space Design</option>
+                <option value="Executive Drawing & Consultation">Executive Drawing & Consultation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="lbl_desc">Project Details (Description)</label>
+            <textarea id="projectDetails" rows="4" placeholder="Briefly describe the area, number of rooms, desired style, or any specific requirements..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-whatsapp" onclick="sendViaWhatsApp()">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-i18n="btn_send_wa">Send via WhatsApp</span>
+            </button>
+            <button type="button" class="btn-email" onclick="sendViaEmail()">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-i18n="btn_send_mail">Send via Email</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <h3 style="color: #fff; margin: 3.5rem 0 1.5rem;" data-i18n="direct_contact_title">Direct Contact Information</h3>
+      <div class="contact-grid">
+        <a href="mailto:lachkhemmohamedamin@gmail.com" class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-info">
+            <h4 data-i18n="c_email_lbl">Email Address</h4>
+            <p>lachkhemmohamedamin@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/212628993050" target="_blank" class="contact-card">
+          <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="contact-info">
+            <h4 data-i18n="c_phone_lbl">Phone / WhatsApp</h4>
+            <p dir="ltr">+212 628 993 050</p>
+          </div>
+        </a>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-info">
+            <h4 data-i18n="c_loc_lbl">Location & Coverage</h4>
+            <p data-i18n="c_loc_val">Morocco (Casablanca / Fes) & Worldwide</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Mohamed Amin Lachkhem. <span data-i18n="rights">All rights reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- نافذة تكبير الصور -->
+  <div class="lightbox-modal" id="imageLightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+      <img src="" alt="Zoomed Project" id="lightboxImg" loading="lazy">
+      <div class="lightbox-caption">
+        <span class="lightbox-cat" id="lightboxCat"></span>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- تحميل السكربت في الخلفية دون تأخير الصفحة -->
+  <script src="script.js?v=11.0" defer></script>
+</body>
+</html>
