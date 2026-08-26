@@ -725,4 +725,3 @@ function handleFormSubmit(e) {
   return false;
 }
 """
-
