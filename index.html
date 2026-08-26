@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +14,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- ملف التنسيقات -->
-  <link rel="stylesheet" href="styles.css?v=8.0">
+  <link rel="stylesheet" href="styles.css?v=9.0">
 </head>
 <body>
 
-  <!-- ================= الشريط العلوي (Navbar مع اللوجو) ================= -->
+  <!-- ================= الشريط العلوي (Navbar) ================= -->
   <header>
     <div class="nav-container">
       <div class="logo-wrapper">
-        <!-- اللوجو الشفاف الخاص بك -->
         <img src="assets/logo-removebg-preview.png" alt="Leder Design Logo" class="nav-logo-img">
         
         <div class="logo-text">
@@ -32,27 +31,27 @@
       </div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="active" data-i18n="nav_home">الرئيسية</a></li>
-        <li><a href="#about" data-i18n="nav_about">عن المصمم</a></li>
-        <li><a href="#services" data-i18n="nav_services">الخدمات</a></li>
-        <li><a href="#projects" data-i18n="nav_projects">المشاريع</a></li>
-        <li><a href="#workflow" data-i18n="nav_workflow">منهجية العمل</a></li>
-        <li><a href="#tools" data-i18n="nav_tools">البرامج والأدوات</a></li>
-        <li><a href="#contact" data-i18n="nav_contact">تواصل معي</a></li>
+        <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#workflow" data-i18n="nav_workflow">Workflow</a></li>
+        <li><a href="#tools" data-i18n="nav_tools">Tools & Software</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact Me</a></li>
       </ul>
 
       <div class="nav-actions">
-        <!-- محول اللغة -->
+        <!-- محول اللغات (بدون أيقونة والإنجليزية هي الافتراضية) -->
         <select class="lang-selector" id="langSelector" onchange="changeLanguage(this.value)">
-          <option value="ar">🌐 العربية</option>
-          <option value="en">🌐 English</option>
-          <option value="fr">🌐 Français</option>
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
         </select>
 
         <!-- زر تحميل البورتفوليو -->
         <a href="mohamed-amin-lachkhem-portfolio.pdf" download class="btn-gold d-none-mobile">
           <i class="fa-solid fa-download"></i>
-          <span data-i18n="btn_portfolio">تحميل البورتفوليو</span>
+          <span data-i18n="btn_portfolio">Download Portfolio</span>
         </a>
 
         <!-- زر القائمة للهواتف -->
@@ -63,7 +62,7 @@
     </div>
   </header>
 
-  <!-- ================= 1. البانر المعماري الكبير في قمة الصفحة ================= -->
+  <!-- ================= 1. البانر المعماري في قمة الصفحة ================= -->
   <section class="top-showcase-banner" id="home">
     <div class="banner-backdrop"></div>
     <div class="banner-content">
@@ -72,19 +71,17 @@
     </div>
   </section>
 
-  <!-- ================= 2. قسم النبذة والتعريف (مقابل صورتك الشخصية) ================= -->
+  <!-- ================= 2. قسم النبذة والتعريف ================= -->
   <section class="section-container profile-intro-section" id="about">
     <div class="profile-intro-grid">
       
-      <!-- العمود النصي -->
       <div class="intro-text-col">
         <div class="brand-yellow-tag" data-i18n="hero_brand_sub">LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D</div>
         
-        <span class="gold-badge" data-i18n="hero_badge">مرحباً بك في مساحتي الإبداعية</span>
+        <span class="gold-badge" data-i18n="hero_badge">Welcome to my Creative Space</span>
         
-        <!-- الاسم يظهر هنا فقط بخط عريض -->
         <h2 class="intro-name">Mohamed Amin Lachkhem</h2>
-        <h3 class="intro-title" data-i18n="hero_spec">مصمم داخلي وخبير إظهار معماري ثلاثي الأبعاد</h3>
+        <h3 class="intro-title" data-i18n="hero_spec">Interior Designer & 3D Architectural Visualizer</h3>
 
         <!-- وسوم البرامج -->
         <div class="software-tags-row">
@@ -98,22 +95,22 @@
         </div>
 
         <p class="intro-description" data-i18n="hero_bio">
-          متخصص في ابتكار وتصميم الفراغات المعمارية الحديثة، وتحويل المخططات الهندسية إلى مشاهد ثلاثية الأبعاد فائقة الواقعية والدقة البصرية، مع مراعاة أدق التفاصيل في توزيع الإضاءة، تناسق الخامات، وجودة الإخراج التنفيذي.
+          Specialized in creating modern architectural spaces and turning blueprints into photorealistic 3D renders with exceptional visual fidelity, paying meticulous attention to lighting distribution, material harmony, and executive rendering quality.
         </p>
 
         <div class="intro-buttons">
           <a href="#request-form" class="btn-gold">
             <i class="fa-solid fa-paper-plane"></i>
-            <span data-i18n="btn_order_project">طلب تصميم مشروع</span>
+            <span data-i18n="btn_order_project">Request a Design Project</span>
           </a>
           <a href="mohamed-amin-lachkhem-portfolio.pdf" download class="btn-outline">
             <i class="fa-solid fa-file-pdf"></i>
-            <span data-i18n="btn_portfolio">البورتفوليو (PDF)</span>
+            <span data-i18n="btn_portfolio">Portfolio (PDF)</span>
           </a>
         </div>
       </div>
 
-      <!-- صورتك الشخصية المربعة -->
+      <!-- صورتك الشخصية -->
       <div class="intro-img-col">
         <div class="profile-square-box">
           <img src="assets/profile.jpg" alt="Mohamed Amin Lachkhem" class="profile-square-img">
@@ -128,114 +125,114 @@
 
   <!-- ================= 3. قسم الخدمات (Services) ================= -->
   <section class="section-container" id="services">
-    <h2 class="section-title" data-i18n="nav_services">الخدمات</h2>
+    <h2 class="section-title" data-i18n="nav_services">Services</h2>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
-        <h3 class="service-title" data-i18n="s1_title">التصميم الداخلي السكني والتجاري</h3>
-        <p class="service-desc" data-i18n="s1_desc">تصميم وتوزيع المساحات للفيلات والشقق والمحلات بأسلوب راقٍ يوازن بين الجمالية والاستغلال الوظيفي.</p>
+        <h3 class="service-title" data-i18n="s1_title">Residential & Commercial Interiors</h3>
+        <p class="service-desc" data-i18n="s1_desc">Refined spatial planning for villas, apartments, and retail blending elegance and functionality.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
-        <h3 class="service-title" data-i18n="s2_title">الإظهار المعماري ثلاثي الأبعاد (3D ArchViz)</h3>
-        <p class="service-desc" data-i18n="s2_desc">رندر احترافي فائق الواقعية للواجهات الخارجية والمساحات الداخلية واللاندسكيب بمختلف سيناريوهات الإضاءة.</p>
+        <h3 class="service-title" data-i18n="s2_title">3D Architectural Visualization (ArchViz)</h3>
+        <p class="service-desc" data-i18n="s2_desc">High-end photorealistic 3D rendering for exteriors, interiors, and landscapes under various lighting conditions.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-        <h3 class="service-title" data-i18n="s3_title">المخططات التنفيذية واللوحات التقنية</h3>
-        <p class="service-desc" data-i18n="s3_desc">إعداد المخططات الدقيقة والمساقط الأفقية وتفاصيل الخامات والإضاءة الجاهزة للتنفيذ الميداني.</p>
+        <h3 class="service-title" data-i18n="s3_title">Executive & Working Drawings</h3>
+        <p class="service-desc" data-i18n="s3_desc">Detailed architectural drawings, material schedules, and lighting plans ready for site execution.</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-        <h3 class="service-title" data-i18n="s4_title">إخراج الكتالوجات والعروض الهندسية</h3>
-        <p class="service-desc" data-i18n="s4_desc">تصميم عروض تقديمية وملفات تعريفية (PDF/InDesign) متكاملة تعبر عن أصالة واحترافية المشاريع.</p>
+        <h3 class="service-title" data-i18n="s4_title">Brochures & Architectural Presentations</h3>
+        <p class="service-desc" data-i18n="s4_desc">Premium presentation design, catalogues, and visual identity for architectural developments.</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= 4. معرض المشاريع الحقيقية (مع ميزة التكبير) ================= -->
+  <!-- ================= 4. معرض المشاريع (مع ميزة التكبير) ================= -->
   <section class="section-container" id="projects">
     <div class="section-header-flex">
-      <h2 class="section-title" data-i18n="title_projects">معرض المشاريع</h2>
-      <span class="hint-text" data-i18n="hint_click_zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط على أي صورة لتكبيرها بدقة عالية</span>
+      <h2 class="section-title" data-i18n="title_projects">Featured Projects</h2>
+      <span class="hint-text" data-i18n="hint_click_zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Click any image to enlarge and preview in full detail</span>
     </div>
 
     <div class="projects-grid">
-      <!-- مشروع 1: صالون معاصر -->
-      <div class="project-card" onclick="openLightbox('assets/interior-salon.jpg', 'صالون معيشة معاصر فاخر', 'تصميم داخلي', 'تناغم دافئ بين الخامات الخشبية، الإضاءة المخفية، وقطع الأثاث المريحة ذات الطابع المودرن.')">
+      <!-- Project 1 -->
+      <div class="project-card" onclick="openLightbox('assets/interior-salon.jpg', 'Luxury Contemporary Living Room', 'Interior Design', 'Warm harmony of wood textures, ambient recessed lighting, and sleek modern furniture.')">
         <div class="img-zoom-container">
           <img src="assets/interior-salon.jpg" alt="Living Room" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
-          <span class="project-category" data-i18n="p1_cat">تصميم داخلي</span>
-          <h3 class="project-title" data-i18n="p1_title">صالون معيشة معاصر فاخر</h3>
-          <p class="project-desc" data-i18n="p1_desc">تناغم دافئ بين الخامات الخشبية، الإضاءة المخفية، وقطع الأثاث المريحة ذات الطابع المودرن.</p>
+          <span class="project-category" data-i18n="p1_cat">Interior Design</span>
+          <h3 class="project-title" data-i18n="p1_title">Luxury Contemporary Living Room</h3>
+          <p class="project-desc" data-i18n="p1_desc">Warm harmony of wood textures, ambient recessed lighting, and sleek modern furniture.</p>
         </div>
       </div>
 
-      <!-- مشروع 2: فيلا بمسبح -->
-      <div class="project-card" onclick="openLightbox('assets/exterior-villa-pool.jpg', 'فيلا سكنية حديثة مع مسبح', 'إظهار خارجي 3D', 'محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.')">
+      <!-- Project 2 -->
+      <div class="project-card" onclick="openLightbox('assets/exterior-villa-pool.jpg', 'Modern Residential Villa with Pool', '3D ArchViz Exterior', 'Photorealistic architectural simulation of villa facade, pool deck, and lush landscape.')">
         <div class="img-zoom-container">
           <img src="assets/exterior-villa-pool.jpg" alt="Villa Exterior" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
-          <span class="project-category" data-i18n="p2_cat">إظهار خارجي 3D</span>
-          <h3 class="project-title" data-i18n="p2_title">فيلا سكنية حديثة مع مسبح</h3>
-          <p class="project-desc" data-i18n="p2_desc">محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.</p>
+          <span class="project-category" data-i18n="p2_cat">3D ArchViz Exterior</span>
+          <h3 class="project-title" data-i18n="p2_title">Modern Residential Villa with Pool</h3>
+          <p class="project-desc" data-i18n="p2_desc">Photorealistic architectural simulation of villa facade, pool deck, and lush landscape.</p>
         </div>
       </div>
 
-      <!-- مشروع 3: غرفة نوم -->
-      <div class="project-card" onclick="openLightbox('assets/interior-bedroom.jpg', 'غرفة نوم رئيسية بتصميم هادئ', 'تصميم داخلي', 'اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.')">
+      <!-- Project 3 -->
+      <div class="project-card" onclick="openLightbox('assets/interior-bedroom.jpg', 'Serene Master Bedroom', 'Interior Design', 'Earthy soothing tones, tailored bedhead wall paneling, and warm relaxed lighting.')">
         <div class="img-zoom-container">
           <img src="assets/interior-bedroom.jpg" alt="Bedroom" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
-          <span class="project-category" data-i18n="p3_cat">تصميم داخلي</span>
-          <h3 class="project-title" data-i18n="p3_title">غرفة نوم رئيسية بتصميم هادئ</h3>
-          <p class="project-desc" data-i18n="p3_desc">اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.</p>
+          <span class="project-category" data-i18n="p3_cat">Interior Design</span>
+          <h3 class="project-title" data-i18n="p3_title">Serene Master Bedroom</h3>
+          <p class="project-desc" data-i18n="p3_desc">Earthy soothing tones, tailored bedhead wall paneling, and warm relaxed lighting.</p>
         </div>
       </div>
 
-      <!-- مشروع 4: هوية بصرية -->
-      <div class="project-card" onclick="openLightbox('assets/graphic-brand.jpg', 'هوية بصرية وتغليف علامة تجارية', 'هوية وجرافيك', 'تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.')">
+      <!-- Project 4 -->
+      <div class="project-card" onclick="openLightbox('assets/graphic-brand.jpg', 'Brand Identity & Packaging', 'Branding & Graphics', 'Complete visual identity, logo refinement, and luxury stationery packaging design.')">
         <div class="img-zoom-container">
           <img src="assets/graphic-brand.jpg" alt="Branding" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
-          <span class="project-category" data-i18n="p4_cat">هوية وجرافيك</span>
-          <h3 class="project-title" data-i18n="p4_title">هوية بصرية وتغليف علامة تجارية</h3>
-          <p class="project-desc" data-i18n="p4_desc">تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.</p>
+          <span class="project-category" data-i18n="p4_cat">Branding & Graphics</span>
+          <h3 class="project-title" data-i18n="p4_title">Brand Identity & Packaging</h3>
+          <p class="project-desc" data-i18n="p4_desc">Complete visual identity, logo refinement, and luxury stationery packaging design.</p>
         </div>
       </div>
 
-      <!-- مشروع 5: مكتب تنفيذي -->
-      <div class="project-card" onclick="openLightbox('assets/interior-office.jpg', 'مكتب تنفيذي بتصميم مريح', 'تصميم داخلي', 'بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.')">
+      <!-- Project 5 -->
+      <div class="project-card" onclick="openLightbox('assets/interior-office.jpg', 'Executive Ergonomic Office', 'Interior Design', 'Balanced professional atmosphere maximizing productivity and ergonomic elegance.')">
         <div class="img-zoom-container">
           <img src="assets/interior-office.jpg" alt="Executive Office" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
-          <span class="project-category" data-i18n="p5_cat">تصميم داخلي</span>
-          <h3 class="project-title" data-i18n="p5_title">مكتب تنفيذي بتصميم مريح</h3>
-          <p class="project-desc" data-i18n="p5_desc">بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.</p>
+          <span class="project-category" data-i18n="p5_cat">Interior Design</span>
+          <h3 class="project-title" data-i18n="p5_title">Executive Ergonomic Office</h3>
+          <p class="project-desc" data-i18n="p5_desc">Balanced professional atmosphere maximizing productivity and ergonomic elegance.</p>
         </div>
       </div>
 
-      <!-- مشروع 6: واجهة معمارية -->
-      <div class="project-card" onclick="openLightbox('assets/exterior-facade.jpg', 'تصميم واجهة معمارية حديثة', 'إظهار خارجي 3D', 'تصميم معماري خارجي يبرز كتل المبنى والإنارة الليلية وتناسق خامات الحجر والزجاج.')">
+      <!-- Project 6 -->
+      <div class="project-card" onclick="openLightbox('assets/exterior-facade.jpg', 'Modern Architectural Facade Design', '3D ArchViz Exterior', 'Exterior architectural visualization highlighting massing, night illumination, and stone-glass harmony.')">
         <div class="img-zoom-container">
           <img src="assets/exterior-facade.jpg" alt="Facade Architecture" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
-          <span class="project-category" data-i18n="p6_cat">إظهار خارجي 3D</span>
-          <h3 class="project-title" data-i18n="p6_title">تصميم واجهة معمارية حديثة</h3>
-          <p class="project-desc" data-i18n="p6_desc">تصميم معماري خارجي يبرز كتل المبنى والإنارة الليلية وتناسق خامات الحجر والزجاج.</p>
+          <span class="project-category" data-i18n="p6_cat">3D ArchViz Exterior</span>
+          <h3 class="project-title" data-i18n="p6_title">Modern Architectural Facade Design</h3>
+          <p class="project-desc" data-i18n="p6_desc">Exterior architectural visualization highlighting massing, night illumination, and stone-glass harmony.</p>
         </div>
       </div>
     </div>
@@ -243,39 +240,38 @@
 
   <!-- ================= 5. قسم منهجية العمل (Workflow) ================= -->
   <section class="section-container" id="workflow">
-    <h2 class="section-title" data-i18n="nav_workflow">منهجية العمل</h2>
+    <h2 class="section-title" data-i18n="nav_workflow">Workflow</h2>
     <div class="workflow-grid">
       <div class="workflow-step">
         <span class="step-num">01</span>
-        <h4 data-i18n="wf1_title">دراسة الاحتياجات والمساحة</h4>
-        <p data-i18n="wf1_desc">تحليل المخططات الهندسية، وفهم رغبة العميل وتحديد النمط والميزانية المتاحة.</p>
+        <h4 data-i18n="wf1_title">Brief & Needs Analysis</h4>
+        <p data-i18n="wf1_desc">Analyzing blueprints, understanding client vision, and establishing style and budget.</p>
       </div>
       <div class="workflow-step">
         <span class="step-num">02</span>
-        <h4 data-i18n="wf2_title">لوحة الإلهام والتوزيع (Moodboard)</h4>
-        <p data-i18n="wf2_desc">اختيار باليت الألوان وتناسق الخامات وتوزيع عناصر الفرش المعماري 2D/3D.</p>
+        <h4 data-i18n="wf2_title">Moodboard & Space Planning</h4>
+        <p data-i18n="wf2_desc">Curating color palettes, material textures, and 2D/3D functional layout configurations.</p>
       </div>
       <div class="workflow-step">
         <span class="step-num">03</span>
-        <h4 data-i18n="wf3_title">النمذجة والإظهار الواقعي 3D</h4>
-        <p data-i18n="wf3_desc">بناء الكتل ثلاثية الأبعاد وضبط الإضاءات الواقعية وتوليد رندرات عالية الدقة.</p>
+        <h4 data-i18n="wf3_title">3D Modeling & Rendering</h4>
+        <p data-i18n="wf3_desc">Detailed 3D modeling, physically-based lighting, and high-resolution realistic rendering.</p>
       </div>
       <div class="workflow-step">
         <span class="step-num">04</span>
-        <h4 data-i18n="wf4_title">المراجعة والتسليم النهائي</h4>
-        <p data-i18n="wf4_desc">إتمام التعديلات المطلوبة وتسليم الحزمة الكاملة من صور ورسومات تنفيذية.</p>
+        <h4 data-i18n="wf4_title">Review & Final Delivery</h4>
+        <p data-i18n="wf4_desc">Fine-tuning client feedback and delivering final render packages and technical files.</p>
       </div>
     </div>
   </section>
 
   <!-- ================= 6. قسم البرامج والتطبيقات (Tools) ================= -->
   <section class="section-container" id="tools">
-    <h2 class="section-title" data-i18n="nav_tools">البرامج والأدوات</h2>
+    <h2 class="section-title" data-i18n="nav_tools">Tools & Software</h2>
     
     <div class="tools-categories-grid">
-      <!-- 3D & Rendering -->
       <div class="tool-group-box">
-        <h3 class="tool-group-title"><i class="fa-solid fa-cube gold-icon"></i> <span data-i18n="tool_group_3d">برامج التصميم والإظهار ثلاثي الأبعاد</span></h3>
+        <h3 class="tool-group-title"><i class="fa-solid fa-cube gold-icon"></i> <span data-i18n="tool_group_3d">3D Modeling & Visualization Software</span></h3>
         <div class="tools-container">
           <span class="tool-tag"><i class="fa-solid fa-cubes"></i> 3ds Max</span>
           <span class="tool-tag"><i class="fa-solid fa-sun"></i> Corona Renderer</span>
@@ -285,9 +281,8 @@
         </div>
       </div>
 
-      <!-- Graphics & Presentation -->
       <div class="tool-group-box">
-        <h3 class="tool-group-title"><i class="fa-solid fa-paintbrush gold-icon"></i> <span data-i18n="tool_group_graphics">برامج التصميم الجرافيكي والإخراج</span></h3>
+        <h3 class="tool-group-title"><i class="fa-solid fa-paintbrush gold-icon"></i> <span data-i18n="tool_group_graphics">Graphic Design & Post-Production</span></h3>
         <div class="tools-container">
           <span class="tool-tag"><i class="fa-solid fa-image"></i> Adobe Photoshop</span>
           <span class="tool-tag"><i class="fa-solid fa-book-open"></i> Adobe InDesign</span>
@@ -295,9 +290,8 @@
         </div>
       </div>
 
-      <!-- CAD & Architecture -->
       <div class="tool-group-box">
-        <h3 class="tool-group-title"><i class="fa-solid fa-ruler-combined gold-icon"></i> <span data-i18n="tool_group_cad">المخططات المعمارية والهندسية</span></h3>
+        <h3 class="tool-group-title"><i class="fa-solid fa-ruler-combined gold-icon"></i> <span data-i18n="tool_group_cad">CAD & Architectural Drafting</span></h3>
         <div class="tools-container">
           <span class="tool-tag"><i class="fa-solid fa-building"></i> ArchiCAD</span>
           <span class="tool-tag"><i class="fa-solid fa-pen-ruler"></i> AutoCAD</span>
@@ -312,54 +306,54 @@
       
       <!-- نموذج طلب التصميم التفاعلي -->
       <div class="request-box" id="request-form">
-        <h2 class="section-title" style="margin-bottom: 1rem;" data-i18n="form_heading">طلب تصميم / استشارة مشروع</h2>
-        <p class="form-sub" data-i18n="form_sub">لديك فكرة فيلا، شقة، أو مشروع تجاري وتريد تجسيدها في الواقع؟ املأ التفاصيل وسأتواصل معك مباشرة:</p>
+        <h2 class="section-title" style="margin-bottom: 1rem;" data-i18n="form_heading">Request a Project / Consultation</h2>
+        <p class="form-sub" data-i18n="form_sub">Have an upcoming villa, apartment, or commercial space? Fill in your details and I'll contact you promptly:</p>
 
         <form id="projectForm" onsubmit="event.preventDefault();">
           <div class="form-row">
             <div class="form-group">
-              <label data-i18n="lbl_name">الاسم الكريم</label>
-              <input type="text" id="clientName" placeholder="مثال: يوسف العلمي" required>
+              <label data-i18n="lbl_name">Full Name</label>
+              <input type="text" id="clientName" placeholder="e.g. Architect John" required>
             </div>
             <div class="form-group">
-              <label data-i18n="lbl_project_type">نوع المشروع</label>
+              <label data-i18n="lbl_project_type">Project Type</label>
               <select id="projectType">
-                <option value="تصميم داخلي لفيلا أو شقة">تصميم داخلي لفيلا أو شقة</option>
-                <option value="إظهار خارجي ثلاثي الأبعاد (3D ArchViz)">إظهار خارجي ثلاثي الأبعاد (3D ArchViz)</option>
-                <option value="تصميم مساحة تجارية / مكتبية">تصميم مساحة تجارية / مكتبية</option>
-                <option value="مخطط تنفيذي واستشارة">مخطط تنفيذي واستشارة</option>
+                <option value="Residential Villa / Apartment Interior">Residential Villa / Apartment Interior</option>
+                <option value="3D Architectural Visualization (Exterior)">3D Architectural Visualization (Exterior)</option>
+                <option value="Commercial / Office Space Design">Commercial / Office Space Design</option>
+                <option value="Executive Drawing & Consultation">Executive Drawing & Consultation</option>
               </select>
             </div>
           </div>
 
           <div class="form-group">
-            <label data-i18n="lbl_desc">تفاصيل الفكرة أو المساحة (الوصف)</label>
-            <textarea id="projectDetails" rows="4" placeholder="اكتب تفاصيل المساحة، عدد الغرف، النمط المطلوب أو أي متطلبات خاصة..." required></textarea>
+            <label data-i18n="lbl_desc">Project Details (Description)</label>
+            <textarea id="projectDetails" rows="4" placeholder="Briefly describe the area, number of rooms, desired style, or any specific requirements..." required></textarea>
           </div>
 
           <div class="form-actions">
-            <!-- إرسال واتساب مباشر -->
+            <!-- إرسال واتساب -->
             <button type="button" class="btn-whatsapp" onclick="sendViaWhatsApp()">
               <i class="fa-brands fa-whatsapp"></i>
-              <span data-i18n="btn_send_wa">إرسال الفكرة عبر واتساب</span>
+              <span data-i18n="btn_send_wa">Send via WhatsApp</span>
             </button>
-            <!-- إرسال بريد إلكتروني -->
+            <!-- إرسال بريد -->
             <button type="button" class="btn-email" onclick="sendViaEmail()">
               <i class="fa-solid fa-envelope"></i>
-              <span data-i18n="btn_send_mail">إرسال عبر البريد الإلكتروني</span>
+              <span data-i18n="btn_send_mail">Send via Email</span>
             </button>
           </div>
         </form>
       </div>
 
       <!-- بطاقات التواصل المباشرة -->
-      <h3 style="color: #fff; margin: 3.5rem 0 1.5rem;" data-i18n="direct_contact_title">معلومات التواصل المباشرة</h3>
+      <h3 style="color: #fff; margin: 3.5rem 0 1.5rem;" data-i18n="direct_contact_title">Direct Contact Information</h3>
       <div class="contact-grid">
         <!-- البريد الإلكتروني الصحيح -->
         <a href="mailto:lachkhemmohamedamin@gmail.com" class="contact-card">
           <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="contact-info">
-            <h4 data-i18n="c_email_lbl">البريد الإلكتروني</h4>
+            <h4 data-i18n="c_email_lbl">Email Address</h4>
             <p>lachkhemmohamedamin@gmail.com</p>
           </div>
         </a>
@@ -368,7 +362,7 @@
         <a href="https://wa.me/212628993050" target="_blank" class="contact-card">
           <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
           <div class="contact-info">
-            <h4 data-i18n="c_phone_lbl">الهاتف / واتساب</h4>
+            <h4 data-i18n="c_phone_lbl">Phone / WhatsApp</h4>
             <p dir="ltr">+212 628 993 050</p>
           </div>
         </a>
@@ -377,19 +371,19 @@
         <div class="contact-card">
           <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div class="contact-info">
-            <h4 data-i18n="c_loc_lbl">المقر والخدمة</h4>
-            <p data-i18n="c_loc_val">المغرب (الدار البيضاء / فاس) وكافة المدن</p>
+            <h4 data-i18n="c_loc_lbl">Location & Coverage</h4>
+            <p data-i18n="c_loc_val">Morocco (Casablanca / Fes) & Worldwide</p>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Mohamed Amin Lachkhem. <span data-i18n="rights">جميع الحقوق محفوظة.</span></p>
+        <p>© 2026 Mohamed Amin Lachkhem. <span data-i18n="rights">All rights reserved.</span></p>
       </div>
     </div>
   </footer>
 
-  <!-- ================= نافذة تكبير الصور (Lightbox Modal) ================= -->
+  <!-- نافذة تكبير الصور -->
   <div class="lightbox-modal" id="imageLightbox" onclick="closeLightbox(event)">
     <div class="lightbox-content">
       <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
@@ -402,7 +396,6 @@
     </div>
   </div>
 
-  <!-- ملف JavaScript -->
-  <script src="script.js?v=8.0"></script>
+  <script src="script.js?v=9.0"></script>
 </body>
 </html>
