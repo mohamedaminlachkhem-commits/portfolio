@@ -14,16 +14,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- ملف التنسيقات -->
-  <link rel="stylesheet" href="styles.css?v=6.0">
+  <link rel="stylesheet" href="styles.css?v=8.0">
 </head>
 <body>
 
-  <!-- ================= الشريط العلوي (Navbar) ================= -->
+  <!-- ================= الشريط العلوي (Navbar مع اللوجو) ================= -->
   <header>
     <div class="nav-container">
-      <div class="logo">
-        <span class="brand-name">MOHAMED AMIN</span>
-        <span class="brand-sub">INTERIOR & 3D ARCHVIZ</span>
+      <div class="logo-wrapper">
+        <!-- اللوجو الشفاف الخاص بك -->
+        <img src="assets/logo-removebg-preview.png" alt="Leder Design Logo" class="nav-logo-img">
+        
+        <div class="logo-text">
+          <span class="brand-name">MOHAMED AMIN</span>
+          <span class="brand-sub">INTERIOR & 3D ARCHVIZ</span>
+        </div>
       </div>
 
       <ul class="nav-links" id="navLinks">
@@ -58,7 +63,7 @@
     </div>
   </header>
 
-  <!-- ================= 1. البانر المعماري في قمة الصفحة ================= -->
+  <!-- ================= 1. البانر المعماري الكبير في قمة الصفحة ================= -->
   <section class="top-showcase-banner" id="home">
     <div class="banner-backdrop"></div>
     <div class="banner-content">
@@ -67,13 +72,12 @@
     </div>
   </section>
 
-  <!-- ================= 2. قسم النبذة والتعريف مقابل صورتك الشخصية ================= -->
+  <!-- ================= 2. قسم النبذة والتعريف (مقابل صورتك الشخصية) ================= -->
   <section class="section-container profile-intro-section" id="about">
     <div class="profile-intro-grid">
       
-      <!-- العمود النصي مع العبارة الصفراء والاسم مرة واحدة -->
+      <!-- العمود النصي -->
       <div class="intro-text-col">
-        <!-- العبارة الصفراء المميزة -->
         <div class="brand-yellow-tag" data-i18n="hero_brand_sub">LEDER DESIGN / ARCHITECTURE INTÉRIEURE / 3D</div>
         
         <span class="gold-badge" data-i18n="hero_badge">مرحباً بك في مساحتي الإبداعية</span>
@@ -109,10 +113,9 @@
         </div>
       </div>
 
-      <!-- العمود المقابل: إطار صورتك الشخصية المربعة -->
+      <!-- صورتك الشخصية المربعة -->
       <div class="intro-img-col">
         <div class="profile-square-box">
-          <!-- صورتك الشخصية من مجلد assets مباشرة -->
           <img src="assets/profile.jpg" alt="Mohamed Amin Lachkhem" class="profile-square-img">
           <div class="square-accent-badge">
             <i class="fa-solid fa-cube"></i> <span data-i18n="badge_archviz">Leder Design ArchViz</span>
@@ -150,18 +153,18 @@
     </div>
   </section>
 
-  <!-- ================= 4. معرض المشاريع (مع ميزة التكبير Lightbox) ================= -->
+  <!-- ================= 4. معرض المشاريع الحقيقية (مع ميزة التكبير) ================= -->
   <section class="section-container" id="projects">
     <div class="section-header-flex">
       <h2 class="section-title" data-i18n="title_projects">معرض المشاريع</h2>
-      <span class="hint-text" data-i18n="hint_click_zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط على أي صورة لتكبيرها واستعراضها بدقة عالية</span>
+      <span class="hint-text" data-i18n="hint_click_zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> اضغط على أي صورة لتكبيرها بدقة عالية</span>
     </div>
 
     <div class="projects-grid">
-      <!-- مشروع 1 -->
-      <div class="project-card" onclick="openLightbox('assets/interior-lounge.jpg', 'صالون معيشة معاصر فاخر', 'تصميم داخلي', 'تناغم دافئ بين الخامات الخشبية، الإضاءة المخفية، وقطع الأثاث المريحة ذات الطابع المودرن.')">
+      <!-- مشروع 1: صالون معاصر -->
+      <div class="project-card" onclick="openLightbox('assets/interior-salon.jpg', 'صالون معيشة معاصر فاخر', 'تصميم داخلي', 'تناغم دافئ بين الخامات الخشبية، الإضاءة المخفية، وقطع الأثاث المريحة ذات الطابع المودرن.')">
         <div class="img-zoom-container">
-          <img src="assets/interior-lounge.jpg" alt="Living Room" class="project-img">
+          <img src="assets/interior-salon.jpg" alt="Living Room" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -171,10 +174,10 @@
         </div>
       </div>
 
-      <!-- مشروع 2 -->
-      <div class="project-card" onclick="openLightbox('assets/villa-pool.jpg', 'فيلا سكنية حديثة مع مسبح', 'إظهار خارجي 3D', 'محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.')">
+      <!-- مشروع 2: فيلا بمسبح -->
+      <div class="project-card" onclick="openLightbox('assets/exterior-villa-pool.jpg', 'فيلا سكنية حديثة مع مسبح', 'إظهار خارجي 3D', 'محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.')">
         <div class="img-zoom-container">
-          <img src="assets/villa-pool.jpg" alt="Villa Exterior" class="project-img">
+          <img src="assets/exterior-villa-pool.jpg" alt="Villa Exterior" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -184,10 +187,10 @@
         </div>
       </div>
 
-      <!-- مشروع 3 -->
-      <div class="project-card" onclick="openLightbox('assets/bedroom.jpg', 'غرفة نوم رئيسية بتصميم هادئ', 'تصميم داخلي', 'اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.')">
+      <!-- مشروع 3: غرفة نوم -->
+      <div class="project-card" onclick="openLightbox('assets/interior-bedroom.jpg', 'غرفة نوم رئيسية بتصميم هادئ', 'تصميم داخلي', 'اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.')">
         <div class="img-zoom-container">
-          <img src="assets/bedroom.jpg" alt="Bedroom" class="project-img">
+          <img src="assets/interior-bedroom.jpg" alt="Bedroom" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -197,10 +200,10 @@
         </div>
       </div>
 
-      <!-- مشروع 4 -->
-      <div class="project-card" onclick="openLightbox('assets/branding.jpg', 'هوية بصرية وتغليف علامة تجارية', 'هوية وجرافيك', 'تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.')">
+      <!-- مشروع 4: هوية بصرية -->
+      <div class="project-card" onclick="openLightbox('assets/graphic-brand.jpg', 'هوية بصرية وتغليف علامة تجارية', 'هوية وجرافيك', 'تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.')">
         <div class="img-zoom-container">
-          <img src="assets/branding.jpg" alt="Branding" class="project-img">
+          <img src="assets/graphic-brand.jpg" alt="Branding" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
@@ -210,16 +213,29 @@
         </div>
       </div>
 
-      <!-- مشروع 5 -->
-      <div class="project-card" onclick="openLightbox('assets/office.jpg', 'مكتب تنفيذي بتصميم مريح', 'تصميم داخلي', 'بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.')">
+      <!-- مشروع 5: مكتب تنفيذي -->
+      <div class="project-card" onclick="openLightbox('assets/interior-office.jpg', 'مكتب تنفيذي بتصميم مريح', 'تصميم داخلي', 'بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.')">
         <div class="img-zoom-container">
-          <img src="assets/office.jpg" alt="Executive Office" class="project-img">
+          <img src="assets/interior-office.jpg" alt="Executive Office" class="project-img">
           <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
         </div>
         <div class="project-body">
           <span class="project-category" data-i18n="p5_cat">تصميم داخلي</span>
           <h3 class="project-title" data-i18n="p5_title">مكتب تنفيذي بتصميم مريح</h3>
           <p class="project-desc" data-i18n="p5_desc">بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.</p>
+        </div>
+      </div>
+
+      <!-- مشروع 6: واجهة معمارية -->
+      <div class="project-card" onclick="openLightbox('assets/exterior-facade.jpg', 'تصميم واجهة معمارية حديثة', 'إظهار خارجي 3D', 'تصميم معماري خارجي يبرز كتل المبنى والإنارة الليلية وتناسق خامات الحجر والزجاج.')">
+        <div class="img-zoom-container">
+          <img src="assets/exterior-facade.jpg" alt="Facade Architecture" class="project-img">
+          <div class="zoom-overlay"><i class="fa-solid fa-expand"></i></div>
+        </div>
+        <div class="project-body">
+          <span class="project-category" data-i18n="p6_cat">إظهار خارجي 3D</span>
+          <h3 class="project-title" data-i18n="p6_title">تصميم واجهة معمارية حديثة</h3>
+          <p class="project-desc" data-i18n="p6_desc">تصميم معماري خارجي يبرز كتل المبنى والإنارة الليلية وتناسق خامات الحجر والزجاج.</p>
         </div>
       </div>
     </div>
@@ -387,6 +403,6 @@
   </div>
 
   <!-- ملف JavaScript -->
-  <script src="script.js?v=6.0"></script>
+  <script src="script.js?v=8.0"></script>
 </body>
 </html>
