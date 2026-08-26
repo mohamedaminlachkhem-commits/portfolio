@@ -13,12 +13,12 @@
   <!-- الأيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- ربط ملف CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- استدعاء styles.css بالاسم الصحيح مع كسر الكاش -->
+  <link rel="stylesheet" href="styles.css?v=2.0">
 </head>
 <body>
 
-  <!-- شريط التنقل العلوي -->
+  <!-- ================= الشريط العلوي ================= -->
   <header>
     <div class="nav-container">
       <div class="logo">
@@ -37,14 +37,15 @@
       </ul>
 
       <div class="nav-actions">
-        <!-- قائمة اللغات -->
+        <!-- تبديل اللغة -->
         <select class="lang-selector" id="langSelector" onchange="changeLanguage(this.value)">
           <option value="ar">🌐 العربية</option>
           <option value="en">🌐 English</option>
           <option value="fr">🌐 Français</option>
         </select>
 
-        <a href="#portfolio-pdf" class="btn-gold">
+        <!-- زر تحميل البورتفوليو بالاسم الصحيح -->
+        <a href="mohamed-amin-lachkhem-portfolio.pdf" download class="btn-gold">
           <i class="fa-solid fa-download"></i>
           <span data-i18n="btn_portfolio">تحميل البورتفوليو</span>
         </a>
@@ -52,14 +53,14 @@
     </div>
   </header>
 
-  <!-- معرض المشاريع -->
+  <!-- ================= قسم المشاريع ================= -->
   <main class="section-container" id="projects">
     <h2 class="section-title" data-i18n="title_projects">معرض المشاريع</h2>
 
     <div class="projects-grid">
       <!-- مشروع 1 -->
       <div class="project-card">
-        <img src="images/living-room.jpg" alt="Living Room" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600'">
+        <img src="assets/interior-lounge.jpg" alt="Living Room" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p1_cat">تصميم داخلي</span>
           <h3 class="project-title" data-i18n="p1_title">صالون معيشة معاصر فاخر</h3>
@@ -69,7 +70,7 @@
 
       <!-- مشروع 2 -->
       <div class="project-card">
-        <img src="images/villa-pool.jpg" alt="Villa Exterior" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600'">
+        <img src="assets/villa-pool.jpg" alt="Villa Exterior" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p2_cat">إظهار خارجي 3D</span>
           <h3 class="project-title" data-i18n="p2_title">فيلا سكنية حديثة مع مسبح</h3>
@@ -79,7 +80,7 @@
 
       <!-- مشروع 3 -->
       <div class="project-card">
-        <img src="images/bedroom.jpg" alt="Bedroom" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=600'">
+        <img src="assets/bedroom.jpg" alt="Bedroom" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p3_cat">تصميم داخلي</span>
           <h3 class="project-title" data-i18n="p3_title">غرفة نوم رئيسية بتصميم هادئ</h3>
@@ -89,7 +90,7 @@
 
       <!-- مشروع 4 -->
       <div class="project-card">
-        <img src="images/branding.jpg" alt="Branding" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600'">
+        <img src="assets/branding.jpg" alt="Branding" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p4_cat">هوية وجرافيك</span>
           <h3 class="project-title" data-i18n="p4_title">هوية بصرية وتغليف علامة تجارية</h3>
@@ -99,7 +100,7 @@
 
       <!-- مشروع 5 -->
       <div class="project-card">
-        <img src="images/office.jpg" alt="Executive Office" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600'">
+        <img src="assets/office.jpg" alt="Executive Office" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p5_cat">تصميم داخلي</span>
           <h3 class="project-title" data-i18n="p5_title">مكتب تنفيذي بتصميم مريح</h3>
@@ -109,13 +110,12 @@
     </div>
   </main>
 
-  <!-- قسم التواصل -->
+  <!-- ================= قسم التواصل ================= -->
   <footer class="contact-section" id="contact">
     <div class="section-container" style="padding-top: 0;">
       <h2 class="section-title" data-i18n="nav_contact">تواصل معي</h2>
       
       <div class="contact-grid">
-        <!-- البريد الإلكتروني -->
         <a href="mailto:mohamedaminlachkhem@gmail.com" class="contact-card">
           <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="contact-info">
@@ -124,7 +124,6 @@
           </div>
         </a>
 
-        <!-- واتساب / الهاتف -->
         <a href="https://wa.me/212628993050" target="_blank" class="contact-card">
           <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
           <div class="contact-info">
@@ -133,7 +132,6 @@
           </div>
         </a>
 
-        <!-- الموقع -->
         <div class="contact-card">
           <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div class="contact-info">
@@ -149,8 +147,8 @@
     </div>
   </footer>
 
-  <!-- ربط ملف JavaScript -->
-  <script src="script.js"></script>
+  <!-- ملف الجافاسكريبت -->
+  <script src="script.js?v=2.0"></script>
 </body>
 </html>
 
