@@ -5,213 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohamed Amin | Interior & 3D ArchViz</title>
   
+  <!-- الخطوط -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- الأيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      --bg-dark: #0a0d14;
-      --bg-card: #121824;
-      --bg-card-hover: #182234;
-      --primary-gold: #c5a059;
-      --primary-gold-hover: #dfba73;
-      --text-main: #f0f4f8;
-      --text-muted: #94a3b8;
-      --border-color: rgba(255, 255, 255, 0.08);
-      --font-ar: 'Cairo', sans-serif;
-      --font-en: 'Inter', sans-serif;
-      --transition: all 0.3s ease;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: var(--font-ar);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body[dir="ltr"] { font-family: var(--font-en); }
-    a { text-decoration: none; color: inherit; }
-
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(10, 13, 20, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      padding: 0.8rem 1.5rem;
-    }
-
-    .nav-container {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .logo { display: flex; flex-direction: column; line-height: 1.1; }
-    .logo .brand-name { font-size: 1.1rem; font-weight: 800; color: #ffffff; letter-spacing: 1px; }
-    .logo .brand-sub { font-size: 0.65rem; color: var(--primary-gold); font-weight: 700; letter-spacing: 1.5px; }
-
-    .nav-links { display: flex; align-items: center; gap: 1.2rem; list-style: none; }
-    .nav-links a { font-size: 0.9rem; color: var(--text-muted); transition: var(--transition); font-weight: 600; }
-    .nav-links a:hover, .nav-links a.active { color: var(--primary-gold); }
-
-    .nav-actions { display: flex; align-items: center; gap: 0.8rem; }
-
-    .lang-selector {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      padding: 0.4rem 0.8rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      outline: none;
-    }
-
-    .btn-gold {
-      background: linear-gradient(135deg, var(--primary-gold), #9b7a36);
-      color: #0a0d14;
-      padding: 0.45rem 1rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: var(--transition);
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-gold:hover {
-      background: linear-gradient(135deg, var(--primary-gold-hover), var(--primary-gold));
-      transform: translateY(-2px);
-    }
-
-    /* Projects Grid */
-    .section-container { max-width: 1280px; margin: 0 auto; padding: 3rem 1.5rem; }
-    .section-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 2rem; position: relative; display: inline-block; }
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      right: 0;
-      width: 50px;
-      height: 3px;
-      background: var(--primary-gold);
-      border-radius: 2px;
-    }
-    body[dir="ltr"] .section-title::after { right: auto; left: 0; }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition);
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(197, 160, 89, 0.4);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-    }
-
-    .project-img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      background: #1e293b;
-    }
-
-    .project-body { padding: 1.2rem; display: flex; flex-direction: column; flex-grow: 1; }
-    .project-category { font-size: 0.75rem; color: var(--primary-gold); font-weight: 700; margin-bottom: 0.4rem; }
-    .project-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.6rem; color: #ffffff; }
-    .project-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
-
-    /* Contact Section */
-    .contact-section {
-      background: #0e131d;
-      border-top: 1px solid var(--border-color);
-      padding: 4rem 1.5rem 2rem;
-      margin-top: 3rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1280px;
-      margin: 0 auto 3rem;
-    }
-
-    .contact-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      transition: var(--transition);
-    }
-
-    .contact-card:hover { border-color: var(--primary-gold); transform: translateY(-4px); }
-
-    .contact-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      background: rgba(197, 160, 89, 0.12);
-      color: var(--primary-gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-    }
-
-    .contact-info h4 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.2rem; }
-    .contact-info p { font-size: 1rem; font-weight: 700; color: #ffffff; }
-
-    .footer-bottom {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border-color);
-      padding-top: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .project-img { height: 200px; }
-    }
-  </style>
+  
+  <!-- ملف التنسيقات CSS -->
+  <link rel="stylesheet" href="styles.css?v=3.0">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ================= الشريط العلوي (Navbar) ================= -->
   <header>
     <div class="nav-container">
       <div class="logo">
@@ -219,7 +26,7 @@
         <span class="brand-sub">INTERIOR & 3D ARCHVIZ</span>
       </div>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active" data-i18n="nav_home">الرئيسية</a></li>
         <li><a href="#about" data-i18n="nav_about">عن المصمم</a></li>
         <li><a href="#services" data-i18n="nav_services">الخدمات</a></li>
@@ -230,28 +37,94 @@
       </ul>
 
       <div class="nav-actions">
+        <!-- قائمة اللغات -->
         <select class="lang-selector" id="langSelector" onchange="changeLanguage(this.value)">
           <option value="ar">🌐 العربية</option>
           <option value="en">🌐 English</option>
           <option value="fr">🌐 Français</option>
         </select>
 
-        <a href="#portfolio-pdf" class="btn-gold">
+        <!-- زر تحميل البورتفوليو -->
+        <a href="mohamed-amin-lachkhem-portfolio.pdf" download class="btn-gold d-none-mobile">
           <i class="fa-solid fa-download"></i>
           <span data-i18n="btn_portfolio">تحميل البورتفوليو</span>
         </a>
+
+        <!-- زر القائمة للهواتف -->
+        <button class="mobile-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Projects -->
-  <main class="section-container" id="projects">
-    <h2 class="section-title" data-i18n="title_projects">معرض المشاريع</h2>
+  <!-- ================= قسم عن المصمم (Hero & About) ================= -->
+  <section class="hero-section" id="home">
+    <div class="section-container hero-grid">
+      <div class="hero-content" id="about">
+        <span class="hero-badge" data-i18n="hero_badge">مرحباً بك في مساحتي الإبداعية</span>
+        <h1 class="hero-title">
+          <span data-i18n="hero_name">محمد أمين لشخم</span>
+          <span class="gold-text" data-i18n="hero_spec">مصمم داخلي وخبير إظهار معماري 3D</span>
+        </h1>
+        <p class="hero-desc" data-i18n="hero_bio">
+          متخصص في تحويل الأفكار والمخططات الهندسية إلى واقع بصري ملموس من خلال تصاميم داخلية عصرية ومحاكاة معمارية ثلاثية الأبعاد فائقة الدقة والواقعية.
+        </p>
+        <div class="hero-btns">
+          <a href="#request-form" class="btn-gold">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span data-i18n="btn_order_project">طلب تصميم مشروع</span>
+          </a>
+          <a href="mohamed-amin-lachkhem-portfolio.pdf" download class="btn-outline">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span data-i18n="btn_portfolio">البورتفوليو (PDF)</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- الصورة الشخصية -->
+      <div class="hero-img-wrapper">
+        <div class="profile-img-container">
+          <img src="assets/profile.jpg" alt="Mohamed Amin Lachkhem" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500'">
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ================= قسم الخدمات (Services) ================= -->
+  <section class="section-container" id="services">
+    <h2 class="section-title" data-i18n="nav_services">الخدمات</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+        <h3 class="service-title" data-i18n="s1_title">التصميم الداخلي السكني والتجاري</h3>
+        <p class="service-desc" data-i18n="s1_desc">تصميم وتوزيع المساحات للفيلات، الشقق، والمكاتب والمحلات بأسلوب يجمع بين الجمالية والوظيفة.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
+        <h3 class="service-title" data-i18n="s2_title">الإظهار المعماري ثلاثي الأبعاد</h3>
+        <p class="service-desc" data-i18n="s2_desc">رندر عالي الدقة (3D Render) للواجهات والمساحات الداخلية واللاندسكيب يحاكي الواقع بمختلف ظروف الإضاءة.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+        <h3 class="service-title" data-i18n="s3_title">المخططات التنفيذية وتوزيع الفرش</h3>
+        <p class="service-desc" data-i18n="s3_desc">إعداد المخططات الدقيقة والمساقط الأفقية وتفاصيل الخامات والإضاءة الجاهزة للتنفيذ الميداني.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3 class="service-title" data-i18n="s4_title">الهوية البصرية والعروض المعمارية</h3>
+        <p class="service-desc" data-i18n="s4_desc">تصميم العروض التقديمية الفاخرة للكتالوجات والملفات التعريفية للمشاريع العقارية والتجارية.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= قسم المشاريع (Projects) ================= -->
+  <section class="section-container" id="projects">
+    <h2 class="section-title" data-i18n="title_projects">معرض المشاريع</h2>
     <div class="projects-grid">
-      <!-- Project 1 -->
+      <!-- مشروع 1 -->
       <div class="project-card">
-        <img src="images/living-room.jpg" alt="Living Room" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600'">
+        <img src="assets/interior-lounge.jpg" alt="Living Room" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p1_cat">تصميم داخلي</span>
           <h3 class="project-title" data-i18n="p1_title">صالون معيشة معاصر فاخر</h3>
@@ -259,9 +132,9 @@
         </div>
       </div>
 
-      <!-- Project 2 -->
+      <!-- مشروع 2 -->
       <div class="project-card">
-        <img src="images/villa-pool.jpg" alt="Villa Exterior" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600'">
+        <img src="assets/villa-pool.jpg" alt="Villa Exterior" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p2_cat">إظهار خارجي 3D</span>
           <h3 class="project-title" data-i18n="p2_title">فيلا سكنية حديثة مع مسبح</h3>
@@ -269,9 +142,9 @@
         </div>
       </div>
 
-      <!-- Project 3 -->
+      <!-- مشروع 3 -->
       <div class="project-card">
-        <img src="images/bedroom.jpg" alt="Bedroom" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=600'">
+        <img src="assets/bedroom.jpg" alt="Bedroom" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p3_cat">تصميم داخلي</span>
           <h3 class="project-title" data-i18n="p3_title">غرفة نوم رئيسية بتصميم هادئ</h3>
@@ -279,9 +152,9 @@
         </div>
       </div>
 
-      <!-- Project 4 -->
+      <!-- مشروع 4 -->
       <div class="project-card">
-        <img src="images/branding.jpg" alt="Branding" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600'">
+        <img src="assets/branding.jpg" alt="Branding" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p4_cat">هوية وجرافيك</span>
           <h3 class="project-title" data-i18n="p4_title">هوية بصرية وتغليف علامة تجارية</h3>
@@ -289,9 +162,9 @@
         </div>
       </div>
 
-      <!-- Project 5 -->
+      <!-- مشروع 5 -->
       <div class="project-card">
-        <img src="images/office.jpg" alt="Executive Office" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600'">
+        <img src="assets/office.jpg" alt="Executive Office" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600'">
         <div class="project-body">
           <span class="project-category" data-i18n="p5_cat">تصميم داخلي</span>
           <h3 class="project-title" data-i18n="p5_title">مكتب تنفيذي بتصميم مريح</h3>
@@ -299,22 +172,108 @@
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Contact -->
+  <!-- ================= قسم منهجية العمل (Workflow) ================= -->
+  <section class="section-container" id="workflow">
+    <h2 class="section-title" data-i18n="nav_workflow">منهجية العمل</h2>
+    <div class="workflow-grid">
+      <div class="workflow-step">
+        <span class="step-num">01</span>
+        <h4 data-i18n="wf1_title">دراسة الاحتياجات والمساحة</h4>
+        <p data-i18n="wf1_desc">فهم رؤية العميل وتحليل المخطط وتحديد النمط المطلوب والميزانية.</p>
+      </div>
+      <div class="workflow-step">
+        <span class="step-num">02</span>
+        <h4 data-i18n="wf2_title">لوحة الإلهام والتوزيع (Moodboard)</h4>
+        <p data-i18n="wf2_desc">اختيار الخامات والألوان وتوزيع عناصر الفرش ثنائية وثلاثية الأبعاد.</p>
+      </div>
+      <div class="workflow-step">
+        <span class="step-num">03</span>
+        <h4 data-i18n="wf3_title">النمذجة والإظهار الواقعي 3D</h4>
+        <p data-i18n="wf3_desc">بناء النموذج الثلاثي الأبعاد وضبط الإضاءات الواقعية وتوليد الرندر عالي الجودة.</p>
+      </div>
+      <div class="workflow-step">
+        <span class="step-num">04</span>
+        <h4 data-i18n="wf4_title">المراجعة والتسليم النهائي</h4>
+        <p data-i18n="wf4_desc">إجراء التعديلات المطلوبة وتسليم الملفات والصور والمخططات التنفيذية.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= قسم البرامج والأدوات (Tools) ================= -->
+  <section class="section-container" id="tools">
+    <h2 class="section-title" data-i18n="nav_tools">البرامج والأدوات</h2>
+    <div class="tools-container">
+      <span class="tool-tag"><i class="fa-solid fa-cube"></i> 3ds Max</span>
+      <span class="tool-tag"><i class="fa-solid fa-sun"></i> Corona Renderer</span>
+      <span class="tool-tag"><i class="fa-solid fa-bolt"></i> V-Ray</span>
+      <span class="tool-tag"><i class="fa-solid fa-pen-ruler"></i> AutoCAD</span>
+      <span class="tool-tag"><i class="fa-solid fa-image"></i> Adobe Photoshop</span>
+      <span class="tool-tag"><i class="fa-solid fa-layer-group"></i> SketchUp</span>
+      <span class="tool-tag"><i class="fa-solid fa-circle-nodes"></i> Blender</span>
+    </div>
+  </section>
+
+  <!-- ================= قسم تواصل معي ونموذج طلب المشاريع ================= -->
   <footer class="contact-section" id="contact">
     <div class="section-container" style="padding-top: 0;">
-      <h2 class="section-title" data-i18n="nav_contact">تواصل معي</h2>
       
+      <!-- نموذج طلب التصميم التفاعلي -->
+      <div class="request-box" id="request-form">
+        <h2 class="section-title" style="margin-bottom: 1rem;" data-i18n="form_heading">طلب تصميم / استشارة</h2>
+        <p class="form-sub" data-i18n="form_sub">هل لديك فكرة أو مشروع فيلا، شقة أو مساحة تجارية؟ اكتب تفاصيل مشروعك وسأقوم بالرد عليك فوراً.</p>
+
+        <form id="projectForm" onsubmit="event.preventDefault();">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="lbl_name">الاسم الكريم</label>
+              <input type="text" id="clientName" placeholder="مثال: يوسف العلمي" required>
+            </div>
+            <div class="form-group">
+              <label data-i18n="lbl_project_type">نوع المشروع</label>
+              <select id="projectType">
+                <option value="تصميم داخلي لفيلا أو شقة">تصميم داخلي لفيلا أو شقة</option>
+                <option value="إظهار خارجي ثلاثي الأبعاد (3D ArchViz)">إظهار خارجي ثلاثي الأبعاد (3D ArchViz)</option>
+                <option value="تصميم مساحة تجارية / مكتبية">تصميم مساحة تجارية / مكتبية</option>
+                <option value="استشارة أو مخطط تنفيذي">استشارة أو مخطط تنفيذي</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="lbl_desc">تفاصيل الفكرة أو المساحة</label>
+            <textarea id="projectDetails" rows="4" placeholder="اكتب نبذة عن المساحة، عدد الغرف، النمط المطلوب أو أي تفاصيل خاصة..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <!-- زر إرسال واتساب -->
+            <button type="button" class="btn-whatsapp" onclick="sendViaWhatsApp()">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-i18n="btn_send_wa">إرسال الفكرة عبر واتساب</span>
+            </button>
+            <!-- زر إرسال البريد -->
+            <button type="button" class="btn-email" onclick="sendViaEmail()">
+              <i class="fa-solid fa-envelope"></i>
+              <span data-i18n="btn_send_mail">إرسال عبر البريد الإلكتروني</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- معلومات التواصل المباشرة -->
+      <h3 style="color: #fff; margin: 3rem 0 1.5rem;" data-i18n="direct_contact_title">معلومات التواصل المباشرة</h3>
       <div class="contact-grid">
-        <a href="mailto:mohamedaminlachkhem@gmail.com" class="contact-card">
+        <!-- البريد الإلكتروني -->
+        <a href="mailto:lachkhemmohamedamin@gmail.com" class="contact-card">
           <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
           <div class="contact-info">
             <h4 data-i18n="c_email_lbl">البريد الإلكتروني</h4>
-            <p>mohamedaminlachkhem@gmail.com</p>
+            <p>lachkhemmohamedamin@gmail.com</p>
           </div>
         </a>
 
+        <!-- واتساب / الهاتف -->
         <a href="https://wa.me/212628993050" target="_blank" class="contact-card">
           <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
           <div class="contact-info">
@@ -323,143 +282,23 @@
           </div>
         </a>
 
+        <!-- المقر -->
         <div class="contact-card">
           <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
           <div class="contact-info">
-            <h4 data-i18n="c_loc_lbl">المقر</h4>
-            <p data-i18n="c_loc_val">المغرب (الدار البيضاء / فاس)</p>
+            <h4 data-i18n="c_loc_lbl">المقر والخدمة</h4>
+            <p data-i18n="c_loc_val">المغرب (الدار البيضاء / فاس) وكافة المدن</p>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Mohamed Amin. <span data-i18n="rights">جميع الحقوق محفوظة.</span></p>
+        <p>© 2026 Mohamed Amin Lachkhem. <span data-i18n="rights">جميع الحقوق محفوظة.</span></p>
       </div>
     </div>
   </footer>
 
-  <!-- Script -->
-  <script>
-    const translations = {
-      ar: {
-        nav_home: "الرئيسية",
-        nav_about: "عن المصمم",
-        nav_services: "الخدمات",
-        nav_projects: "المشاريع",
-        nav_workflow: "منهجية العمل",
-        nav_tools: "البرامج والأدوات",
-        nav_contact: "تواصل معي",
-        btn_portfolio: "تحميل البورتفوليو",
-        title_projects: "معرض المشاريع",
-        p1_cat: "تصميم داخلي",
-        p1_title: "صالون معيشة معاصر فاخر",
-        p1_desc: "تناغم دافئ بين الخامات الخشبية، الإضاءة المخفية، وقطع الأثاث المريحة ذات الطابع المودرن.",
-        p2_cat: "إظهار خارجي 3D",
-        p2_title: "فيلا سكنية حديثة مع مسبح",
-        p2_desc: "محاكاة معمارية واقعية لواجهة الفيلا وتفاصيل المسبح واللاندسكيب المحيط بدقة بصرية عالية.",
-        p3_cat: "تصميم داخلي",
-        p3_title: "غرفة نوم رئيسية بتصميم هادئ",
-        p3_desc: "اعتماد ألوان ترابية مهدئة وإضاءة دافئة مع خلفية سرير مكسوة ببانوهات جدارية حديثة.",
-        p4_cat: "هوية وجرافيك",
-        p4_title: "هوية بصرية وتغليف علامة تجارية",
-        p4_desc: "تطوير شعار ونظام ألوان ومطبوعات متكاملة تعبر عن الأصالة والاحترافية.",
-        p5_cat: "تصميم داخلي",
-        p5_title: "مكتب تنفيذي بتصميم مريح",
-        p5_desc: "بيئة عمل متوازنة تجمع بين الفخامة الوظيفية وتوزيع الإضاءة المريح لساعات العمل الطويلة.",
-        c_email_lbl: "البريد الإلكتروني",
-        c_phone_lbl: "الهاتف / واتساب",
-        c_loc_lbl: "المقر",
-        c_loc_val: "المغرب (الدار البيضاء / فاس)",
-        rights: "جميع الحقوق محفوظة."
-      },
-      en: {
-        nav_home: "Home",
-        nav_about: "About",
-        nav_services: "Services",
-        nav_projects: "Projects",
-        nav_workflow: "Workflow",
-        nav_tools: "Tools & Software",
-        nav_contact: "Contact Me",
-        btn_portfolio: "Download Portfolio",
-        title_projects: "Featured Projects",
-        p1_cat: "Interior Design",
-        p1_title: "Luxury Contemporary Living Room",
-        p1_desc: "Harmonious blend of rich wood textures, recessed lighting, and comfortable modern furnishings.",
-        p2_cat: "3D ArchViz Exterior",
-        p2_title: "Modern Residential Villa with Pool",
-        p2_desc: "Photorealistic architectural visualization of villa facade, pool details, and surrounding landscape.",
-        p3_cat: "Interior Design",
-        p3_title: "Serene Master Bedroom",
-        p3_desc: "Calming earthy palette, ambient warm lighting, and tailored modern wall paneling.",
-        p4_cat: "Branding & Graphics",
-        p4_title: "Brand Identity & Premium Packaging",
-        p4_desc: "Complete visual identity design, logo typography, and high-end collateral systems.",
-        p5_cat: "Interior Design",
-        p5_title: "Executive Ergonomic Office",
-        p5_desc: "Balanced workspace pairing functional luxury with optimized lighting for productivity.",
-        c_email_lbl: "Email Address",
-        c_phone_lbl: "Phone / WhatsApp",
-        c_loc_lbl: "Location",
-        c_loc_val: "Morocco (Casablanca / Fes)",
-        rights: "All rights reserved."
-      },
-      fr: {
-        nav_home: "Accueil",
-        nav_about: "À propos",
-        nav_services: "Services",
-        nav_projects: "Projets",
-        nav_workflow: "Méthodologie",
-        nav_tools: "Logiciels & Outils",
-        nav_contact: "Contactez-moi",
-        btn_portfolio: "Télécharger Portfolio",
-        title_projects: "Galerie de Projets",
-        p1_cat: "Architecture d'Intérieur",
-        p1_title: "Salon Contemporain de Luxe",
-        p1_desc: "Alliance chaleureuse de finitions en bois, d'éclairage indirect et de mobilier moderne et ergonomique.",
-        p2_cat: "Rendu 3D Extérieur",
-        p2_title: "Villa Moderne avec Piscine",
-        p2_desc: "Visualisation architecturale photoréaliste de la façade, de l'espace piscine et du paysage.",
-        p3_cat: "Architecture d'Intérieur",
-        p3_title: "Chambre Parentale Épurée",
-        p3_desc: "Palette de tons terreux, lumière d'ambiance feutrée et boiseries murales modernes.",
-        p4_cat: "Identité Visuelle",
-        p4_title: "Branding & Packaging Premium",
-        p4_desc: "Création de logo, charte graphique et supports visuels de haute qualité.",
-        p5_cat: "Architecture d'Intérieur",
-        p5_title: "Bureau Exécutif Ergonomique",
-        p5_desc: "Espace de travail associant élégance fonctionnelle et confort visuel optimal.",
-        c_email_lbl: "Adresse E-mail",
-        c_phone_lbl: "Téléphone / WhatsApp",
-        c_loc_lbl: "Emplacement",
-        c_loc_val: "Maroc (Casablanca / Fès)",
-        rights: "Tous droits réservés."
-      }
-    };
-
-    function changeLanguage(lang) {
-      const isRTL = (lang === 'ar');
-      document.documentElement.lang = lang;
-      document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
-      document.body.dir = isRTL ? 'rtl' : 'ltr';
-
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-
-      localStorage.setItem('preferred_lang', lang);
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('preferred_lang') || 'ar';
-      const langSelector = document.getElementById('langSelector');
-      if (langSelector) {
-        langSelector.value = savedLang;
-      }
-      changeLanguage(savedLang);
-    });
-  </script>
+  <!-- ملف JavaScript -->
+  <script src="script.js?v=3.0"></script>
 </body>
 </html>
